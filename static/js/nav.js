@@ -1,3 +1,4 @@
+console.log($('.nickForm'))
 $('.nickForm').submit(function(e){
     e.preventDefault();
     let nickVal = $('.nickInput').val();
