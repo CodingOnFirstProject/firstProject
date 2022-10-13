@@ -13,11 +13,11 @@ app.use('/static', express.static(__dirname + '/static'));
 
 app.get('/',function(request, response){
     //client가 get 요청을 보내면 -> 응답으로 send('안에 있는 메서지')를 띄운다
-    response.send('connect success');
+    response.render('main');
 })
 
-app.get('/test', function(request, response){
-    response.render('test');
+app.get('/main', function(request, response){
+    response.render('main');
 })
 
 // app.get('/test2', function (request, response) {
