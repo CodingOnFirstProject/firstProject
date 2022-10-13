@@ -20,11 +20,12 @@ app.get('/main', function(request, response){
     response.render('main');
 })
 
-// app.get('/test2', function (request, response) {
-//     //   response.send('test page');
-//       response.render('test2');
-//     })
-    
+
+app.get('/navbar', function(request, response){
+    response.render('navbar');
+})
+
+
 //로컬 서버 동작
 app.listen(PORT, function(){
     console.log(`Listening on port ${PORT}`);
