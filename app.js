@@ -11,13 +11,20 @@ app.use('/views', express.static(__dirname + '/views')); // ejs 파일을 저장
 //해당 파일을 ip:port/static/image/cat.jpg 에 존재하는지 찾음
 app.use('/static', express.static(__dirname + '/static'));
 
+// app.get('/',function(request, response){
+//     //client가 get 요청을 보내면 -> 응답으로 send('안에 있는 메서지')를 띄운다
+//     // response.send('connect success');
+//     response.render('sights')
+// })
+
 app.get('/',function(request, response){
     //client가 get 요청을 보내면 -> 응답으로 send('안에 있는 메서지')를 띄운다
-    response.send('connect success');
+    // response.send('connect success');
+    response.render('sights');
 })
 
-app.get('/test', function(request, response){
-    response.render('test');
+app.get('/sights', function(request, response){
+    response.render('sights');
 })
 
 // app.get('/test2', function (request, response) {
