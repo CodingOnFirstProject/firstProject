@@ -19,14 +19,14 @@
 
 <body>
     <!-- 상단 nav바 -->
-    <div class="d-box">
+
 
     <%- include('navbar.ejs')%>
 
         <!-- 메인박스 -->
 
 
-        <div class="container-fluid bg-light mainBox">
+        <div class="container-fluid mainBox">
 
             <!-- 메인 사진 -->
 
@@ -77,20 +77,22 @@
                 <div class="tabMenu">
 
                     <!-- 관광지/음식 순위 -->
-                    <button class="themBtn" onclick="changeThema()">Thema</button>
-                    <button class="foodBtn" onclick="changeFood()">Food</button>
-                    <div class="themaGrims ">
-                        <div class="d-flex justify-content-evenly">
-                            <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
-                            <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
-                            <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
+                    <button class="themBtn cliBtn" onclick="changeThema()">Thema</button>
+                    <button class="foodBtn unCliBtn" onclick="changeFood()">Food</button>
+                    <div class="subTabMenu">
+                        <div class="themaGrims ">
+                            <div class="d-flex justify-content-around">
+                                <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                                <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
+                                <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
+                            </div>
                         </div>
-                    </div>
-                    <div class="themaFoods hidden">
-                        <div class="d-flex justify-content-evenly">
-                            <img src="/static/image/nature4.jpg" class="themaGrim" alt="자연">
-                            <img src="/static/image/nature5.jpg" class="themaGrim" alt="자연">
-                            <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                        <div class="themaFoods hidden">
+                            <div class="d-flex justify-content-around">
+                                <img src="/static/image/nature4.jpg" class="themaGrim" alt="자연">
+                                <img src="/static/image/nature5.jpg" class="themaGrim" alt="자연">
+                                <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,12 +101,14 @@
 
 
         </div>
-    </div>
+        <footer>
+
+        </footer>
 
 
         <!-- Jquey/BootStrap -->
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/static/js/main.js"></script>

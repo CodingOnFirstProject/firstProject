@@ -1,21 +1,20 @@
 
         
         body {
-            height: 4000px;
-            /* box-sizing: border-box; */
+            background-color: whitesmoke;
         }
 
         .mainBox {
             margin: auto;
-            width: 70%;
+            width: 100%;
             margin-top: 1vh;
         }
 
-        .contentBox {
+        /* .contentBox {
             height: 1300px;
             background-color: yellowgreen;
      
-        }
+        } */
 
        
       
@@ -33,19 +32,17 @@
         /* 검색상자 */
   
         .serBox {
-            background-color: aqua;
-            position: relative;
-            top: 30px;
+           
+            /* top: 30px; */
             width: 50%;
-            margin: auto;
-            height: 130px;
+            margin-top: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3vh;
+      
         }
 
-        #search-form {
-            position: relative;
-            
-            top: 50px;
-        }
+      
 
         #search-form input {
             text-align: center;
@@ -54,52 +51,70 @@
             width: 100%;
             height: 60px;
             padding: 10px;
-            border-radius: 30px;
+            border-radius: 20px;
+            border-color: blueviolet;
             font-size: 1.2em;
         }
 
-        /* 탭메뉴 */
+        /* 탭메뉴 및 버튼*/
 
         .tabMenu {
-            position: relative;
+            /* position: relative; */
             width: 90%;
-            height: 300px;
-            top: 60px;
-            background-color: antiquewhite;
-            margin: auto;
+            height: 40vh;
+            /* top: 60px; */
+            /* margin-bottom: 30vh; */
+            background-color: whitesmoke;
+            margin: 0 auto 15vh auto;
         }
+        .subTabMenu {
+            width: 100%;
+            height: 35vh;
+            background-color: antiquewhite;
+            border-radius: 0px 15px 15px 15px;
+        }
+
 
         /* 관광지.음식 순위 */
+        
 
-        .themaGrims {
-            position: absolute;
-            top: 100px;
-            width: 100%;
-            background-color: blue;
-        }
+
 
 
         .hidden {
             display: none;
         }
 
-        .themaFoods {
-            position: absolute;
-            top: 100px;
-            width: 100%;
-            background-color: green;
-        }
+
 
         .themaGrim {
-            width: 30%;
-            height: 20vh;
+            width: 18vw;
+            height: 24vh;
+            margin-top: 5vh;    
         }
 
         .cliBtn {
-            background-color: grey;
+            background-color: antiquewhite;
+            border: none;
+            border-radius: 3px 3px 0 0;
         }
 
-        .uncliBtn {
-            background-color: aliceblue;
+        .unCliBtn {
+            background-color: whitesmoke;
+            border: none;
+      
         }
 
+        @media (max-width: 990px) {
+            .mainBox {
+                width: 90%;
+            }
+                
+        }
+            
+        footer {
+            background-color: green;
+            width: 100%;
+            height: 20vh;
+        }
+        

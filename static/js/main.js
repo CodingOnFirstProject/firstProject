@@ -1,16 +1,21 @@
 function changeThema (){
-    $('.themaGrims').addClass('hidden')
-    $('.themaFoods').removeClass('hidden')
+    $('.themaFoods').addClass('hidden')
+    $('.themaGrims').removeClass('hidden')
     $('.themBtn').addClass('cliBtn')
     $('.foodBtn').removeClass('cliBtn')
-    
+
+    $('.foodBtn').addClass('unCliBtn')
+    $('.themBtn').removeClass('unCliBtn')
 }
 
 function changeFood (){
-    $('.themaFoods').addClass('hidden')
-    $('.themaGrims').removeClass('hidden')
+    $('.themaGrims').addClass('hidden')
+    $('.themaFoods').removeClass('hidden')
     $('.foodBtn').addClass('cliBtn')
     $('.themBtn').removeClass('cliBtn')
+
+    $('.themBtn').addClass('unCliBtn')
+    $('.foodBtn').removeClass('unCliBtn')
     
 }
 
