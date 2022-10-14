@@ -8,8 +8,6 @@
     flex-direction: column;
 
     width : 100%;
-    height : 2125px;
-    /* 100px 500px 1450px 100px; */
 }
 /* header */
 header{
@@ -24,7 +22,16 @@ header{
     height : 500px;
 
     position : relative;
+
 }
+#bigImg .text{
+    display : flex;
+    flex-direction: row;
+    align-items: end;
+    position : absolute;
+    bottom : 12px;
+}
+
 #bigImg img{
     width : 100%;
     height : 500px;
@@ -32,89 +39,104 @@ header{
 #bigImg h1{
     color : white;
     font-weight: 800;
-    /* 50px;  */
-    font-size : 7vw;
-    
-    position : absolute;
-    left : 2vw;
-    bottom : 2vh;
+    font-size : 6vw;
+    bottom : 1.5vh;
 }
 #bigImg h3{
     color : orange;
     font-weight : 600;
     font-size : 4vw;
-    position : absolute;
-    left : 45vw;
-    bottom : 1vh;
+
 }
 /* contents */
-#contents{
-    /* background-color:; */
+#contents {
     width : 100%;
-    height : 1425px;
-
     /* grid-template-rows: 325px 450px 325px 325px; */
 }
 #contents h1{
     font-size : 25px;
     
 }
-#fourButton{
-    height : 55px;
+#fourButton {
     background-color: bisque;
 
     display : flex;
     flex-direction: row;
     justify-content: start;
+    margin-top : 20px;
 }
 .btn{
-    width: 10vw;
-    height : 5vh;
+    width: 12vw;
+    height : 4vh;
     margin : auto 10px;
+    font-size : 2vw;
 }
-#box1{
-    background-color: white;
-    height : 270px;
+.box{
+    background-color: azure;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
-#box1 #msg{
+.boxOdd{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.box .msg{
     background-color: white;
     width : 60%;
-    height : 170px;
-    margin-top : 30px;
-    margin-left : 100px;
+    /* margin-left : 60px; */
 }
-
+/* 다시보기 */
+.boxOdd .msg{
+    background-color: white;
+    width : 60%;
+    margin-right : 60px;
+}
+/*======*/
 #box1 p{
     font-size : 20px;
     margin-top : 30px;
 }
-#box1 img{
+.box img, .boxOdd img{
     width: 350px;
     height : 270px;
+    margin: 20px;
 }
 #box2{
     background-color: #2a4b76;;
     border : 1px solid black;
-    height : 325px;
 }
 #box3{
     border : 1px solid black;
-    height : 325px;
 }
+#box3 .msgImg{
+    display : flex;
+    flex-direction: column;
+
+}
+#box3 .imgs img{
+    width : 50px;
+    height: 40px;
+}
+#box3 .msgImg .imgs{
+    display : flex;
+    flex-direction: column;
+}
+
 #box4{
     background-color: #2a4b76;;
     border : 1px solid black;
-    height : 500px;
+    height : 57vh;
 }
 #box4 .next{
     color : white;
     background-color: white;
     width : 250px;
-    height : 300px;
+    /* height : 300px; */
 }
 /* footer */
 footer{
@@ -123,11 +145,19 @@ footer{
     height : 100px;
 }
 
-/* <article id = "box4" class = "box">
-                <div class = "next1" class = "next">
-                    <img src = "/static/img/paris.jpeg">
-                </div>
-
-                <div class = "next2" class = "next">
-                    <img src = "/static/img/england.jpeg">
-                </div> */
+@media (max-width: 666px){
+    #fourButton{
+        justify-content: center;
+    }
+    #bigImg .text{
+        flex-direction: column;
+        align-items: start;
+    }
+    #box1{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .box .msg{
+        margin-left: 0;
+    }
+}
