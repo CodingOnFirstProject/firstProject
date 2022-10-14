@@ -1,6 +1,13 @@
+
 .navbar {
-    height: 60px;
-    font-size: 14px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 16px;
+}
+
+.nav-item {
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .navbar-brand {
@@ -10,4 +17,22 @@
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 1150px) {
+    .nav-item {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        
+    }
+    
+}
+
+
+@media (max-width: 990px) {
+    .nicknameBox {
+       display: none;
+        
+    }
+    
 }
