@@ -2,20 +2,23 @@
         
         body {
             height: 4000px;
+            /* box-sizing: border-box; */
         }
 
-
-        .contentBox {
-            height: 1300px;
-            background-color: yellowgreen;
-        }
-
-       
-       .mainBox {
+        .mainBox {
             margin: auto;
             width: 70%;
             margin-top: 1vh;
         }
+
+        .contentBox {
+            height: 1300px;
+            background-color: yellowgreen;
+     
+        }
+
+       
+      
 
 
         .grim {
