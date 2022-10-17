@@ -6,6 +6,7 @@ function changeThema (){
 
     $('.foodBtn').addClass('unCliBtn')
     $('.themBtn').removeClass('unCliBtn')
+    
 }
 
 function changeFood (){

@@ -8,6 +8,16 @@
 
 }
 
+.navDiv {
+    position: absolute;
+    width: 100%;
+    z-index: 1100;
+}
+
+.navHidDiv {
+    opacity: 0;
+}
+
 .nav-item {
     margin-left: 3rem;
     margin-right: 3rem;

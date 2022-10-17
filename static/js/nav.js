@@ -1,4 +1,3 @@
-
 $('.nickForm').submit(function(e){
     e.preventDefault();
     let nickVal = $('.nickInput').val();
@@ -11,4 +10,16 @@ $('.nickForm').submit(function(e){
 
     $('.welcDiv').text(`환영합니다 ${nickVal}님`)
     console.log(nickVal);
+})
+
+$('.navDiv').mouseover(function(){
+    $('.navDiv').removeClass('navHidDiv')
+
+    
+})
+
+$('.navDiv').mouseout(function(){
+    $('.navDiv').addClass('navHidDiv')
+
+    
 })
