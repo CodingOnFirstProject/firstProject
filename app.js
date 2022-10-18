@@ -27,6 +27,18 @@ app.get('/sights', function(request, response){
     response.render('sights');
 })
 
+app.get('/sights2', function(request, response){
+    response.render('sights2');
+})
+
+app.get('/sights3', function(request, response){
+    response.render('sights3');
+})
+
+app.get('/sights4', function(request, response){
+    response.render('sights4');
+})
+
 
 //로컬 서버 동작
 app.listen(PORT, function(){
