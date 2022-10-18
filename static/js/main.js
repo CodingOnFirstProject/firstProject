@@ -39,27 +39,74 @@ $('.fstvAni').mouseout(function () {
 $('.fstvDiv').click(function () {
     
     // $('.fstvDiv').addClass('hidden');
-    $(this).addClass('fstvCliSt')
+    $(this).removeClass('hidden');
+    $('.fstvDiv').addClass('opaciZero');
+    $(this).removeClass('opaciZero');
     
     $(this).removeClass('hidden');
-    let test = $(this);
+    let thisFstv = $(this);
+    let thisBtn = thisFstv.next('.fstvBtn')
     setTimeout(function () {
-        // console.log($(this))
-        // $(this).removeClass('fstvAni');
-        // $(this).addClass('fstvCli')
-        // $(this).next('.fstvDesc').removeClass('hidden');
-   
-        test.removeClass('fstvAni');
-        test.addClass('fstvCli')
-        test.next('.fstvDesc').removeClass('hidden');
+        thisFstv.removeClass('fstvAni');
+        $('.fstvDiv').addClass('fstvCli')
+        $('.fstvBtn').removeClass('hidden');
+        thisBtn.addClass('fstvBtnClr')
+
+        thisBtn.next('.fstvDesc').removeClass('hidden');
+        $('.fstvDiv').addClass('hidden');
+        $('.fstvDiv').removeClass('fstvAni');
+        thisFstv.removeClass('hidden');
     }, 2000);
 
-    $('.fstvDiv').addClass('hidden');
-    $(this).removeClass('hidden');
+})
+
+
+
+
+
+$('.fstvBtn').click(function () {
     
-    // $(this).removeClass('fstvAni');
-    // $(this).addClass('fstvCli')
-    // $(this).next('.fstvDesc').removeClass('hidden');
+    // $('.fstvDiv').addClass('hidden');
+    $('.fstvDiv').removeClass('hidden');
+    $('.fstvDiv').removeClass('opaciZero');
+
+    $('.fstvDiv').addClass('hidden');
+    $(this).prev('.fstvDiv').removeClass('hidden');
+
+
+    // $(this).prev('.fstvDiv').addClass('fstvCli');
+
+    $('.fstvDesc').removeClass('hidden');
+    $('.fstvDesc').addClass('hidden');
+    $(this).next('.fstvDesc').removeClass('hidden');
+
+    $('.fstvBtn').removeClass('fstvBtnClr');
+
+    $(this).addClass('fstvBtnClr');
+
+})
+
+
+
+
+
+$('.fstvBack').click(function () {
+    
+    $('.fstvDiv').removeClass('hidden');
+    $('.fstvDiv').removeClass('opaciZero');
+    $('.fstvDiv').addClass('fstvAni');
+
+
+    // $(this).prev('.fstvDiv').addClass('fstvCli');
+
+    $('.fstvDesc').removeClass('hidden');
+    $('.fstvDesc').addClass('hidden');
+
+    $('.fstvBtn').removeClass('fstvBtnClr');
+    $('.fstvBtn').addClass('hidden');
+
+
+
 })
 
 
