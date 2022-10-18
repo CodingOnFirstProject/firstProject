@@ -1,3 +1,50 @@
+// 검색기능 만들기
+
+$('#search-form').submit(function(e){
+    e.preventDefault();
+    let searBar = $('.searchInput').val();
+
+    if (searBar == '관광지A'){
+        window.open('./sights');
+        $('.searchInput').val('');
+    } else if (searBar == '관광지B'){
+        window.open('./sights');
+        $('.searchInput').val('');
+    } else if (searBar == '관광지B'){
+        window.open('./sights');
+        $('.searchInput').val('');
+    } else if (searBar == '관광지C'){
+        window.open('./sights');
+        $('.searchInput').val('');
+    } else if (searBar == '관광지D'){
+        window.open('./sights');
+        $('.searchInput').val('');
+    } else {
+        $('.searchInput').val('');
+    }  
+})
+
+
+
+$('#search-form').mouseover(function() {
+    $('.keywordBox').removeClass('hidden')
+})
+
+
+$('#search-form').mouseout(function() {
+    $('.keywordBox').addClass('hidden')
+})
+
+
+
+
+
+
+
+
+
+
+
 // 서브 사진테마 효과
 
 function changeThema() {
@@ -21,7 +68,7 @@ function changeFood() {
     $('.foodBtn').removeClass('unCliBtn')
 }
 
-// 페스티벌 사진 호버시 효과
+// 페스티벌 사진 호버시 아이콘 효과
 
 $('.fstvAni').mouseover(function () {
     let festIcon = $(this).find('.icons');
@@ -36,16 +83,26 @@ $('.fstvAni').mouseout(function () {
 // 페스티벌 사진 클릭시 효과
 
 
-$('.fstvDiv').click(function () {
-    
-    // $('.fstvDiv').addClass('hidden');
-    $(this).removeClass('hidden');
-    $('.fstvDiv').addClass('opaciZero');
-    $(this).removeClass('opaciZero');
-    
-    $(this).removeClass('hidden');
+$('.fstvEvt').click(fstvEvtFunc)
+
+
+function fstvEvtFunc() {
     let thisFstv = $(this);
+    
+
+
+    // $('.fstvDiv').addClass('hidden');
+    thisFstv.removeClass('hidden');
+    $('.fstvDiv').addClass('opaciZero');
+    thisFstv.removeClass('opaciZero');
+    
+    thisFstv.removeClass('hidden');
+    
     let thisBtn = thisFstv.next('.fstvBtn')
+    $('.fstvBack-1').addClass('fstvBackHover');
+
+    $('.fstvEvt').off('click', fstvEvtFunc);
+
     setTimeout(function () {
         thisFstv.removeClass('fstvAni');
         $('.fstvDiv').addClass('fstvCli')
@@ -56,13 +113,16 @@ $('.fstvDiv').click(function () {
         $('.fstvDiv').addClass('hidden');
         $('.fstvDiv').removeClass('fstvAni');
         thisFstv.removeClass('hidden');
+        $('.fstvBack-1').addClass('hidden');
+        $('.fstvBack-2').removeClass('hidden');
+        $('.fstvEvt').click(fstvEvtFunc);
+
     }, 2000);
 
-})
+}
 
 
-
-
+// 페스티벌 상단 동그란 버튼 클릭시 변경
 
 $('.fstvBtn').click(function () {
     
@@ -88,9 +148,9 @@ $('.fstvBtn').click(function () {
 
 
 
+// 상단 돌아가기 버튼
 
-
-$('.fstvBack').click(function () {
+$('.fstvBack-2').click(function () {
     
     $('.fstvDiv').removeClass('hidden');
     $('.fstvDiv').removeClass('opaciZero');
@@ -104,9 +164,12 @@ $('.fstvBack').click(function () {
 
     $('.fstvBtn').removeClass('fstvBtnClr');
     $('.fstvBtn').addClass('hidden');
+    
+    $('.fstvBack-1').removeClass('hidden');
+    $('.fstvBack-2').addClass('hidden');
+
+    $('.fstvBack').removeClass('fstvBackHover')
 
 
-
-})
-
+});
 

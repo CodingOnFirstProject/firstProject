@@ -24,8 +24,7 @@ body {
 /* 검색상자 */
 
 .serBox {
-
-    width: 50%;
+    width: 60%;
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
@@ -39,12 +38,32 @@ body {
     text-align: center;
     background: transparent;
     color: black;
-    width: 100%;
+    width: 90%;
     height: 8vh;
     /* padding: 10px; */
-    border-radius: 20px;
-    border-color: blueviolet;
+    /* border-radius: 20px; */
+    border-color: black;
     font-size: 1.2em;
+    border-right: 0;
+}
+
+.search-btn {
+    color: #EDEDED;
+    float: right;
+    /* width: 40px; */
+    /* height: 40px; */
+    width: 10%;
+    height: 8vh;
+    /* border-radius: 50%; */
+    background: #949BA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.keywordBox {
+    background: #F5EFE6;
+    padding: 30px;
 }
 
 /* 탭메뉴 및 버튼*/
@@ -83,7 +102,7 @@ body {
 .cliBtn {
     background-color: #F8C4B4;
     border: none;
-    border-radius: 3px 3px 0 0;
+    border-radius: 6px 6px 0 0;
     font-size: 1.3rem;
     padding: 7px 10px 3px 10px;
     font-weight: bold;
@@ -240,14 +259,30 @@ body {
     left: 6vw;
 
     font-size: 40px;
-
 }
 
-.fstvBack:hover {
-    /* font-size: 50px; */
-    color: red;
+.fstvBackHover {
+    transform: translateY(-50px);
+    transition-duration: 2s;
 }
 
+.fstvBack-2:hover {
+    transform: translateY(-50px);
+    transition-duration: 2s;
+}
+
+.fstvBack-2 {
+    animation: fstvBackAni 2s 1;
+}
+
+@keyframes fstvBackAni {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -317,7 +352,7 @@ body {
 
 /* footer */
 footer {
-    background-color: yellow;
+    background-color: #CDFCF6;
     width: 100%;
-    height: 20vh;
+    height: 30vh;
 }
