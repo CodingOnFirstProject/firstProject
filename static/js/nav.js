@@ -16,11 +16,11 @@ $('.nickForm').submit(function(e){
 
 // 네비게이션 마우스 호버시 나타나는 효과
 
-$('.navDiv').mouseover(function(){
-    $('.navDiv').removeClass('navHidDiv')
+$('.naviMain').mouseover(function(){
+    $('.naviHid').removeClass('hidden')
 })
 
-$('.navDiv').mouseout(function(){
-    $('.navDiv').addClass('navHidDiv')
+$('.naviHid').mouseout(function(){  
+    $('.naviHid').addClass('hidden')
 })
 

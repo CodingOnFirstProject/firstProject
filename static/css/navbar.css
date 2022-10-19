@@ -21,6 +21,7 @@
     opacity: 0.5;
 } */
 
+
 .nav-item {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -89,7 +90,11 @@
     font-size: 1.2rem;
 }
 
+ul li {
+    list-style-type: none;
+    list-style: none;
 
+}
 /* ul li {list-style-type: none; float: left;} */
 
 
@@ -114,6 +119,12 @@ a:hover { text-decoration: none; }
 a:focus { text-decoration: none; }
 a:hover,a:active { text-decoration: none; }
 
+.naviHid {
+    position: absolute;
+    z-index: 4000;
+    width: 100%;
+}
+
 .naviSubDiv {
     display: flex;
     justify-content: space-between;
@@ -127,13 +138,15 @@ a:hover,a:active { text-decoration: none; }
 .line {
     border-left: thin solid  black;
     margin-top: 2vh;
-    margin-bottom: 5vw;
+    margin-bottom: 5vh;
 }
 
 .dropSub {
     padding-left: 0;
 
 }
+
+
 
 .dropSub > li {
     margin-bottom: 2vh;
