@@ -12,7 +12,7 @@ body {
 
 .mainPic {
     width: 100%;
-    height: 82vh;
+    height: 72vh;
 }
 
 /* 사진 이후 박스 */
@@ -28,8 +28,8 @@ body {
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5vh;
-   
+    margin-bottom: 30vh;
+
 }
 
 
@@ -38,7 +38,7 @@ body {
     text-align: center;
     background: transparent;
     color: black;
-    width: 90%;
+    width: 54vw;
     height: 8vh;
     /* padding: 10px; */
     border-radius: 20px;
@@ -61,15 +61,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-  }
 
-  .search-icon {
+}
+
+.search-icon {
     font-size: 20px;
 
-  }
+}
 
-  /* .fa-search {
+/* .fa-search {
         font-size: 30px;
   } */
 
@@ -80,13 +80,14 @@ body {
 }
 
 .keywordBox {
+    position: absolute;
+    width: 54vw;
     background: white;
     padding: 30px;
-    width: 90%;
     box-shadow: 0px 5px 4px #0002;
     border-radius: 0 0 20px 20px;
     color: #0006;
-    
+
 }
 
 /* 탭메뉴 및 버튼*/
@@ -96,7 +97,7 @@ body {
     /* height: 40vh; */
     background-color: whitesmoke;
     margin: 20vh auto 45vh auto;
-    
+
 }
 
 .subTabMenu {
@@ -141,13 +142,17 @@ body {
 .unCliBtn {
     background-color: whitesmoke;
     border: none;
-    font-size: 1.2rem;  
+    font-size: 1.2rem;
     margin: auto;
 }
 
 
 
 @media (max-width: 1200px) {
+
+    .mainPic {
+        height: 60vh;
+    }
     .mainBox {
         width: 90%;
     }
@@ -157,25 +162,22 @@ body {
         align-items: center;
     }
 
-    
-.search-btn {
-    display: none;
-}
 
-.themaGrim {
-    width: 70vw;
-    height: 30vh;
-}
+    .search-btn {
+        display: none;
+    }
 
-.serBox {
-    width: 90%
-    
-}
+    .themaGrim {
+        width: 70vw;
+        height: 30vh;
+    }
 
-.fstvBox {
-    flex-direction: column;
-    align-items: center;
-}
+
+
+    .fstvBox {
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
@@ -190,7 +192,7 @@ body {
     justify-content: space-around;
     padding: 0 15vh 0 15vh;
     border-radius: 15px;
-}   
+}
 
 
 .fstvDiv {
@@ -218,7 +220,7 @@ body {
     position: absolute;
     /* top: 5px; */
     margin-top: 5vh;
-    
+
     border-radius: 50%;
     width: 2vw;
     height: 2vw;
@@ -235,11 +237,11 @@ body {
 }
 
 .fstvBtn-2 {
-    transform: translateX(-200%); 
+    transform: translateX(-200%);
 }
 
 .fstvBtn-3 {
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 .fstvBtn-4 {
@@ -299,7 +301,7 @@ body {
 .fstvDescInner {
     animation: fstvDescAni 1s;
     background-color: #F8C4B4;
-    height: 58vh;   
+    height: 58vh;
     width: 60vw;
     margin-top: 15vh;
     margin-left: 3vw;
@@ -336,6 +338,7 @@ body {
     0% {
         transform: translateY(-50px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -370,10 +373,9 @@ body {
     0% {
         width: 0;
     }
-    
-    30% {
 
-    }
+    30% {}
+
     100% {
         width: 100%
     }
