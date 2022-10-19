@@ -4,10 +4,13 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
     font-size: 14px;
-    background-color: #f4f4f4;
+    background-color:  #EAF6F6;
 
 }
-
+.logo {
+    width: 4vw;
+    height: 5vh;
+}
 .navDiv {
     position: absolute;
     width: 100%;
@@ -38,6 +41,10 @@
     font-size: 2rem;
 }
 
+
+
+
+
 @media (max-width: 1150px) {
     .nav-item {
         margin-right: 1.5rem;
@@ -54,4 +61,83 @@
         
     }
     
+}
+
+
+
+
+/* ------------------------------------------- */
+
+.naviMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    
+    background-color:  #EAF6F6;
+}
+
+.naviItemDiv {
+    display: flex;
+}
+
+.naviItem {
+    /* writing-mode: horizontal-tb; */
+    width: 15vw;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+/* ul li {list-style-type: none; float: left;} */
+
+
+/* .dropSub {
+    position: absolute;
+    background-color: aqua;
+    width: 9vw;
+    height: 15vh;
+    transform: translate(3vw, 2.7vh);
+    z-index: 2000;
+    list-style: none;
+    padding-left: 0px;
+} */
+
+/* .dropSub-item {
+
+} */
+
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover,a:active { text-decoration: none; }
+
+.naviSubDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 24.1vw 0 12vw;
+    width: 100%;
+    height: 22vh;
+    background-color: antiquewhite;
+
+}
+
+.line {
+    border-left: thin solid  black;
+    margin-top: 2vh;
+    margin-bottom: 5vw;
+}
+
+.dropSub {
+    padding-left: 0;
+
+}
+
+.dropSub > li {
+    margin-bottom: 2vh;
+}
+.dropSubItem {
+    margin-top: 20vw;
 }

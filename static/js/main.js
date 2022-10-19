@@ -26,16 +26,26 @@ $('#search-form').submit(function(e){
 
 
 
-$('#search-form').mouseover(function() {
+$('#search-form input').mouseover(function() {
     $('.keywordBox').removeClass('hidden')
 })
 
 
-$('#search-form').mouseout(function() {
+$('#search-form input').mouseout(function() {
     $('.keywordBox').addClass('hidden')
 })
 
 
+
+
+
+$('.search-btn').mouseover(function() {
+    $('.fa-search').addClass('search-icon')
+})
+
+$('.search-btn').mouseout(function() {
+    $('.fa-search').removeClass('search-icon')
+})
 
 
 
@@ -104,6 +114,7 @@ function fstvEvtFunc() {
     $('.fstvEvt').off('click', fstvEvtFunc);
 
     setTimeout(function () {
+
         thisFstv.removeClass('fstvAni');
         $('.fstvDiv').addClass('fstvCli')
         $('.fstvBtn').removeClass('hidden');

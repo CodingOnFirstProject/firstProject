@@ -69,7 +69,7 @@
         <div class="contentBox">
             <div class="serBox">
                 <form id="search-form">
-                    <input type='text' placeholder="검색어를 입력해주세요" class="searchInput">
+                    <input type='text' placeholder="검색어를 입력해주세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '검색어를 입력해주세요'" class="searchInput">
                     <button class="search-btn" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
@@ -93,14 +93,14 @@
                 <button class="foodBtn unCliBtn" onclick="changeFood()">음식</button>
                 <div class="subTabMenu">
                     <div class="themaGrims ">
-                        <div class="d-flex justify-content-around">
+                        <div class="tabGrims">
                             <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
                             <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
                             <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
                         </div>
                     </div>
                     <div class="themaFoods hidden">
-                        <div class="d-flex justify-content-around">
+                        <div class="tabGrims">
                             <img src="/static/image/nature4.jpg" class="themaGrim" alt="자연">
                             <img src="/static/image/nature5.jpg" class="themaGrim" alt="자연">
                             <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">

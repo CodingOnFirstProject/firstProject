@@ -29,7 +29,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5vh;
-
+   
 }
 
 
@@ -41,10 +41,12 @@ body {
     width: 90%;
     height: 8vh;
     /* padding: 10px; */
-    /* border-radius: 20px; */
-    border-color: black;
-    font-size: 1.2em;
+    border-radius: 20px;
+    box-shadow: 0px -5px 4px #0002;
+    border-width: 0;
     border-right: 0;
+    background-color: white;
+    outline: none;
 }
 
 .search-btn {
@@ -52,34 +54,57 @@ body {
     float: right;
     /* width: 40px; */
     /* height: 40px; */
-    width: 10%;
+    width: 8vh;
     height: 8vh;
-    /* border-radius: 50%; */
-    background: #949BA0;
+    border-radius: 50%;
+    background: #B1AFFF;
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
+  .search-icon {
+    font-size: 20px;
+
+  }
+
+  /* .fa-search {
+        font-size: 30px;
+  } */
+
+#search-form input:hover {
+    border-width: 0;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+}
+
 .keywordBox {
-    background: #F5EFE6;
+    background: white;
     padding: 30px;
+    width: 90%;
+    box-shadow: 0px 5px 4px #0002;
+    border-radius: 0 0 20px 20px;
+    color: #0006;
+    
 }
 
 /* 탭메뉴 및 버튼*/
 
 .tabMenu {
     width: 90vw;
-    height: 40vh;
+    /* height: 40vh; */
     background-color: whitesmoke;
     margin: 20vh auto 45vh auto;
+    
 }
 
 .subTabMenu {
     width: 100%;
-    height: 50vh;
-    background-color: #F8C4B4;
+    /* height: 50vh; */
+    background-color: #FFDEDE;
     border-radius: 0px 15px 15px 15px;
+    padding-bottom: 15vh;
 }
 
 
@@ -91,6 +116,11 @@ body {
 }
 
 
+.tabGrims {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
 .themaGrim {
     width: 21vw;
@@ -100,7 +130,7 @@ body {
 }
 
 .cliBtn {
-    background-color: #F8C4B4;
+    background-color: #FFDEDE;
     border: none;
     border-radius: 6px 6px 0 0;
     font-size: 1.3rem;
@@ -115,10 +145,37 @@ body {
     margin: auto;
 }
 
-@media (max-width: 990px) {
+
+
+@media (max-width: 1200px) {
     .mainBox {
         width: 90%;
     }
+
+    .tabGrims {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+.search-btn {
+    display: none;
+}
+
+.themaGrim {
+    width: 70vw;
+    height: 30vh;
+}
+
+.serBox {
+    width: 90%
+    
+}
+
+.fstvBox {
+    flex-direction: column;
+    align-items: center;
+}
 
 }
 
