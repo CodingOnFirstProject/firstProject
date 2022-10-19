@@ -122,6 +122,8 @@
                     <img src = "/static/image/nature2.jpg" alt = "이미지1" class = "img2">
                     <img src = "/static/image/nature2.jpg" alt = "이미지1" class = "img3">
                 </div>
+                <button id = "prev">&lang;</button>
+                <button id = "next">&rang;</button>
             </div>
 
 
@@ -130,5 +132,38 @@
     <footer>
         footer
     </footer>
+
+    <script>
+
+        var slides = document.querySelectorAll("#exhibitImg > img");
+		var prev = document.getElementById("prev");
+		var next = document.getElementById("next");
+
+        
+        var before = 0;
+        var current = 1;
+        var after = 2;
+
+        var temp = 0;
+
+
+        //showSlides(current); //현재 이미지 표시/
+        prev.onclick = function () {
+            prevSlide('hi')
+        }; //이전 이미지 표시
+        next.onclick = nextSlide(current, before, after); //다음 이미지 표시
+
+       
+        function prevSlide(test){ //이전버튼을 누르면
+            console.log(test);
+            slides[0].setAttribute('src', '/static/image/nature2.jpg');
+            slides[1].setAttribute('src', '/static/image/nature3.jpg');
+            slides[2].setAttribute('src', '/static/image/nature4.jpg');
+        }
+
+        function nextSlide(current){ //다음버튼을 누르면
+
+        }
+    </script>
 </body>
 </html>

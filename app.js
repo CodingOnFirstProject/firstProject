@@ -39,6 +39,9 @@ app.get('/sights4', function(request, response){
     response.render('sights4');
 })
 
+app.get('/weather', function(request, response){
+    response.render('weather');
+})
 
 //로컬 서버 동작
 app.listen(PORT, function(){
