@@ -35,12 +35,18 @@ app.get('/sights3', function(request, response){
     response.render('sights3');
 })
 
-app.get('/sights4', function(request, response){
+app.get('/sights4', function(request, ressponse){
     response.render('sights4');
 })
 
 app.get('/weather', function(request, response){
     response.render('weather');
+})
+app.get('/exchangeRate', function(request, response){
+    response.render('exchangeRate');
+})
+app.get('/loading', function(request, response){
+    response.render('loading');
 })
 
 //로컬 서버 동작
