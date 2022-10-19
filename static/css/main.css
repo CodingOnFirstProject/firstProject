@@ -83,7 +83,7 @@ body {
     position: absolute;
     width: 54vw;
     background: white;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0px 5px 4px #0002;
     border-radius: 0 0 20px 20px;
     color: #0006;
@@ -147,39 +147,6 @@ body {
 }
 
 
-
-@media (max-width: 1200px) {
-
-    .mainPic {
-        height: 60vh;
-    }
-    .mainBox {
-        width: 90%;
-    }
-
-    .tabGrims {
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    .search-btn {
-        display: none;
-    }
-
-    .themaGrim {
-        width: 70vw;
-        height: 30vh;
-    }
-
-
-
-    .fstvBox {
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
 
 /* 페스티벌 탭 */
 
@@ -414,4 +381,93 @@ footer {
     background-color: #CDFCF6;
     width: 100%;
     height: 30vh;
+}
+
+
+@media (max-width: 1200px) {
+
+    .serBox {
+        width: 80%;
+    }
+
+    
+    #search-form input {
+        width: 80vw;
+    }
+
+    .keywordBox {
+        width: 80vw;
+    }
+
+    .mainPic {
+        height: 60vh;
+    }
+
+    .mainBox {
+        width: 90%;
+    }
+
+    .tabGrims {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .search-btn {
+        display: none;
+    }
+
+    .themaGrim { 
+        width: 70vw;
+        height: 30vh;
+    }
+
+    .fstvBox {
+        height: 90vh;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 30vw; */
+    }
+    .fstvDiv {
+        width: 60vw;
+        height: 10vh;
+        margin: 2vh;
+    }
+
+    .fstvAni {
+        margin-top: 2vw;
+    }
+
+    .fstvAni:nth-child(6n+1) {
+        margin-top: 2vh;
+    }
+    .fstvAni:hover {
+        transform: translateY(-1vw);
+        transition-duration: 2s;
+        width: 25vw;
+        box-shadow: 0 5px 5px 5px rgba(92, 137, 222, 0.4);
+    }
+    .fstvText {
+        top: 0
+    }
+    .fstvBack {
+       margin-bottom: 93vh;
+    }
+
+    .fstvDescInner {
+        margin-top: 3vh;
+        margin-left: 0vw
+    }
+
+    .fstvBtn {
+        margin-bottom: 85vh;
+    }
+/* 
+    .fstvBox {
+        flex-direction: column;
+        align-items: center;
+    }
+     */
 }

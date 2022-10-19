@@ -32,6 +32,11 @@ $('.naviBoss').mouseout(function(){
 })
 
 // 네비바 좁은화면 버튼 클릭시
-// $('.navMQBtn').click(function () {
+$('.navMQBtn').click(function () {
 
-// })
+        
+        $('.navMQmaster').toggleClass('hidden')
+
+
+    
+})
