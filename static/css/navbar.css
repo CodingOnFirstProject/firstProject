@@ -23,7 +23,9 @@
 }
  */
 
-
+ .nicknameBox {
+    width: 20vw;
+ }
 
 
 
@@ -47,7 +49,7 @@
 
 .naviItem {
     /* writing-mode: horizontal-tb; */
-    width: 13vw;
+    width: 12vw;
     height: 100%;
     text-align: center;
     font-size: 1.2rem;
@@ -75,13 +77,14 @@ a:hover,a:active { text-decoration: none; }
 
 .naviSubDiv {
     display: flex;
-    justify-content: space-between;
-    padding: 4vh 24vw 0 15vw;
+    justify-content: space-around;
+    padding: 4vh 24vw 0 11vw;
     width: 100%;
     height: 22vh;
     background-color: antiquewhite;
 
 }
+
 
 .line {
     border-left: thin solid  black;
@@ -98,10 +101,14 @@ a:hover,a:active { text-decoration: none; }
 
 .dropSub > li {
     margin-bottom: 2vh;
+    font-size: 0.9rem;  
 }
 .dropSubItem {
     margin-top: 20vw;
+    
 }
+
+
 
 .navMQBtn {
     display: none;      
@@ -119,27 +126,82 @@ a:hover,a:active { text-decoration: none; }
 }
 
 .navMQmain {
-    position: absolute;
+    position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    width: 50vw;
+    width: 45vw;
     height: 100vh;
-    background-color: black;
+    background-color: pink;
     top: 0;
     left: 0;
     z-index: 10000;
 }
 
 .navMQLogo {
-
-    width: 80%;
-    height: 25vw;
+    width: 60%;
+    height: 22vw;
     border-radius: 50%;
+    margin-top: 5vw;
 }
 
+.navMQItems {
+    /* background-color: bisque; */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    
+}
+
+
+.navMQItem {
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column; 
+    width: 80%;
+    
+    /* margin-right: 2vw; */
+    /* height: 10vh; */
+    /* margin: auto; */
+}
+
+
+
+.navMQSub {
+    /* margin-right: 7vw; */
+    /* background-color: white; */
+    /* width: 20vw; */
+    margin-top: 2vh;
+    text-align: center;
+    background-color: #EAF6F6;
+    border-radius: 8px;
+    
+}
+
+.navMQSub > div {
+    font-size: 0.8rem;
+    margin-bottom: 1.5vh;
+    margin-top: 0.9vh;
+    /* margin-left: 2vh; */
+}
+
+@media (max-width: 1200px) {
+   
+
+.naviItem {
+    font-size: 1rem;
+}
+    }
+
 @media (max-width: 1030px) {
+
     .nicknameBox {
        display: none;
         

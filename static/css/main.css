@@ -90,6 +90,7 @@ body {
 
 }
 
+
 /* 탭메뉴 및 버튼*/
 
 .tabMenu {
@@ -126,8 +127,22 @@ body {
 .themaGrim {
     width: 21vw;
     height: 28vh;
-    margin-top: 11vh;
+    margin-top: 8vw;
     border-radius: 5px;
+}
+
+.tabGrimDesc {
+    width: 21vw;
+    height: 28vh;
+    margin-top: 8vw;
+    border-radius: 5px;
+    background-color: red;
+    padding-top: 6vh;
+    text-align: center;
+}
+
+.opaci {
+    opacity: 0.5;
 }
 
 .cliBtn {
@@ -274,7 +289,8 @@ body {
     margin-left: 3vw;
     border-radius: 6px;
     text-align: center;
-    padding: 20vh 0;
+    padding: 12vh 5vw 10vh 5vw;
+    line-height: 1.7;
     overflow: hidden;
 }
 
@@ -383,8 +399,11 @@ footer {
     height: 30vh;
 }
 
+/* 미디어쿼리 */
+
 
 @media (max-width: 1200px) {
+
 
     .serBox {
         width: 80%;
@@ -395,8 +414,18 @@ footer {
         width: 80vw;
     }
 
+    .search-btn {
+        display: none;
+    }
+
+
     .keywordBox {
         width: 80vw;
+    }
+}
+    @media (max-width: 1030px) {
+    .subTabMenu {
+        padding-bottom: 10vh;
     }
 
     .mainPic {
@@ -413,17 +442,18 @@ footer {
     }
 
 
-    .search-btn {
-        display: none;
-    }
-
+   
     .themaGrim { 
         width: 70vw;
         height: 30vh;
     }
 
+    .tabGrimDesc {
+        width: 70vw;
+        height: 30vh;
+    }
     .fstvBox {
-        height: 90vh;
+        height: 98vh;
         padding: 0;
         flex-direction: column;
         justify-content: center;
@@ -432,7 +462,7 @@ footer {
     }
     .fstvDiv {
         width: 60vw;
-        height: 10vh;
+        height: 13vh;
         margin: 2vh;
     }
 
@@ -442,7 +472,9 @@ footer {
 
     .fstvAni:nth-child(6n+1) {
         margin-top: 2vh;
+        margin-left: 15vw;
     }
+
     .fstvAni:hover {
         transform: translateY(-1vw);
         transition-duration: 2s;
@@ -450,7 +482,7 @@ footer {
         box-shadow: 0 5px 5px 5px rgba(92, 137, 222, 0.4);
     }
     .fstvText {
-        top: 0
+        top: 2vh
     }
     .fstvBack {
        margin-bottom: 93vh;
@@ -464,6 +496,7 @@ footer {
     .fstvBtn {
         margin-bottom: 85vh;
     }
+    
 /* 
     .fstvBox {
         flex-direction: column;

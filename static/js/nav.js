@@ -40,3 +40,14 @@ $('.navMQBtn').click(function () {
 
     
 })
+
+$('.navMQtag').click(function() {
+    $('.navMQSub').removeClass('hidden')
+    $('.navMQSub').addClass('hidden')
+    $(this).next('.navMQSub').removeClass('hidden')
+})  
+
+$('.navMQLogo').click(function() {
+    $('.navMQSub').removeClass('hidden')
+    $('.navMQSub').addClass('hidden')
+})  

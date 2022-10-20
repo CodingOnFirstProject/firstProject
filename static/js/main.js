@@ -57,26 +57,82 @@ $('.search-btn').mouseout(function() {
 
 // 서브 사진테마 효과
 
-function changeThema() {
-    $('.themaFoods').addClass('hidden')
-    $('.themaGrims').removeClass('hidden')
-    $('.themBtn').addClass('cliBtn')
-    $('.foodBtn').removeClass('cliBtn')
+$('.spotBtn').click(function(){
+    $('.ranBtn').removeClass('cliBtn')
+    $('.ranBtn').addClass('unCliBtn')
+    $('.spotBtn').removeClass('unCliBtn')
+    $('.spotBtn').addClass('cliBtn')
+    
+    
+    $('.grimsTab').addClass('hidden')
+    $('.spotGrims').removeClass('hidden')
+})
 
-    $('.foodBtn').addClass('unCliBtn')
-    $('.themBtn').removeClass('unCliBtn')
+$('.celebBtn').click(function(){
+    $('.ranBtn').removeClass('cliBtn')
+    $('.ranBtn').addClass('unCliBtn')
+    $('.celebBtn').removeClass('unCliBtn')
+    $('.celebBtn').addClass('cliBtn')
+    
+    
+    $('.grimsTab').addClass('hidden')
+    $('.celebGrims').removeClass('hidden')
+})
 
-}
+$('.artBtn').click(function(){
+    $('.ranBtn').removeClass('cliBtn')
+    $('.ranBtn').addClass('unCliBtn')
+    $('.artBtn').removeClass('unCliBtn')
+    $('.artBtn').addClass('cliBtn')
+    
+    
+    $('.grimsTab').addClass('hidden')
+    $('.artGrims').removeClass('hidden')
+})
 
-function changeFood() {
-    $('.themaGrims').addClass('hidden')
-    $('.themaFoods').removeClass('hidden')
-    $('.foodBtn').addClass('cliBtn')
-    $('.themBtn').removeClass('cliBtn')
 
-    $('.themBtn').addClass('unCliBtn')
-    $('.foodBtn').removeClass('unCliBtn')
-}
+$('.themaGrim').mouseover(function(){
+    
+ 
+
+    $(this).next('.tabGrimDesc').removeClass('hidden')
+    $(this).addClass('hidden')
+
+})
+
+$('.tabGrimDesc').mouseout(function(){
+    
+
+    $(this).addClass('hidden')
+    $(this).prev('.themaGrim').removeClass('hidden')
+
+})
+
+
+
+
+
+
+// function changeThema() {
+//     $('.themaFoods').addClass('hidden')
+//     $('.themaGrims').removeClass('hidden')
+//     $('.themBtn').addClass('cliBtn')
+//     $('.foodBtn').removeClass('cliBtn')
+
+//     $('.foodBtn').addClass('unCliBtn')
+//     $('.themBtn').removeClass('unCliBtn')
+
+// }
+
+// function changeFood() {
+//     $('.themaGrims').addClass('hidden')
+//     $('.themaFoods').removeClass('hidden')
+//     $('.foodBtn').addClass('cliBtn')
+//     $('.themBtn').removeClass('cliBtn')
+
+//     $('.themBtn').addClass('unCliBtn')
+//     $('.foodBtn').removeClass('unCliBtn')
+// }
 
 // 페스티벌 사진 호버시 아이콘 효과
 

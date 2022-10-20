@@ -12,11 +12,14 @@
 
     <!-- ICON (css) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/navbar.css">
-    
+    <link rel="stylesheet" href="/static/css/footer.css">
+
 
 </head>
 
@@ -69,17 +72,21 @@
         <div class="contentBox">
             <div class="serBox">
                 <form id="search-form">
-                    <input type='text' placeholder="검색어를 입력해주세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '검색어를 입력해주세요'" class="searchInput">
+                    <input type='text' placeholder="검색어를 입력해주세요" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = '검색어를 입력해주세요'" class="searchInput">
                     <button class="search-btn" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
                 <div class="keywordBox hidden">
-                    # 관광지A <br>
-                    # 관광지B <br>
-                    # 관광지C <br>
-                    # 관광지D <br>
-                    # 관광지E
+                   
+                        # 이탈리아<br>
+                        # 대표 음식<br>
+                        # 피렌체 대성당 <br>
+                        # 날씨 <br>
+                        # 콜로세움
+               
+                
                 </div>
             </div>
 
@@ -89,21 +96,39 @@
             <div class="tabMenu">
 
                 <!-- 관광지/음식 순위 -->
-                <button class="themBtn cliBtn" onclick="changeThema()">관광지</button>
-                <button class="foodBtn unCliBtn" onclick="changeFood()">음식</button>
+                <button class="spotBtn ranBtn cliBtn">스팟</button>
+                <button class="celebBtn ranBtn unCliBtn">인물</button>
+                <button class="artBtn ranBtn unCliBtn">작품</button>
+
                 <div class="subTabMenu">
-                    <div class="themaGrims ">
+                    <div class="spotGrims grimsTab">
                         <div class="tabGrims">
                             <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                            <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                             <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                             <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                         </div>
                     </div>
-                    <div class="themaFoods hidden">
+                    <div class="celebGrims grimsTab hidden">
                         <div class="tabGrims">
                             <img src="/static/image/nature4.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                             <img src="/static/image/nature5.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                             <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                        </div>
+                    </div>
+                    <div class="artGrims grimsTab hidden">
+                        <div class="tabGrims">
+                            <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
                         </div>
                     </div>
                 </div>
@@ -125,7 +150,7 @@
                 <div class="fstvBtn hidden fstvBtn-1"></div>
                 <div class="fstvDesc hidden">
                     <div class="fstvDescInner">
-                                            이곳은 어쩌구 저쩌구 111111111111111.....................................
+                        이곳은 어쩌구 저쩌구 111111111111111.....................................
 
                     </div>
                 </div>
@@ -139,7 +164,7 @@
                 <div class="fstvBtn hidden fstvBtn-2"></div>
                 <div class="fstvDesc hidden">
                     <div class="fstvDescInner">
-                                            이곳은 어쩌구 저쩌구 22222222222222222.....................................
+                        이곳은 어쩌구 저쩌구 22222222222222222.....................................
 
                     </div>
                 </div>
@@ -153,7 +178,18 @@
                 <div class="fstvBtn hidden fstvBtn-3"></div>
                 <div class="fstvDesc hidden">
                     <div class="fstvDescInner">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit eius aspernatur, odio necessitatibus, veritatis maiores enim quod harum distinctio amet porro accusantium alias, ullam architecto itaque minima blanditiis consequuntur. Aut explicabo veritatis ipsa at nisi aliquid optio esse doloribus, facere rerum impedit tenetur dolor in ipsum laudantium modi totam cumque voluptate, mollitia autem aliquam! Tempora laborum nostrum cumque exercitationem.
+                        베네치아 카니발은 이탈리아 베네치아에서 열리는 세계 10대 축제 중 하나로
+                        사순절의 시작을 알리는 재의 수요일 전 날까지 10일동안 열린다.
+                        브라질 리우 카니발, 프랑스 니스 카니발과 함께 세계 3대 카니발로 손꼽히며
+                        특징은 화려한 의상과 가면을 착용한다는 점이다.
+                        베네치아 카니발은 중세시기 베네치아 공화국이 전쟁에서 승리한 것을 기념하기 위해
+                        축제를 연 것이 시초이며 르네상스 시대에 군주들의 후원으로 인해 규모가 커지고
+                        더욱 더 화려해졌다.
+                        카니발 기간에는 전쟁을 상징하는 불꽃놀이와 전투를 상징하는 무어인의 춤,
+                        심판을 상징하는 황소 목 자르기, 평화를 상징하는 천사의 비행, 단결을 상징하는 인간탑 쌓기
+                        가 진행되며 마지막 날에는 가면과 의상을 선보이는 아름다운 가면 경연대회가 진행된다.
+                        가면의 종류로는 크게 눈, 코와 턱 윗부분만 가리는 반쪽 가면인 콜롬비나,
+                        새처럼 긴 부리가 특징인 메디코 델라 페스테, 고양이 얼굴 가면인 가토 가 있다.
                     </div>
                 </div>
                 <div class="fstvDiv fstvEvt fstvAni">
@@ -167,8 +203,8 @@
                 <div class="fstvDesc hidden">
                     <div class="fstvDescInner">
                         <div class="fstvDsecInnerText">
-                                            이곳은 어쩌구 저쩌구 4444444444444444444444.....................................
-                                        </div>
+                            이곳은 어쩌구 저쩌구 4444444444444444444444.....................................
+                        </div>
                     </div>
                 </div>
                 <div class="fstvDiv fstvEvt fstvAni">
@@ -181,28 +217,30 @@
                 <div class="fstvBtn hidden fstvBtn-5"></div>
                 <div class="fstvDesc hidden">
                     <div class="fstvDescInner ">
-                                            이곳은 어쩌구 저쩌구 5555555555555555.....................................
+                        이곳은 어쩌구 저쩌구 5555555555555555.....................................
 
                     </div>
                 </div>
                 <i class="bi bi-pin-fill fstvBack fstvBack-1"></i>
                 <i class="bi bi-pin hidden fstvBack fstvBack-2"></i>
-   
-            </div>  
+
+            </div>
 
         </div>
-        <footer>
-
-        </footer>
+        <%- include('footer.ejs')%>
 
 
-        <!-- Jquey/BootStrap -->
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+            <!-- Jquey/BootStrap -->
+            <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+                integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/static/js/main.js"></script>
-        <script src="/static/js/nav.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="/static/js/main.js"></script>
+            <script src="/static/js/nav.js"></script>
+            <script src="/static/js/footer.js"></script>
+            <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </body>
+
 
 </html>
