@@ -35,7 +35,7 @@ app.get('/sights3', function(request, response){
     response.render('sights3');
 })
 
-app.get('/sights4', function(request, ressponse){
+app.get('/sights4', function(request, response){
     response.render('sights4');
 })
 
@@ -47,6 +47,13 @@ app.get('/exchangeRate', function(request, response){
 })
 app.get('/loading', function(request, response){
     response.render('loading');
+})
+app.get('/prac', function(request, response){
+    response.render('prac');
+})
+
+app.get('/exchangePage', function(request, response){
+    response.render('exchangePage');
 })
 
 //로컬 서버 동작
