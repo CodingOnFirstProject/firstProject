@@ -108,3 +108,4 @@ function calculate(){
       //input 창에 뜨게 하기(conversion_rates * 내가 입력한 돈의 양.value)
   });
 }
+

@@ -56,6 +56,10 @@ app.get('/exchangePage', function(request, response){
     response.render('exchangePage');
 })
 
+app.get("/Popup",function(request, response){
+    response.render('Popup');
+})
+
 //로컬 서버 동작
 app.listen(PORT, function(){
     console.log(`Listening on port ${PORT}`);
