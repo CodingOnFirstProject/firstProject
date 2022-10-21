@@ -1,120 +1,506 @@
-
-        
-        body {
-            background-color: whitesmoke;
-        }
-
-        .mainBox {
-            margin: auto;
-            width: 100%;
-            margin-top: 1vh;
-        }
-
-        /* .contentBox {
-            height: 1300px;
-            background-color: yellowgreen;
-     
-        } */
-
-       
-      
-
-
-        .grim {
-            width: 100%;
-            height: 60vh;
-        }
-        
-
- 
-
-       
-        /* 검색상자 */
-  
-        .serBox {
-           
-            /* top: 30px; */
-            width: 50%;
-            margin-top: 5vh;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 3vh;
-      
-        }
-
-      
-
-        #search-form input {
-            text-align: center;
-            background: transparent;
-            color: black;
-            width: 100%;
-            height: 60px;
-            padding: 10px;
-            border-radius: 20px;
-            border-color: blueviolet;
-            font-size: 1.2em;
-        }
-
-        /* 탭메뉴 및 버튼*/
-
-        .tabMenu {
-            /* position: relative; */
-            width: 90%;
-            height: 40vh;
-            /* top: 60px; */
-            /* margin-bottom: 30vh; */
-            background-color: whitesmoke;
-            margin: 0 auto 15vh auto;
-        }
-        .subTabMenu {
-            width: 100%;
-            height: 35vh;
-            background-color: antiquewhite;
-            border-radius: 0px 15px 15px 15px;
-        }
-
-
-        /* 관광지.음식 순위 */
-        
+body {
+    background-color: whitesmoke;
+}
 
 
 
 
-        .hidden {
-            display: none;
-        }
+
+/* 메인 화면 사진 */
 
 
 
-        .themaGrim {
-            width: 18vw;
-            height: 24vh;
-            margin-top: 5vh;    
-        }
+.mainPic {
+    width: 100%;
+    height: 72vh;
+}
 
-        .cliBtn {
-            background-color: antiquewhite;
-            border: none;
-            border-radius: 3px 3px 0 0;
-        }
+/* 사진 이후 박스 */
 
-        .unCliBtn {
-            background-color: whitesmoke;
-            border: none;
-      
-        }
+.contentBox {
+    margin-bottom: 30vh;
+}
 
-        @media (max-width: 990px) {
-            .mainBox {
-                width: 90%;
-            }
-                
-        }
-            
-        footer {
-            background-color: green;
-            width: 100%;
-            height: 20vh;
-        }
-        
+/* 검색상자 */
+
+.serBox {
+    width: 60%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30vh;
+
+}
+
+
+
+#search-form input {
+    text-align: center;
+    background: transparent;
+    color: black;
+    width: 54vw;
+    height: 8vh;
+    /* padding: 10px; */
+    border-radius: 20px;
+    box-shadow: 0px -5px 4px #0002;
+    border-width: 0;
+    border-right: 0;
+    background-color: white;
+    outline: none;
+}
+
+.search-btn {
+    color: #EDEDED;
+    float: right;
+    /* width: 40px; */
+    /* height: 40px; */
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background: #B1AFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-icon {
+    font-size: 20px;
+
+}
+
+/* .fa-search {
+        font-size: 30px;
+  } */
+
+#search-form input:hover {
+    border-width: 0;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.keywordBox {
+    position: absolute;
+    width: 54vw;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 5px 4px #0002;
+    border-radius: 0 0 20px 20px;
+    color: #0006;
+
+}
+
+
+/* 탭메뉴 및 버튼*/
+
+.tabMenu {
+    width: 90vw;
+    /* height: 40vh; */
+    background-color: whitesmoke;
+    margin: 20vh auto 45vh auto;
+
+}
+
+.subTabMenu {
+    width: 100%;
+    /* height: 50vh; */
+    background-color: #FFDEDE;
+    border-radius: 0px 15px 15px 15px;
+    padding-bottom: 15vh;
+}
+
+
+/* 관광지.음식 순위 */
+
+
+.hidden {
+    display: none;
+}
+
+
+.tabGrims {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.themaGrim {
+    width: 21vw;
+    height: 28vh;
+    margin-top: 8vw;
+    border-radius: 5px;
+}
+
+.tabGrimDesc {
+    width: 21vw;
+    height: 28vh;
+    margin-top: 8vw;
+    border-radius: 5px;
+    background-color: red;
+    padding-top: 6vh;
+    text-align: center;
+}
+
+.opaci {
+    opacity: 0.5;
+}
+
+.cliBtn {
+    background-color: #FFDEDE;
+    border: none;
+    border-radius: 6px 6px 0 0;
+    font-size: 1.3rem;
+    padding: 7px 10px 3px 10px;
+    font-weight: bold;
+}
+
+.unCliBtn {
+    background-color: whitesmoke;
+    border: none;
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+
+
+/* 페스티벌 탭 */
+
+.fstvBox {
+    background-color: aqua;
+    height: 85vh;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15vh 0 15vh;
+    border-radius: 15px;
+}
+
+
+.fstvDiv {
+    position: relative;
+    height: 58vh;
+    width: 13vw;
+    background-color: beige;
+    margin-top: 19vh;
+    border-radius: 6px;
+}
+
+.fstvAni:hover {
+    transform: translateY(-50px);
+    transition-duration: 2s;
+    width: 14vw;
+    box-shadow: 0 5px 5px 5px rgba(92, 137, 222, 0.4);
+}
+
+.opaciZero {
+    animation: opaciZeroAni 2s 1;
+}
+
+
+.fstvBtn {
+    position: absolute;
+    /* top: 5px; */
+    margin-top: 5vh;
+
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    background-color: #BCCEF8;
+    z-index: 2;
+}
+
+.fstvBtnClr {
+    background-color: grey;
+}
+
+.fstvBtn-1 {
+    transform: translateX(-350%);
+}
+
+.fstvBtn-2 {
+    transform: translateX(-200%);
+}
+
+.fstvBtn-3 {
+    transform: translateX(-50%);
+}
+
+.fstvBtn-4 {
+    transform: translateX(100%);
+}
+
+.fstvBtn-5 {
+    transform: translateX(250%);
+}
+
+
+
+.fstvCli {
+    margin-top: 15vh;
+}
+
+
+
+.fstvAni:nth-child(6n+1) {
+    margin-top: 10vh;
+}
+
+.fstvImg {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    border-radius: 6px;
+}
+
+
+.fstvText {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.icons {
+    font-size: 30px;
+}
+
+.transIcon {
+    animation-name: icon;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.fstvDesc {
+    width: 60vw;
+    height: 58vh;
+}
+
+
+.fstvDescInner {
+    animation: fstvDescAni 1s;
+    background-color: #F8C4B4;
+    height: 58vh;
+    width: 60vw;
+    margin-top: 15vh;
+    margin-left: 3vw;
+    border-radius: 6px;
+    text-align: center;
+    padding: 12vh 5vw 10vh 5vw;
+    line-height: 1.7;
+    overflow: hidden;
+}
+
+
+.fstvBack {
+    position: absolute;
+    margin-top: 2vh;
+    left: 6vw;
+
+    font-size: 40px;
+}
+
+.fstvBackHover {
+    transform: translateY(-50px);
+    transition-duration: 2s;
+}
+
+.fstvBack-2:hover {
+    transform: translateY(-50px);
+    transition-duration: 2s;
+}
+
+.fstvBack-2 {
+    animation: fstvBackAni 2s 1;
+}
+
+@keyframes fstvBackAni {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/* keyframes */
+
+/* icon 애니메이션 효과 */
+
+@keyframes icon {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes fstvDescAni {
+
+    0% {
+        width: 0;
+    }
+
+    30% {}
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes opaciZeroAni {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.7;
+
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* footer */
+footer {
+    background-color: #CDFCF6;
+    width: 100%;
+    height: 30vh;
+}
+
+/* 미디어쿼리 */
+
+
+@media (max-width: 1200px) {
+
+
+    .serBox {
+        width: 80%;
+    }
+
+    
+    #search-form input {
+        width: 80vw;
+    }
+
+    .search-btn {
+        display: none;
+    }
+
+
+    .keywordBox {
+        width: 80vw;
+    }
+}
+    @media (max-width: 1030px) {
+    .subTabMenu {
+        padding-bottom: 10vh;
+    }
+
+    .mainPic {
+        height: 60vh;
+    }
+
+    .mainBox {
+        width: 90%;
+    }
+
+    .tabGrims {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+   
+    .themaGrim { 
+        width: 70vw;
+        height: 30vh;
+    }
+
+    .tabGrimDesc {
+        width: 70vw;
+        height: 30vh;
+    }
+    .fstvBox {
+        height: 98vh;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 30vw; */
+    }
+    .fstvDiv {
+        width: 60vw;
+        height: 13vh;
+        margin: 2vh;
+    }
+
+    .fstvAni {
+        margin-top: 2vw;
+    }
+
+    .fstvAni:nth-child(6n+1) {
+        margin-top: 2vh;
+        margin-left: 15vw;
+    }
+
+    .fstvAni:hover {
+        transform: translateY(-1vw);
+        transition-duration: 2s;
+        width: 25vw;
+        box-shadow: 0 5px 5px 5px rgba(92, 137, 222, 0.4);
+    }
+    .fstvText {
+        top: 2vh
+    }
+    .fstvBack {
+       margin-bottom: 93vh;
+    }
+
+    .fstvDescInner {
+        margin-top: 3vh;
+        margin-left: 0vw
+    }
+
+    .fstvBtn {
+        margin-bottom: 85vh;
+    }
+    
+/* 
+    .fstvBox {
+        flex-direction: column;
+        align-items: center;
+    }
+     */
+}

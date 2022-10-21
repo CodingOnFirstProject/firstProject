@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather</title>
+
+<link rel = "stylesheet" href = "/static/css/weather.css">
+
+<!-- jquery cdn -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- <h1>Weather</h1> -->
+
+<div id = "container">
+
+    <div id = "box">
+        <div id = "day">
+            <p id = "nowDay"> </p>
+        </div>
+
+        <img src = "" alt = "날씨 이미지">
+
+        <div id = "info">
+            <p class = "dayinfo"></p>
+            <p>현재온도: <span id = "nowTemp"> </span></p>
+            <p>현재습도: <span id = "nowHumidity"> </span></p>
+            <p>날씨 : <span id = "weather"> </span></p>
+            <p>바람 : <span id = "wind"> </span></p>
+            <p>나라 : <span id = "country"> </span></p>
+            <p>도시이름: <span id = "city"> </span></p>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/weather.js"></script>
+</body>
+</html>

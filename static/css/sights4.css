@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+header{
+    background-color: gray;
+    width: 100%;
+    height : 100px;
+
+}
+/* contents */
+#contents{
+
+}
+#bigImg{
+    width : 100%;
+    height : 500px;
+}
+#bigImg img{
+    width : 100%;
+    height : 500px;
+}
+#btn4{
+    background : #1C6758;
+    width : 100%;
+    height : 70px;
+}
+#btn4 button{
+    width : 90px;
+    height : 30px;
+}
+
+/* box */
+#box1{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+}
+#box1 img{
+    width: 300px;
+    height : 350px;
+}
+#box1 #msg{
+    width: 50%;
+    margin-left: 10px;
+}
+#box1 h2{
+    margin-left: 20px;
+}
+#box1 #msg .pFour{
+    display: flex;
+    flex-direction: column;
+}
+#box1 #msg .pFour p{
+    /* border : 1px solid black; */
+    width : 300px;
+    height: 120px;
+    margin: 10px 20px;
+}
+
+#box1 #msg .pFour .twop{
+    display : flex;
+    flex-direction: row;
+}
+#box1 #msg button{
+    width: 100px;
+    height: 30px;
+    margin-left : 20px;
+    margin-top: 10px;
+}
+
+/* box2 */
+#box2{
+    background : #1C6758;
+    display :flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+    justify-content: space-between;
+    margin-bottom: 180px;
+}
+#box2 #box3Img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#box2  #box3Img img{
+    width : 200px;
+    height : 200px;
+    margin: 0 40px;
+}
+
+#box2 #test{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    height: 300px; /*위에 초록색의 높이를 결정하는 height*/
+    margin-bottom: 20px;
+}
+
+#box2 #test .box2Div3{
+    display: flex;
+    flex-direction: column;
+    /* border : 2px solid white; */
+    width: 60%;
+    margin-left : 30px;
+    padding-top: 80px;
+}
+#box2 #test h2{
+    color : white;
+    width: 30%;
+    height : 150px;
+    padding-right: 10px;
+    padding-top: 80px;
+    margin-left : 150px;
+}
+
+#box2 #test .box2Div3 p{
+    /* border: 1px solid black; */
+    color : white;
+
+    margin-bottom : 20px;
+}
+#box2 #test .box2Div3 .box2button{
+    display :flex;
+    flex-direction: row;
+}
+#box2 #test .box2Div3 .box2button button{
+    width: 150px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background : #1C6758;
+    color: white;
+    font-weight: 700;
+    border: 1px solid white;
+}
+#box2 #test .box2Div3 .box2button .colorbtn{
+    background-color: #D6CDA4;
+}
+/* footer */
+footer{
+    background-color: rgb(85, 83, 83);
+    width : 100%;
+    height : 300px;
+
+    /* background-color: #25316D #5F6F94  #97D2EC #FEF5AC; */
+    background-color: #1C6758 #3D8361 #D6CDA4 #EEF2E6
+    /* background-color: #231955 /#1F4690 /#E8AA42 /#FFE5B4; */
+    /* background-color: #2C3639 /#3F4E4F / #A27B5C / #DCD7C9; */
+}

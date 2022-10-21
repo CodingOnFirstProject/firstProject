@@ -10,9 +10,15 @@
     <!-- CDN Link (css) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 
-
+    <!-- ICON (css) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS 연결 -->
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
 
 
 </head>
@@ -26,93 +32,215 @@
         <!-- 메인박스 -->
 
 
-        <div class="container-fluid mainBox">
 
-            <!-- 메인 사진 -->
 
-            <div id="carouselExampleControls" class="carou carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/static/image/nature1.jpg" class="grim" alt="자연">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/image/nature2.jpg" class="grim" alt="자연">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/image/nature3.jpg" class="grim" alt="자연">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/image/nature4.jpg" class="grim" alt="자연">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/image/nature5.jpg" class="grim" alt="자연">
-                    </div>
+        <!-- 메인 사진 -->
+
+        <div id="carouselExampleControls" class="carou carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/image/colosseum.jpg" class="mainPic" alt="자연">
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>`
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                    <img src="/static/image/florence.jpg" class="mainPic" alt="자연">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/image/rome_center.jpg" class="mainPic" alt="자연">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/image/rome.jpg" class="mainPic" alt="자연">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/image/venice.jpg" class="mainPic" alt="자연">
+                </div>
             </div>
 
-            <!-- 검색상자 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>`
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-            <div class="contentBox">
-                <div class="serBox">
-                    <form id="search-form">
-                        <input type='text' placeholder="검색어를 입력해주세요" name="search">
+        <!-- 검색상자 -->
 
-                    </form>
-                </div>
-
-
-                <!-- 탭메뉴 -->
-
-                <div class="tabMenu">
-
-                    <!-- 관광지/음식 순위 -->
-                    <button class="themBtn cliBtn" onclick="changeThema()">Thema</button>
-                    <button class="foodBtn unCliBtn" onclick="changeFood()">Food</button>
-                    <div class="subTabMenu">
-                        <div class="themaGrims ">
-                            <div class="d-flex justify-content-around">
-                                <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
-                                <img src="/static/image/nature2.jpg" class="themaGrim" alt="자연">
-                                <img src="/static/image/nature3.jpg" class="themaGrim" alt="자연">
-                            </div>
-                        </div>
-                        <div class="themaFoods hidden">
-                            <div class="d-flex justify-content-around">
-                                <img src="/static/image/nature4.jpg" class="themaGrim" alt="자연">
-                                <img src="/static/image/nature5.jpg" class="themaGrim" alt="자연">
-                                <img src="/static/image/nature1.jpg" class="themaGrim" alt="자연">
-                            </div>
-                        </div>
-                    </div>
+        <div class="contentBox">
+            <div class="serBox">
+                <form id="search-form">
+                    <input type='text' placeholder="검색어를 입력해주세요" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = '검색어를 입력해주세요'" class="searchInput">
+                    <button class="search-btn" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="keywordBox hidden">
+                   
+                        # 이탈리아<br>
+                        # 대표 음식<br>
+                        # 피렌체 대성당 <br>
+                        # 날씨 <br>
+                        # 콜로세움
+               
+                
                 </div>
             </div>
 
 
+            <!-- 탭메뉴 -->
+
+            <div class="tabMenu">
+
+                <!-- 관광지/음식 순위 -->
+                <button class="spotBtn ranBtn cliBtn">스팟</button>
+                <button class="celebBtn ranBtn unCliBtn">인물</button>
+                <button class="artBtn ranBtn unCliBtn">작품</button>
+
+                <div class="subTabMenu">
+                    <div class="spotGrims grimsTab">
+                        <div class="tabGrims">
+                            <img src="/static/image/pisa.jpeg" class="themaGrim" alt="자연">
+                            <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/emanuel.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/trevi.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                        </div>
+                    </div>
+                    <div class="celebGrims grimsTab hidden">
+                        <div class="tabGrims">
+                            <img src="/static/image/dante.jpg" class="themaGrim" alt="단테">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/leonardo_davinchi.jpg" class="themaGrim" alt="레오나르도 다빈치">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/pavarotti.jpg" class="themaGrim" alt="파바로티">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                        </div>
+                    </div>
+                    <div class="artGrims grimsTab hidden">
+                        <div class="tabGrims">
+                            <img src="/static/image/davide.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/monariza.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                            <img src="/static/image/pinokio.jpg" class="themaGrim" alt="자연">
+                             <div class="tabGrimDesc hidden">스팟1 <br> 스팟1에 대한 설명</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 축제 페이지 -->
+            <div class="fstvBox">
+                <div class="fstvDiv fstvEvt fstvAni">
+                    <img src="/static/image/festival1.jfif" class="fstvImg" alt=축제">
+                    <div class="fstvText">
+                        <div class="icons">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                        축제
+                    </div>
+                </div>
+                <div class="fstvBtn hidden fstvBtn-1"></div>
+                <div class="fstvDesc hidden">
+                    <div class="fstvDescInner">
+                        이곳은 어쩌구 저쩌구 111111111111111.....................................
+
+                    </div>
+                </div>
+                <div class="fstvDiv fstvEvt fstvAni">
+                    <img src="/static/image/festival2.jfif" class="fstvImg" alt=축제">
+                    <div class="fstvText">
+                        <div class="icons"><i class="bi bi-compass"></i></div>
+                        패션
+                    </div>
+                </div>
+                <div class="fstvBtn hidden fstvBtn-2"></div>
+                <div class="fstvDesc hidden">
+                    <div class="fstvDescInner">
+                        이곳은 어쩌구 저쩌구 22222222222222222.....................................
+
+                    </div>
+                </div>
+                <div class="fstvDiv fstvEvt fstvAni">
+                    <img src="/static/image/festival3.jfif" class="fstvImg" alt=축제">
+                    <div class="fstvText">
+                        <div class="icons"><i class="bi bi-flag-fill"></i></div>
+                        축구
+                    </div>
+                </div>
+                <div class="fstvBtn hidden fstvBtn-3"></div>
+                <div class="fstvDesc hidden">
+                    <div class="fstvDescInner">
+                        베네치아 카니발은 이탈리아 베네치아에서 열리는 세계 10대 축제 중 하나로
+                        사순절의 시작을 알리는 재의 수요일 전 날까지 10일동안 열린다.
+                        브라질 리우 카니발, 프랑스 니스 카니발과 함께 세계 3대 카니발로 손꼽히며
+                        특징은 화려한 의상과 가면을 착용한다는 점이다.
+                        베네치아 카니발은 중세시기 베네치아 공화국이 전쟁에서 승리한 것을 기념하기 위해
+                        축제를 연 것이 시초이며 르네상스 시대에 군주들의 후원으로 인해 규모가 커지고
+                        더욱 더 화려해졌다.
+                        카니발 기간에는 전쟁을 상징하는 불꽃놀이와 전투를 상징하는 무어인의 춤,
+                        심판을 상징하는 황소 목 자르기, 평화를 상징하는 천사의 비행, 단결을 상징하는 인간탑 쌓기
+                        가 진행되며 마지막 날에는 가면과 의상을 선보이는 아름다운 가면 경연대회가 진행된다.
+                        가면의 종류로는 크게 눈, 코와 턱 윗부분만 가리는 반쪽 가면인 콜롬비나,
+                        새처럼 긴 부리가 특징인 메디코 델라 페스테, 고양이 얼굴 가면인 가토 가 있다.
+                    </div>
+                </div>
+                <div class="fstvDiv fstvEvt fstvAni">
+                    <img src="/static/image/festival4.jfif" class="fstvImg" alt=축제">
+                    <div class="fstvText">
+                        <div class="icons"><i class="bi bi-binoculars"></i></div>
+                        음악
+                    </div>
+                </div>
+                <div class="fstvBtn hidden fstvBtn-4"></div>
+                <div class="fstvDesc hidden">
+                    <div class="fstvDescInner">
+                        <div class="fstvDsecInnerText">
+                            이곳은 어쩌구 저쩌구 4444444444444444444444.....................................
+                        </div>
+                    </div>
+                </div>
+                <div class="fstvDiv fstvEvt fstvAni">
+                    <img src="/static/image/festival5.jfif" class="fstvImg" alt=축제">
+                    <div class="fstvText">
+                        <div class="icons"><i class="bi bi-camera-fill"></i></div>
+                        미디어
+                    </div>
+                </div>
+                <div class="fstvBtn hidden fstvBtn-5"></div>
+                <div class="fstvDesc hidden">
+                    <div class="fstvDescInner ">
+                        이곳은 어쩌구 저쩌구 5555555555555555.....................................
+
+                    </div>
+                </div>
+                <i class="bi bi-pin-fill fstvBack fstvBack-1"></i>
+                <i class="bi bi-pin hidden fstvBack fstvBack-2"></i>
+
+            </div>
 
         </div>
-        <footer>
-
-        </footer>
+        <%- include('footer.ejs')%>
 
 
-        <!-- Jquey/BootStrap -->
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+            <!-- Jquey/BootStrap -->
+            <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+                integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/static/js/main.js"></script>
-        <script src="/static/js/nav.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="/static/js/main.js"></script>
+            <script src="/static/js/nav.js"></script>
+            <script src="/static/js/footer.js"></script>
+            <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </body>
+
 
 </html>
