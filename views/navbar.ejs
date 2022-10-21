@@ -1,74 +1,13 @@
-<!-- <div class="navDiv navHidDiv">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid ">
-      <a class="navbar-brand" href="#">
-        <img src="/static/image/LOGO.png" alt="LOGO" class="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              랜드마크
-            </a>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href="#">랜드마크1</a></li>
-              <li><a class="dropdown-item" href="#">랜드마크2</a></li>
-              <li><a class="dropdown-item" href="#">랜드마크3</a></li>
-            </ul>
-          </li>
-
-
-          <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              음식
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">음식1</a></li>
-              <li><a class="dropdown-item" href="#">음식2</a></li>
-              <li><a class="dropdown-item" href="#">음식3</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navReview" href="#">리뷰</a>
-            
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">공지사항</a>
-          </li>
-        </ul>
-
-        <div class="nicknameBox">
-          <div class="nickDiv">
-            <form class="d-flex nickForm" role="nickName">
-              <input class="form-control me-2 nickInput" type="nickName" placeholder="닉네임을 적어주세요!"
-                aria-label="nickName">
-              <button class="btn btn-outline-success" type="submit">Login</button>
-            </form>
-          </div>
-          <div class="welcDiv hidden">
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-</div> -->
 <div class="naviBoss">
   <nav class="naviMain ">
 
-    <div>
-      <a href="../views/main.ejs">
+    <div class="growDiv1">
+      <a href="../">
         <img src="/static/image/LOGO.jpg" alt="LOGO" class="logo">
       </a>
     </div>
-    <div class="naviItemDiv">
+    <div class="naviItemDiv growDiv2">
 
       <div class="naviItem">
         <a class="navReview" href="#">소개</a>
@@ -81,12 +20,12 @@
       </div>
 
       <div class="naviItem">
-        <a class="navReview" href="#">휴양지</a>
+        <a class="navReview" href="#">유적지</a>
 
       </div>
 
       <div class="naviItem">
-        <a class="navReview" href="#">유적지</a>
+        <a class="navReview" href="#">휴양지</a>
 
       </div>
 
@@ -96,10 +35,10 @@
     </div>
 
 
-    <div class="nicknameBox">
+    <div class="nicknameBox growDiv3">
       <div class="nickDiv">
         <form class="d-flex nickForm" role="nickName">
-          <input class="form-control me-2 nickInput" type="nickName" placeholder="닉네임을 적어주세요!" aria-label="nickName">
+          <input class="form-control me-2 nickInput" type="nickName" placeholder="이름을 적어주세요" aria-label="nickName">
           <button class="btn btn-outline-success" type="submit">Login</button>
         </form>
       </div>
@@ -121,11 +60,14 @@
 
 
   <div class="naviHid hidden">
+
     <div class="naviSubDiv">
+      
       <div class="naviSubItems">
         <ul class="dropSub">
           <li><a class="dropSub-item" href="#">이탈리아에 대하여</a></li>
           <li><a class="dropSub-item" href="#">대표 음식</a></li>
+          <li><a class="dropSub-item" href="#">추천 여행지</a></li>
         </ul>
       </div>
       <div class="line"></div>
@@ -158,17 +100,27 @@
       <div class="line"></div>
       <div class="naviSubItems">
         <ul class="dropSub">
-          <li><a class="dropSub-item" href="#">날씨</a></li>
-          <li><a class="dropSub-item" href="#">환율</a></li>
+          <li><a class="dropSub-item weather" href="#">날씨</a></li>
+          <li><a class="dropSub-item money" href="#">환율</a></li>
           <li><a class="dropSub-item" href="#">리뷰</a></li>
         </ul>
       </div>
+      <div class="line"></div>
+      <div class="naviSubItems ticket hidden">
+        <ul class="dropSub">
+          <li><a class="dropSub-item" href="https://flight.naver.com/flights/international/ICN-FCO-20221027/FCO-ICN-20221110?adult=1&fareType=Y" target="_blank">예매하기</a></li>
+          <li><a class="dropSub-item logout">로그아웃</a></li>
+
+        </ul>
+      </div>
+      
 
     </div>
   </div>
 </div>
 <div class="navMQmaster hidden">
   <div class="navMQmain ">
+    <i class="bi bi-arrow-right navMQBack"></i>
     <img class="navMQLogo" src="/static/image/LOGO2.png" alt="로꼬로꼬">
     <div class="navMQItems">
 
@@ -190,7 +142,7 @@
       </div>
 
       <div class="navMQItem">
-        <a class="navMQtag" href="#">유적</a>
+        <a class="navMQtag" href="#">유적지</a>
         <div class="navMQSub hidden">
           <div><a class="MQSub-item" href="#">콜로세움</a></div>
           <div><a class="MQSub-item" href="#">판테온</a></div>
@@ -208,11 +160,11 @@
       </div>
 
       <div class="navMQItem">
-        <a class="navMQtag" href="#">리뷰</a>
+        <a class="navMQtag" href="#">오늘의 이탈리아</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">음식1</a></div>
-          <div><a class="MQSub-item" href="#">음식2</a></div>
-          <div><a class="MQSub-item" href="#">음식3</a></div>
+          <div><a class="MQSub-item" href="#">날씨</a></div>
+          <div><a class="MQSub-item" href="#">환율</a></div>
+          <div><a class="MQSub-item" href="#">리뷰</a></div>
         </div>
       </div>
     </div>
