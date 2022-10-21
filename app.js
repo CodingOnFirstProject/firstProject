@@ -52,13 +52,10 @@ app.get('/prac', function(request, response){
     response.render('prac');
 })
 
-app.get('/exchangePage', function(request, response){
-    response.render('exchangePage');
-})
-
 app.get("/Popup",function(request, response){
     response.render('Popup');
 })
+
 
 //로컬 서버 동작
 app.listen(PORT, function(){

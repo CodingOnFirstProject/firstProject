@@ -6,7 +6,7 @@ const selectCountry = document.querySelector('#selectCountry');
 const amount = document.querySelector('#amount');
 
 const seeCountry = document.querySelector('#seeCountry');
-const changeRate = document.querySelector('#changeRate');
+// const changeRate = document.querySelector('#changeRate');
 
 const swapButton = document.querySelector('.swapButton');
 const rateDiv = document.querySelector('#rateDiv');
@@ -107,4 +107,8 @@ function calculate(){
 
       //input 창에 뜨게 하기(conversion_rates * 내가 입력한 돈의 양.value)
   });
+}
+
+function showResult(){
+  calculate();
 }
