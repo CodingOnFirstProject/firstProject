@@ -50,19 +50,19 @@ form.addEventListener("submit", function (event) {
   const star5 = rating5.checked;
 
   if (star5 == true) {
-    perstar.innerHTML = '<img src="./img/5점.png" alt ="별점이미지">';
+    perstar.innerHTML = '<img src="/static/img/5점.png" alt ="별점이미지">';
     console.log("5");
   } else if (star4 == true && star5 != true) {
-    perstar.innerHTML = '<img src="./img/4점.png" alt ="별점이미지">';
+    perstar.innerHTML = '<img src="/static/img/4점.png" alt ="별점이미지">';
     console.log("4");
   } else if (star3 == true && star4 != true) {
-    perstar.innerHTML = '<img src="./img/3점.png" alt ="별점이미지">';
+    perstar.innerHTML = '<img src="/static/img/3점.png" alt ="별점이미지">';
     console.log("3");
   } else if (star2 == true && star3 != true) {
-    perstar.innerHTML = '<img src="./img/2점.png" alt ="별점이미지">';
+    perstar.innerHTML = '<img src="/static/img/2점.png" alt ="별점이미지">';
     console.log("2");
   } else if (star1 == true && star2 != true) {
-    perstar.innerHTML = '<img src="./img/1점.png" alt ="별점이미지">';
+    perstar.innerHTML = '<img src="/static/img/1점.png" alt ="별점이미지">';
     console.log("1");
   } else {
     perstar.textContent = "";
