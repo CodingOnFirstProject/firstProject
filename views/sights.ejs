@@ -26,10 +26,10 @@
         <div id = "contents">
 
             <div id = "fourButton">
-                <button class = "btn btn1">작품1</button>
-                <button class = "btn btn2">작품2</button>
-                <button class = "btn btn3">작품3</button>
-                <button class = "btn btn4">요약버튼</button>
+                <a href = "#box1"><button class = "btn btn1">작품1</button></a>
+                <a href = "#box2"><button class = "btn btn2">작품2</button></a>
+                <a href = "#box3"><button class = "btn btn3">작품3</button></a>
+                <a href = "#box4"><button class = "btn btn4">요약버튼</button></a>
             </div>
 
 
@@ -45,7 +45,7 @@
 
             </article>
 
-            <article id = "box2" class = "boxOdd">
+            <article id = "box2" class = "box">
                 <div class = "msg">
                     <h1>루브르 박물관 이집트 유물에 대해서</h1>
                     <p>
@@ -59,7 +59,9 @@
 
 
             <article id = "box3" class = "box">
-                <div class = "msgImg">
+
+
+                <div class = "msgImg msg">
                     
                     <div class = "msg">
                         <h1>루브르 박물관 이집트 유물에 대해서</h1>
@@ -67,47 +69,88 @@
                           이 전시관은 50,000여점의 유물을 소장하고 있는데, BC 4000년부터 AD 4세기까지의 나일강 문명의 산물들로 채워져 있다. 이 세계 최대규모의 이집트 컬렉션은 이집트의 고대
                         </p>
                     </div>
+                
     
                     <div class = "imgs">
                         <div class = "oneThree">
-                            <img src = "/static/image/nature2.jpg">
-                            <img src = "/static/image/nature2.jpg">
-                            <img src = "/static/image/nature2.jpg">
+                            <img src = "/static/image/nature2.jpg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
+                            <img src = "/static/img/england2.jpeg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
+                            <img src = "/static/image/nature2.jpg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
                         </div>
 
                         <div class = "oneThree">
-                            <img src = "/static/image/nature2.jpg">
-                            <img src = "/static/image/nature2.jpg">
-                            <img src = "/static/image/nature2.jpg">
+                            <img src = "/static/img/england2.jpeg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
+                            <img src = "/static/image/nature2.jpg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
+                            <img src = "/static/img/england2.jpeg" class = "smallImg">
+                            <!-- <div class = "caption">
+                                <h2>설명1</h2>
+                            </div> -->
                         </div>
                     </div>
-                </div>
 
-                <img src = "/static/img/img1.jpg">
+
+                </div> <!--msgImg-->
+
+
+                <img src = "/static/img/img1.jpg" alt = "박스3큰이미지" id = "box3BigImg">
 
             </article>
 
 
             <article id = "box4" class = "box">
-                <div class = "next1" class = "next">
-                    img1
-                    <!-- <img src = "/static/img/paris.jpeg"> -->
+                <div class = "next next1">
+                    <img src = "/static/img/paris.jpeg">
+                    <a href = "#"><button class = "box4Btn">자세히보기</button></a>
                 </div>
 
-                <div class = "next2" class = "next">
-                    img2
-                    <!-- <img src = "/static/img/england.jpeg"> -->
+                <div class = "next next2">
+                    <img src = "/static/img/england.jpeg">
+                    <a href = "#"><button class = "box4Btn">자세히보기</button></a>
                 </div>
 
-                <div class = "next3" class = "next">
-                    img3
-                    <!-- <img src = "/static/img/germany.jpeg"> -->
+                <div class = "next next3">
+                    <img src = "/static/img/germany.jpeg">
+                    <a href = "#">
+                        <button class = "box4Btn">자세히보기</button>
+                    </a>
                 </div>
             </article>
         </div>
         <footer>
             footer
         </footer>
+        
     </div>
+    
+    <script>
+        var box3BigImg = document.querySelector("#box3BigImg");
+        var smallPics = document.querySelectorAll('.smallImg');
+
+        for(let i = 0; i < smallPics.length; i++){
+            smallPics[i].addEventListener('click', changePic);
+        }
+
+        function changePic(){
+            var newPic = this.src;
+            box3BigImg.setAttribute('src', newPic);
+        }
+        
+        
+    </script>
 </body>
 </html>

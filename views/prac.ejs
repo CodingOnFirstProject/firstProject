@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel = "stylesheet" href = "/static/css/prac.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Amazing Currency Converter</h1>
+        <main>
+            <label for="original-currency-amount">Convert</label>
+        <input type="number" id="original-currency-amount" placeholder="1" name="original-currency-amount"></input>
+
+
+        <label for="original-currency">
+            Original Currency
+        </label>
+        <select id="original-currency">
+            <option value = "UND">UND</option>
+            <option value = "KOR">KOR</option>
+            <option value = "JAN">JAN</option>
+        </select>
+
+        <label for="to">to</label>
+        <select id="to">
+            <option value = "UND">UND</option>
+            <option value = "KOR">KOR</option>
+            <option value = "JAN">JAN</option>
+        </select>
+
+        <label for="exchange-rate">
+        Exchange Rate:</label>
+
+        <p id="exchange-rate"></p>
+
+        <button id="btn" class="exchange-btn">Exchange my money now!</button>
+        <p id="output-text" class="blink">
+        Converted 💰 will appear here.
+        </p></main>
+    </div>
+
+    <script src = "/static/js/prac.js"></script>
+    </body>
+</html>

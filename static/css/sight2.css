@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/* header */
+header{
+    background-color: gray;
+    width: 100%;
+    height : 100px;
+
+}
+/* contents */
+#contents{
+
+}
+#bigImg{
+    width : 100%;
+    height : 500px;
+}
+#bigImg img{
+    width : 100%;
+    height : 500px;
+}
+#btn4{
+    background : #3D8361;
+    width : 100%;
+    height : 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+#btn4 button{
+    width : 17vw;
+    height : 6vh;
+    margin-right: 10px;
+}
+
+/* box */
+#threeBox{
+    width: 100%;
+}
+.box{
+    margin : 0 20px 0 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#box2{
+    display : flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#threeBox .box img{
+    width : 47%; /*부모요소의 45%*/
+    height : 300px;
+}
+.box .msg{
+    margin-left : 7%;
+    margin-top : 60px;
+    margin-bottom: 30px;
+    width : 40%;
+}
+#threeBox .box .msg h2, #threeBox #box2 .msg h2{
+    font-size: 2.5rem;
+}
+#threeBox .box .msg p, #threeBox #box2 .msg p{
+    font-size: 1.5rem;
+}
+
+#box2 .msg{
+    margin-right : 6%;
+    margin-bottom: 30px;
+}
+
+#threeBox .box .msg .smallw{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* explain */
+#explain{
+    margin-bottom :130px;
+}
+#explain > h2{
+    font-size: 2.5rem;
+    margin-top : 120px; /*위에 box와 exhibit간의 간격*/
+    text-align : center;
+}
+#explain #explainImg p{
+    font-size: 1.5rem;
+}
+
+#explain #explainImg .line{
+    width : 250px;
+    height : 170px;
+    border: 1px solid black;
+    background-color: #D6CDA4;
+
+}
+
+#explain #explainImg .divide{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    margin : 10px 10px;
+    padding : 10px 10px;
+}
+#explain #explainImg .divide div{
+    margin : 0 10px;
+}
+#explain #explainImg .divide div p{
+    text-align : center;
+}
+
+/* exhibit */
+#exhibit{
+    position: relative; /*부모요소로서 자식요소는 exhibitImg*/
+    margin-bottom : 100px;
+
+    overflow: hidden;
+}
+
+#exhibit #rectangle{
+    background: #3D8361;;
+    width : 50%;
+    height : 330px;
+}
+#exhibit #rectangle h2{
+    color : #E8AA42;
+    margin-left : 130px;
+    padding-top : 50px;
+}
+
+#exhibit #rectangle .smallletter{
+    font-size : 10px;
+}
+
+#exhibit #rectangle p{
+    width : 300px;
+    color : white;
+    margin-left : 130px;
+    margin-top : 10px;
+}
+
+#exhibit #exhibitImg img{
+    width: 350px;
+    height : 250px;
+}
+
+#exhibit #exhibitImg .img1{
+    position : absolute;
+    bottom : 57px;
+    left : 35%;
+
+}
+
+#exhibit #exhibitImg .img2{
+    position : absolute;
+    bottom : 57px;
+    left : 880px;
+}
+
+#exhibit #exhibitImg .img3{
+    position : absolute;
+    bottom : 57px;
+    left : 1245px;
+}
+/* #exhibit #exhibitImg .img4{
+    position : absolute;
+    bottom : 57px;
+    left : 1245px;
+} */
+
+#exhibit #prev{
+    width :50px;
+    height: 30px;
+    position: absolute;
+    bottom : 100px;
+    left : 130px;
+}
+
+#exhibit #next{
+    width :50px;
+    height: 30px;
+    position: absolute;
+    bottom : 100px;
+    left : 190px;
+}
+
+
+/* footer */
+footer{
+    background-color: rgb(85, 83, 83);
+    width : 100%;
+    height : 300px;
+
+    /* background-color: #25316D #5F6F94  #97D2EC #FEF5AC; */
+    background-color: #1C6758 #3D8361 #D6CDA4 #EEF2E6
+    /* background-color: #231955 /#1F4690 /#E8AA42 /#FFE5B4; */
+    /* background-color: #2C3639 /#3F4E4F / #A27B5C / #DCD7C9; */
+}
+
+/* media query */
+@media (max-width: 666px){
+    .box, #box2{
+        flex-direction: column;
+    }
+    #threeBox .box img{
+        width : 100%;
+    }
+    .box .msg, #box2 .msg{
+        margin: 35px auto;
+        width : 80%;
+    }
+    
+}

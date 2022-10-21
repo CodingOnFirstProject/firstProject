@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color : green;
+}
+#container{
+    background-color : white;
+    border : 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+h1{
+    font-size: 27px;
+    text-align: center;
+}
+.box{
+    margin: 20px 0;
+}
+.box select{
+    margin-left: 10px;
+}
+#firstbox{
+    display: flex;
+    flex-direction: row;
+}
+#secondbox{
+    display: flex;
+    flex-direction: row;
+}
+#thirdbox{
+    display: flex;
+    flex-direction: row;
+}
+#thirdbox input{
+    margin-left: 10px;
+}
+#fourthbox{
+    display: flex;
+    flex-direction: row;
+}
+
+.swapButton{
+    width: 200px;
+    margin-top: 20px;
+}

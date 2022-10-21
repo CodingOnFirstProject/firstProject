@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+header{
+    background-color: gray;
+    width: 100%;
+    height : 100px;
+
+}
+/* contents */
+#contents{
+
+}
+#bigImg{
+    width : 100%;
+    height : 500px;
+}
+#bigImg img{
+    width : 100%;
+    height : 500px;
+}
+#btn4{
+    background : #1C6758;
+    width : 100%;
+    height : 70px;
+}
+#btn4 button{
+    width : 90px;
+    height : 30px;
+}
+
+/* box */
+.box{
+    margin : 0 20px 0 0;
+    display: flex;
+    flex-direction: row;
+}
+#box2{
+    background: #3D8361;
+    display : flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    margin-bottom : 40px;
+}
+
+#threeBox .box img{
+    width : 47%; /*부모요소의 45%*/
+    height : 300px;
+}
+.box .msg{
+    margin-left : 7%;
+    margin-top : 60px;
+    width : 40%;
+}
+#box2 .msg{
+    margin-right : 6%;
+    color : white;
+}
+
+.box .msg .smallw{
+    font-size: 10px;
+    margin: 10px 0;
+}
+/* explain */
+#explain{
+    margin-bottom: 30px;
+}
+#explain h2{
+    text-align : center;
+    margin-bottom: 40px;
+}
+#explain #posit{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#explain #posit #text p{
+    text-align: center;
+}
+#explain #posit #text{
+    margin-top : 30px; /*글씨위치*/
+}
+#explain #posit #text button{
+    margin-left : 90px;
+    background: #D6CDA4;
+    width : 100px;
+    border: 2px solid #1C6758;
+}
+
+#explain img{
+    width: 400px;
+    height : 300px;
+
+    margin-bottom: 80px;
+    margin-left : 70px;
+}
+
+/* infoThree */
+#infoThree{
+    background: #3D8361;
+    padding: 30px;
+    padding-bottom : 50px;
+    margin-bottom: 80px;
+}
+#infoThree h2{
+    text-align : center;
+    margin-bottom : 20px;
+    color: white;
+}
+#infoThree #infoImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+#infoThree #infoImg .card{
+    margin: 10px 40px;
+    border: 1px solid black;
+}
+#infoThree #infoImg img{
+    width: 286px;
+    height : 180px;
+}
+
+/* footer */
+footer{
+    background-color: rgb(85, 83, 83);
+    width : 100%;
+    height : 300px;
+
+    /* background-color: #25316D #5F6F94  #97D2EC #FEF5AC; */
+    background-color: #1C6758 #3D8361 #D6CDA4 #EEF2E6
+    /* background-color: #231955 /#1F4690 /#E8AA42 /#FFE5B4; */
+    /* background-color: #2C3639 /#3F4E4F / #A27B5C / #DCD7C9; */
+}
