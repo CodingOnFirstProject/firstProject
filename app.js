@@ -27,6 +27,10 @@ app.get("/sights", function (request, response) {
   response.render("sights");
 });
 
+app.get("/review", function (request, response) {
+  response.render("review");
+});
+
 //로컬 서버 동작
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
