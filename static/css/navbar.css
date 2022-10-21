@@ -1,22 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
-.navbar {
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    font-size: 14px;
-    background-color: #f4f4f4;
 
+
+.logo {
+    width: 10vw;
+    height: 9vh;
 }
 
-.nav-item {
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
-.navbar-brand {
-    font-size: 20px;
-    font-weight: bold;
-}
 
 .hidden {
     display: none;
@@ -24,24 +14,227 @@
 
 .welcDiv {
     font-family: 'Gamja Flower', cursive;
-    margin-right: 5rem;
+    /* margin-right: 5rem; */
     font-size: 2rem;
 }
 
-@media (max-width: 1150px) {
-    .nav-item {
-        margin-right: 1.5rem;
-        margin-left: 1.5rem;
-        
-    }
+/* .nickForm {
+    width: 19vw;
+}
+ */
+
+ .nicknameBox {
+    width: 20vw;
+ }
+
+
+
+
+
+/* ------------------------------------------- */
+
+.naviMain {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    width: 100%;
+    background-color:  #EAF6F6;
+}
+
+.naviItemDiv {
+    display: flex;
+}
+
+.naviItem {
+    /* writing-mode: horizontal-tb; */
+    width: 12vw;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+ul li {
+    list-style-type: none;
+    list-style: none;
+
+}
+
+
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover,a:active { text-decoration: none; }
+
+.naviHid {
+    position: absolute;
+    z-index: 4000;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.naviSubDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 4vh 24vw 0 11vw;
+    width: 100%;
+    height: 22vh;
+    background-color: antiquewhite;
+
+}
+
+
+.line {
+    border-left: thin solid  black;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+.dropSub {
+    padding-left: 0;
+
+}
+
+
+
+.dropSub > li {
+    margin-bottom: 2vh;
+    font-size: 0.9rem;  
+}
+.dropSubItem {
+    margin-top: 20vw;
     
 }
 
 
-@media (max-width: 990px) {
+
+.navMQBtn {
+    display: none;      
+    font-size: 3rem;
+     
+}
+.navLogoDIv {
+
+    display: none;
+}
+
+.navLogoCenter {
+    height: 8vh;
+    width: 40vw;
+}
+
+.navMQmain {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+    background-color: pink;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.navMQLogo {
+    width: 60%;
+    height: 22vw;
+    border-radius: 50%;
+    margin-top: 5vw;
+}
+
+.navMQItems {
+    /* background-color: bisque; */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    
+}
+
+
+.navMQItem {
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column; 
+    width: 80%;
+    
+    /* margin-right: 2vw; */
+    /* height: 10vh; */
+    /* margin: auto; */
+}
+
+
+
+.navMQSub {
+    /* margin-right: 7vw; */
+    /* background-color: white; */
+    /* width: 20vw; */
+    margin-top: 2vh;
+    text-align: center;
+    background-color: #EAF6F6;
+    border-radius: 8px;
+    
+}
+
+.navMQSub > div {
+    font-size: 0.8rem;
+    margin-bottom: 1.5vh;
+    margin-top: 0.9vh;
+    /* margin-left: 2vh; */
+}
+
+@media (max-width: 1200px) {
+   
+
+.naviItem {
+    font-size: 1rem;
+}
+    }
+
+@media (max-width: 1030px) {
+
     .nicknameBox {
        display: none;
         
     }
+    .navLogoDIv {
+        display: block;
+    }
+    
+
+   
+    .naviItemDiv {
+        display: none;
+    }
+    .navMQBtn {
+        display: inline-block;
+        /* position: absolute;
+        right: 2vw; */
+    }
+    .naviHid {
+        display: none;
+    }
+
+    /* .navMQmain {
+        
+    }
+} */
     
 }
+
+@media (min-width: 1030px) {
+    .navMQmaster {
+        display: none;
+    }
+}
+
+
