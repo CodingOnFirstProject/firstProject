@@ -3,10 +3,9 @@ const RATE_API_URL = "https://v6.exchangerate-api.com/v6/d53ace0f556c6cedfeaf1d7
 
 
 const selectCountry = document.querySelector('#selectCountry');
-const amount = document.querySelector('#amount');
-
 const seeCountry = document.querySelector('#seeCountry');
-const changeRate = document.querySelector('#changeRate');
+// const changeRate = document.querySelector('#changeRate');
+const amount = document.querySelector('#amount');
 
 const swapButton = document.querySelector('.swapButton');
 const rateDiv = document.querySelector('#rateDiv');
@@ -26,68 +25,11 @@ swapButton.addEventListener("click", showResult);
         type: "GET", // GET 방식으로 요청한다.
         url: RATE_API_URL,
         success: function (response) {
-          const str = 'tttttt';
-
-          // 서버에서 준 결과를 response라는 변수에 담음
-          // console.log(response); // 서버에서 준 결과를 이용해서 나머지 코드를 작성
-          // console.log(response.conversion_rates); // 서버에서 준 결과를 이용해서 나머지 코드를 작성
-          // console.log(response.conversion_rates.AED);
-          // console.log(response.conversion_rates.AFN);
-          // console.log(response.conversion_rates.ALL);
-          // console.log(response.conversion_rates.AMD);
-          // console.log(response.conversion_rates.ANG);
-          // console.log(response.conversion_rates.AOA);
-          // console.log(response.conversion_rates.ARS);
-          // console.log(response.conversion_rates.AUD);
-          // console.log(response.conversion_rates.AWG);
-          // console.log(response.conversion_rates.AZN);
-          // console.log(response.conversion_rates.BAM);
-          // console.log(response.conversion_rates.BBD);
-          // console.log(response.conversion_rates.BDT);
-          // console.log(response.conversion_rates.BGN);
-          // console.log(response.conversion_rates.BHD);
-          // console.log(response.conversion_rates.BIF);
-          // console.log(response.conversion_rates.BMD);
-          // console.log(response.conversion_rates.BND);
-          // console.log(response.conversion_rates.BOB);
-          // console.log(response.conversion_rates.BRL);
-          // console.log(response.conversion_rates.BSD);
-          // console.log(response.conversion_rates.BTN);
-          // console.log(response.conversion_rates.BWP);
-
-          // console.log(`백틱 테스트 입니다. ${str}`);
-
         },
       });
 
 //키는 안필요함. 
 
-
-
-function calculate(){
-    const selectCountryValue = selectCountry.value;
-
-    const seeCountryValue = seeCountry.value;
-
-    fetch(`https://v6.exchangerate-api.com/v6/d53ace0f556c6cedfeaf1d7d/latest/${selectCountryValue}`)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-
-        const rate = data.conversion_rates[seeCountryValue];
-        const result = rate * amount.value;
-        console.log(rate);
-        rateDiv.innerHTML = `${amount.value} ${selectCountryValue} = ${seeCountryValue} ${result}`;
-        // console.log('@@@',amount);
-        // changeRate.value = amount.value * rate}.toFixed(2);
-
-        //input 창에 뜨게 하기(conversion_rates * 내가 입력한 돈의 양.value)
-    });
-}
-
-//항상 temp 변수를 만들어서 A 값을 넣어주고
-//A, B 값 바꿔준다. => A와 B 값이 벼한다.
-//그럼 currency가 변했으니 그걸 기준으로 다시 환율을 calculate 한다.
 function calculate(){
   const selectCountryValue = selectCountry.value;
 
@@ -102,10 +44,11 @@ function calculate(){
       const result = rate * amount.value;
       console.log(rate);
       rateDiv.innerHTML = `${amount.value} ${selectCountryValue} = ${seeCountryValue} ${result}`;
-      // console.log('@@@',amount);
-      // changeRate.value = amount.value * rate}.toFixed(2);
 
       //input 창에 뜨게 하기(conversion_rates * 내가 입력한 돈의 양.value)
   });
 }
 
+function showResult(){
+  calculate();
+}

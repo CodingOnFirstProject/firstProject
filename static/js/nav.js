@@ -51,3 +51,17 @@ $('.navMQLogo').click(function() {
     $('.navMQSub').removeClass('hidden')
     $('.navMQSub').addClass('hidden')
 })  
+
+//환율창에 대한 js
+const money = document.querySelector(".money");
+
+money.addEventListener('click', function(){
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
+
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    openCenter("/Popup", "pop", 450, 350);
+})

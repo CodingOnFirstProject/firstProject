@@ -56,6 +56,9 @@ app.get("/Popup",function(request, response){
     response.render('Popup');
 })
 
+app.get('/pageWeather', function(request, response){
+    response.render('pageWeather');
+})
 
 //로컬 서버 동작
 app.listen(PORT, function(){
