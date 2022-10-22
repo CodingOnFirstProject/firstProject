@@ -11,6 +11,8 @@
 /*cityselect*/
 #citySelect{
     border: 1px solid green;
+    display: flex;
+    flex-direction: column;
 }
 #contents{
     border: 1px solid red;

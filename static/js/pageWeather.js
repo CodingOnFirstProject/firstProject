@@ -2,17 +2,43 @@ const API_URL = 'http://api.openweathermap.org/data/2.5/weather?q=';
 const API_KEY = '7f59daeedf7035efe7544f4ec617e143';
 // const API_KEY = '3aa3f27483a6d0c00cdcf947123163df';
 
+const city = document.querySelector("#city"); //select 태그
+
+let temp = document.querySelector("#temp");
+let humidity = document.querySelector("#humidity");
+let wind = document.querySelector("#wind");
+
+const cityName = document.querySelector("#cityName"); // 도시 이름을 저장한 변수
+const resultbtn = document.querySelector('#resultbtn');
+
+resultbtn.addEventListener("click", apply); // "날씨보기" 버튼을 누르면 showResult()함수가 실행
+
+function apply(){
+    //cityurax = `'${cityValue}'`; // 버튼을 누르면 그 해당 도시의 날씨정보가 보이게
+    //cityurax의 값을 기본값(seoul)에서 사용자가 고른 값(해당 도시)으로 바꿔준다.
+
+
+    const cityValue = city.value; // city 변수의 value값을 cityValue에 대입.
+
+    cityName.innerHTML = cityValue;
+    console.log("cityvalue 확인 : " + cityValue); 
+    console.log("다시확인: " + `'${cityValue}'`);
+    // console.log("cityName 확인: " + cityName);
+}
+
+
 
 let nowTemp = document.querySelector('#nowTemp');
 let nowHumidity = document.querySelector('#nowHumidity')
 let weather = document.querySelector('#weather');
-let wind = document.querySelector('#wind');
+// let wind = document.querySelector('#wind');
 let country = document.querySelector('#country');
-let city = document.querySelector('#city');
+// let city = document.querySelector('#city');
 let weatherimg = document.querySelector('img');
-city = 'seoul';
+cityurax = 'seoul'; //서울은 기본값
+// cityurax = `'${cityValue}'`;
 
-let url = API_URL + city + '&appid=' + API_KEY;
+let url = API_URL + cityurax + '&appid=' + API_KEY;
 $.ajax({
   url: url,
   dataType: 'json',
@@ -32,48 +58,10 @@ $.ajax({
     console.log('도시이름  : ' + response.name);
     console.log('구름  : ' + response.clouds.all + '%');
 
-    nowTemp.innerText = `${Math.floor(response.main.temp - 273.15)}°C`;
-    nowHumidity.innerText = response.main.humidity;
-    weather.innerText = response.weather[0].main;
-    wind.innerText = response.wind.speed;
-    country.innerText = 'japan';
-    city.innerText = response.name;
-    var iconurl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
-    weatherimg.setAttribute('src', iconurl);
+    temp.innerHTML = `${Math.floor(response.main.temp - 273.15)}°C`;
+    humidity.innerHTML = response.main.humidity;
+    wind.innerHTML = response.wind.speed;
+
+    
   },
 });
-
-let nowDay = document.querySelector('#nowDay');
-
-var time = new Date();
-
-var year = time.getFullYear();
-var month = time.getMonth();
-var date = time.getDate();
-var day = time.getDay();//0~6 (일~토)
-
-switch(time.getDay()){
-    case 0:
-        day.innerText = "일";
-        break;
-    case 1:
-        day.innerText = "월";
-        break;
-    case 2:
-        day.innerText = "화";
-        break;
-    case 3:
-        day.innerText = "수";
-        break;
-    case 4:
-        day.innerText = "목";
-        break;
-    case 5:
-        day.innerText = "금";
-        break;
-    case 6:
-        day.innerText = "토";
-        break;
-}
-
-nowDay.innerText = `${year}년 ${month}월 ${date}일`;

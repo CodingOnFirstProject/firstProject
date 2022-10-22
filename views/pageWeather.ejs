@@ -7,6 +7,10 @@
     <title>weater 팝업창</title>
 
     <link rel = "stylesheet" href = "/static/css/pageWeather.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id = "container">
@@ -19,12 +23,14 @@
                 <option value = "ansan">안산</option>
                 <option value = "gangnam">강남</option>
             </select>
+
+            <button id = "resultbtn">날씨보기</button>
         </div>
 
         <div id = "contents"> <!-- 셀렉트 바 옆에 내용들-->
 
             <div id = "cityNameDay">
-                <h2 class = "cityName">서울</h2>
+                <h2 id = "cityName">서울</h2>
                 <p class = "cityDay">날짜</p>
             </div>
 
@@ -34,7 +40,7 @@
             </div>
 
             <div id = "weatherImg">
-                <img src = "" alt = "날씨 아이콘">
+                <img src = "" alt = "날씨아이콘">
             </div>
 
             <div id = "weatherInfo">
