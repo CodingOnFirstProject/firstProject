@@ -55,6 +55,12 @@ app.get('/prac', function(request, response){
 app.get("/Popup",function(request, response){
     response.render('Popup');
 })
+app.get("/ticket",function(request, response){
+    response.render('ticket');
+})
+app.get("/login",function(request, response){
+    response.render('login');
+})
 
 
 //로컬 서버 동작

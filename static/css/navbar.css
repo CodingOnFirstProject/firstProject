@@ -8,6 +8,21 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.loginBtn {
+    font-family: 'twayair';
+    font-size: 1.5rem;
+    margin-left: 5vw;
+    color: rgb(108, 108, 108);
+}
+
+
 
 .logo {
     width: 10vw;
@@ -35,16 +50,12 @@
 }
 .growDiv3 {
     flex-grow:1;
-}
-
-.nickForm {
-    margin-left: 1.5vw;
+    width: 17vw;
 }
 
 
- .nicknameBox {
-    width: 20vw;
- }
+
+
 
 
 .naviMain {
@@ -127,6 +138,11 @@ a:hover,a:active { text-decoration: none; }
     text-align: center;
     font-family: 'twayair';
 }
+
+.loginDropSub {
+    margin-left: 2vw;
+}
+
 .dropSubItem {
     margin-top: 20vw;
     
@@ -169,7 +185,7 @@ a:hover,a:active { text-decoration: none; }
     flex-direction: column;
     width: 45vw;
     height: 100vh;
-    background-color: pink;
+    background-color: #b8c3c3;
     top: 0;
     right: 0;
     z-index: 10000;
@@ -243,6 +259,13 @@ a:hover,a:active { text-decoration: none; }
     /* font-family: 'Cute Font', cursive; */
     /* margin-left: 2vh; */
 }
+
+
+input::placeholder {
+    font-family: 'MICEGothic Bold';
+    text-align: center;
+}
+
 
 
 @media (max-width: 1340px) {
