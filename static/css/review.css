@@ -11,6 +11,7 @@ body {
   padding: 20px 30px 50px;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-left: 10px;
 }
@@ -22,6 +23,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* .top {
+  flex-direction: row;
+}
+
+.container {
+  background-color: white;
+} */
 
 .comment {
   display: flex;
@@ -68,8 +77,8 @@ body {
 }
 
 .rerabu {
-  border-style: solid;
-  border-color: black;
+  border-style: dashed;
+  border-color: rgb(83, 134, 165);
   position: relative;
   width: 80%;
   flex-direction: column;
@@ -135,8 +144,9 @@ body {
   flex-direction: row;
   width: 100%;
   /* height: 10%; */
-  border-style: solid;
-  border-color: black;
+  border-style: groove;
+  border-width: thin;
+  border-color: rgb(89, 179, 154);
 }
 
 /* 닉네임칸 */
@@ -274,47 +284,5 @@ img {
   .side {
     display: flex;
     flex-direction: row;
-  }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
-
-.navbar {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  font-size: 14px;
-  background-color: #f4f4f4;
-}
-
-.nav-item {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.navbar-brand {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
-}
-
-.welcDiv {
-  font-family: "Gamja Flower", cursive;
-  margin-right: 5rem;
-  font-size: 2rem;
-}
-
-@media (max-width: 1150px) {
-  .nav-item {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-  }
-}
-
-@media (max-width: 990px) {
-  .nicknameBox {
-    display: none;
   }
 }

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* contents */
+
+#video {
+  width: 100%;
+  height: 700px;
+}
+#video video {
+  width: 100%;
+  height: 700px;
+}
+#btn4 {
+  background: #1c6758;
+  width: 100%;
+  height: 70px;
+}
+#btn4 button {
+  width: 90px;
+  height: 30px;
+}
+
+/* box */
+.box {
+  margin: 0 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+#box2 {
+  background: #3d8361;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#box4 {
+  background: #3d8361;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#threeBox .box img {
+  width: 47%; /*부모요소의 45%*/
+  height: 300px;
+}
+.box .msg {
+  margin-left: 7%;
+  margin-top: 30px;
+  width: 40%;
+}
+
+.italyintro {
+  font-size: 1.1rem;
+}
+
+#box2 .msg {
+  margin-right: 6%;
+  color: white;
+}
+
+#box4 .msg {
+  margin-right: 6%;
+  color: white;
+}
+
+/* explain */
+#explain {
+  margin-bottom: 30px;
+}
+#explain h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.smallw {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#explain #posit {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#explain #posit #text p {
+  text-align: left;
+}
+#explain #posit #text {
+  margin-top: 30px; /*글씨위치*/
+  margin-right: 100px;
+  margin-left: 100px;
+}
+#contents button {
+  margin-left: 47%;
+  background: #d6cda4;
+  width: 100px;
+  border: 2px solid #1c6758;
+}
+
+#explain img {
+  width: 400px;
+  height: 400px;
+
+  margin-bottom: 80px;
+  margin-left: 70px;
+}
+
+@media (max-width: 1090px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box2 {
+    flex-direction: column;
+    align-items: center;
+    /* background-color: white; */
+  }
+
+  /* #box2 .msg {
+    background-color: #3d8361;
+  } */
+
+  #box4 {
+    flex-direction: column;
+    align-items: center;
+    /* background-color: white; */
+  }
+
+  /* #box4 .msg {
+    background-color: #3d8361;
+  } */
+
+  #explain #posit {
+    flex-direction: column;
+    align-items: center;
+  }
+}

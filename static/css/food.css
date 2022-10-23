@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* box */
+/* box1 */
+#box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0;
+}
+#box1 img {
+  width: 550px;
+  height: 400px;
+}
+#box1 #msg {
+  width: 50%;
+  margin-left: 10px;
+}
+#box1 h2 {
+  margin-left: 20px;
+}
+#box1 #msg .pFour {
+  display: flex;
+  flex-direction: column;
+}
+#box1 #msg .pFour p {
+  /* border : 1px solid black; */
+  width: 300px;
+  height: 120px;
+  margin: 10px 20px;
+}
+
+#box1 #msg .pFour .twop {
+  display: flex;
+  flex-direction: row;
+}
+#box1 #msg button {
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* box2 */
+#box2 {
+  background: #3d8361;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#threeBox .box {
+  margin: 0 20px 0 0;
+}
+
+#threeBox .box img {
+  width: 47%; /*부모요소의 45%*/
+  height: 300px;
+}
+.box .msg {
+  margin-left: 7%;
+  margin-top: 40px;
+  width: 40%;
+}
+#box2 .msg {
+  margin-right: 6%;
+  color: white;
+}
+
+.box .msg .smallw {
+  font-size: 10px;
+  margin: 10px 0;
+}
+
+/* box3 */
+#box3 {
+  /* background: #3d8361; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#box3 .msg {
+  margin-right: 6%;
+  /* color: white; */
+}
+
+/* box4 */
+#box4 {
+  background: #3d8361;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#box4 .msg {
+  margin-right: 6%;
+  color: white;
+}
+
+/* box5 */
+#box5 {
+  /* background: #3d8361; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#box5 .msg {
+  margin-right: 6%;
+  /* color: white; */
+}
+/* box끝 */
+
+/* 디저트 */
+#infoThree {
+  background: #3d8361;
+  padding: 30px;
+  padding-bottom: 50px;
+  margin-bottom: 80px;
+}
+#infoThree h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+#infoThree #infoImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#infoThree #infoImg .card {
+  margin: 10px 40px;
+  border: 1px solid black;
+}
+#infoThree #infoImg img {
+  /* width: 18rem; */
+  height: 180px;
+}
+
+#contents button {
+  margin-left: 47%;
+  background: #d6cda4;
+  width: 100px;
+  border: 2px solid #1c6758;
+}
+
+@media (max-width: 1090px) {
+  #box1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box1 #msg {
+    height: 30vw;
+  }
+
+  #infoThree #infoImg {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1188px) {
+  #box2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box2 img {
+    display: none;
+  }
+
+  #box3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box3 img {
+    display: none;
+  }
+
+  #box4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box4 img {
+    display: none;
+  }
+
+  #box5 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #box5 img {
+    display: none;
+  }
+}

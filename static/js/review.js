@@ -74,6 +74,25 @@ form.addEventListener("submit", function (event) {
   perdate.textContent = `${year}.${month + 1}.${day}`;
   perdate.classList.add("dates"); // div.dates 생성 후 dates value값 삽입
 
+  const makeBtn = document.createElement("button");
+  makeBtn.innerHTML = "삭제";
+  makeBtn.classList.add("deletBtn");
+  // 삭제버튼을 누르면 발생하는 이벤트 만들기
+  makeBtn.addEventListener("click", (event) => {
+    // 삭제버튼을 클릭하면 이벤트 발생
+
+    const btn = event.target; // => 그 이벤트 발생의 'target'을 btn 변수에 선언
+    console.log(btn); // 콘솔창을 띄우면 버튼 태그가 출력됨
+
+    const deleteAll = btn.parentNode; // btn의 부모 노드 => commentDiv(버튼 태그를 감싸는 상위태그)
+
+    list.removeChild(deleteAll);
+    // commentDiv를 감싸는 상위 태그 => comment,  comment의 자식 노드를 삭제한다 => deleteAll을(commentDiv태그를)
+
+    // 결과적으로 삭제버튼을 클릭하면 그 삭제버튼을 포함하는 부모태그 commentDiv 자체가 지워져서
+    // 원하는 댓글을 삭제할 수 있다.
+  });
+
   list.append(divReviews);
   if (nickname === "" || review === "") {
     perdate.textContent = "";
@@ -83,13 +102,38 @@ form.addEventListener("submit", function (event) {
 
   divLeft.append(pericon, pernick);
   divRight.append(pertxt, divSide);
-  divSide.append(perstar, perdate);
+  divSide.append(perstar, perdate, makeBtn);
+
+  //별점 선택 안했으면 메시지 표시
+  if (rating.rate == 0) {
+    alert("별점을 선택해주세요!");
+    return false;
+  }
+  //리뷰 5자 미만이면 메시지 표시
+  if (document.getElementById("review").value.length < 5) {
+    alert("리뷰를 5자 이상 써주세요!");
+    return false;
+  }
+  if (rating.rate != 0 && document.getElementById("review").value.length < 5) {
+    alert("리뷰등록이 완료되었습니다!");
+  }
 
   // document.getElementById("nickname").value = "";
   // document.getElementById("review").value = "";
   $("form[name='review']").each(function () {
     this.reset();
   }); // 등록 눌렀을때 폼 초기화
+});
+
+document.getElementById("review").addEventListener("keydown", function () {
+  //리뷰 20자 초과 안되게 자동 자름
+  let reviewLength = document.getElementById("review");
+
+  let lengthCheckEx = /^.{20,}$/;
+  if (lengthCheckEx.test(reviewLength.value)) {
+    //20자 초과 컷
+    reviewLength.value = reviewLength.value.substr(0, 20);
+  }
 });
 
 function Rating() {}
@@ -136,18 +180,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
 
-$(".nickForm").submit(function (e) {
-  e.preventDefault();
-  let nickVal = $(".nickInput").val();
+  $(".nickForm").submit(function (e) {
+    e.preventDefault();
+    let nickVal = $(".nickInput").val();
 
-  $(".nickInput").val("");
+    $(".nickInput").val("");
 
-  $(".nickDiv").addClass("hidden");
+    $(".nickDiv").addClass("hidden");
 
-  $(".welcDiv").removeClass("hidden");
+    $(".welcDiv").removeClass("hidden");
 
-  $(".welcDiv").text(`환영합니다 ${nickVal}님`);
-  console.log(nickVal);
+    $(".welcDiv").text(`환영합니다 ${nickVal}님`);
+    console.log(nickVal);
+  });
 });
