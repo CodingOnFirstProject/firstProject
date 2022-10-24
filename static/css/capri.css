@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-/* header */
-header {
-  background-color: gray;
-  width: 100%;
-  height: 100px;
-}
 /* contents */
 #contents {
 }
@@ -25,10 +19,20 @@ header {
   background: #1c6758;
   width: 100%;
   height: 70px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 #btn4 button {
   width: 90px;
   height: 30px;
+}
+#btn4 span {
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px #1c6758;
 }
 
 /* box */
@@ -69,11 +73,13 @@ header {
   height: 30px;
   margin-left: 20px;
   margin-top: 10px;
+  background-color: #f9bc6c;
 }
 
 /* box2 */
 #box2 {
-  background: #1c6758;
+  /* background : #1C6758; */
+  background-color: #1c6758;
   display: flex;
   flex-direction: column;
   padding-bottom: 70px;
@@ -112,7 +118,7 @@ header {
   width: 30%;
   height: 150px;
   padding-right: 10px;
-  padding-top: 80px;
+  padding-top: 50px;
   margin-left: 150px;
 }
 
@@ -131,22 +137,61 @@ header {
   height: 40px;
   margin-right: 20px;
   margin-top: 20px;
-  background: #1c6758;
+  background: #f9bc6c;
   color: white;
   font-weight: 700;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 #box2 #test .box2Div3 .box2button .colorbtn {
-  background-color: #d6cda4;
+  /* background-color: #D6CDA4; */
+  background-color: #f9bc6c;
 }
-/* footer */
-footer {
-  background-color: rgb(85, 83, 83);
-  width: 100%;
-  height: 300px;
 
-  /* background-color: #25316D #5F6F94  #97D2EC #FEF5AC; */
-  background-color: #1c6758 #3d8361 #d6cda4 #eef2e6;
-  /* background-color: #231955 /#1F4690 /#E8AA42 /#FFE5B4; */
-  /* background-color: #2C3639 /#3F4E4F / #A27B5C / #DCD7C9; */
+#box3 {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#box3 #writer {
+  border: 2px solid red;
+  width: 70%;
+  text-align: center;
+}
+
+#box3 #oneImg {
+  margin: 20px 0;
+  width: 100%;
+  border: 2px solid pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#box3 #oneImg {
+  position: relative;
+}
+#box3 #oneImg img {
+  width: 400px;
+  height: 250px;
+}
+#box3 .absoluteText {
+  width: 150px;
+  height: 150px;
+  border: 2px solid red;
+  position: absolute;
+  bottom: 40px;
+  right: 450px;
+}
+
+#box1:target h2 {
+  font-weight: 700;
+}
+#box2:target h2 {
+  font-weight: 700;
+}
+#box3:target h2 {
+  font-weight: 700;
 }

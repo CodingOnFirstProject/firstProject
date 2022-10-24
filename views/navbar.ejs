@@ -1,65 +1,4 @@
-<!-- <div class="navDiv navHidDiv">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid ">
-      <a class="navbar-brand" href="#">
-        <img src="/static/image/LOGO.png" alt="LOGO" class="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              랜드마크
-            </a>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href="#">랜드마크1</a></li>
-              <li><a class="dropdown-item" href="#">랜드마크2</a></li>
-              <li><a class="dropdown-item" href="#">랜드마크3</a></li>
-            </ul>
-          </li>
-
-
-          <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              음식
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">음식1</a></li>
-              <li><a class="dropdown-item" href="#">음식2</a></li>
-              <li><a class="dropdown-item" href="#">음식3</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navReview" href="#">리뷰</a>
-            
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">공지사항</a>
-          </li>
-        </ul>
-
-        <div class="nicknameBox">
-          <div class="nickDiv">
-            <form class="d-flex nickForm" role="nickName">
-              <input class="form-control me-2 nickInput" type="nickName" placeholder="닉네임을 적어주세요!"
-                aria-label="nickName">
-              <button class="btn btn-outline-success" type="submit">Login</button>
-            </form>
-          </div>
-          <div class="welcDiv hidden">
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-</div> -->
 <div class="naviBoss">
   <nav class="naviMain ">
 
@@ -68,7 +7,7 @@
         <img src="/static/image/LOGO.jpg" alt="LOGO" class="logo">
       </a>
     </div>
-    <div class="naviItemDiv">
+    <div class="naviItemDiv growDiv2">
 
       <div class="naviItem">
         <a class="navReview" href="#">소개</a>
@@ -81,12 +20,12 @@
       </div>
 
       <div class="naviItem">
-        <a class="navReview" href="#">휴양지</a>
+        <a class="navReview" href="#">유적지</a>
 
       </div>
 
       <div class="naviItem">
-        <a class="navReview" href="#">유적지</a>
+        <a class="navReview" href="#">휴양지</a>
 
       </div>
 
@@ -96,18 +35,12 @@
     </div>
 
 
-    <div class="nicknameBox">
-      <div class="nickDiv">
-        <form class="d-flex nickForm" role="nickName">
-          <input class="form-control me-2 nickInput" type="nickName" placeholder="닉네임을 적어주세요!" aria-label="nickName">
-          <button class="btn btn-outline-success" type="submit">Login</button>
-        </form>
-      </div>
-      <div class="welcDiv hidden">
-      </div>
+    <div class="nicknameBox growDiv3">
+      <a class="loginBtn navReview" id="mainLoginBtn">로그인</a>
+      <div class="welcDiv" id="welcome"></div>
     </div>
     <div class="navLogoDIv">
-      <img class="navLogoCenter" src="/static/image/logoLetter.png" alt="로고">
+      <img class="navLogoCenter" src="/static/image/LogoLetter2.png" alt="로고">
     </div>
 
     <div class="navMQBtn">
@@ -121,37 +54,40 @@
 
 
   <div class="naviHid hidden">
+
     <div class="naviSubDiv">
+      
       <div class="naviSubItems">
         <ul class="dropSub">
-          <li><a class="dropSub-item" href="#">이탈리아에 대하여</a></li>
-          <li><a class="dropSub-item" href="#">대표 음식</a></li>
+          <li><a class="dropSub-item" href="./country">이탈리아에 대하여</a></li>
+          <li><a class="dropSub-item" href="./food">대표 음식</a></li>
+          <li><a class="dropSub-item" href="./review">리뷰</a></li>        
         </ul>
       </div>
       <div class="line"></div>
       <div class="naviSubItems">
         <ul class="dropSub">
-          <li><a class="dropSub1-item" href="#">피렌체 대성당</a></li>
-          <li><a class="dropSub1-item" href="#">밀라노 대성당</a></li>
-          <li><a class="dropSub1-item" href="#">성베드로 성당</a></li>
-        </ul>
-      </div>
-
-      <div class="line"></div>
-      <div class="naviSubItems">
-        <ul class="dropSub">
-          <li><a class="dropSub-item" href="#">콜로세움</a></li>
-          <li><a class="dropSub-item" href="#">판테온</a></li>
-          <li><a class="dropSub-item" href="#">포로로마노</a></li>
+          <li><a class="dropSub1-item" href="./florence">피렌체 대성당</a></li>
+          <li><a class="dropSub1-item" href="./milan">밀라노 대성당</a></li>
+          <li><a class="dropSub1-item" href="./saint">성베드로 성당</a></li>
         </ul>
       </div>
 
       <div class="line"></div>
       <div class="naviSubItems">
         <ul class="dropSub">
-          <li><a class="dropSub-item" href="#">카프리섬</a></li>
-          <li><a class="dropSub-item" href="#">친퀘테레</a></li>
-          <li><a class="dropSub-item" href="#">베네치아</a></li>
+          <li><a class="dropSub-item" href="./colosseum">콜로세움</a></li>
+          <li><a class="dropSub-item" href="./pantheon">판테온</a></li>
+          <li><a class="dropSub-item" href="./fororomano">포로로마노</a></li>
+        </ul>
+      </div>
+
+      <div class="line"></div>
+      <div class="naviSubItems">
+        <ul class="dropSub">
+          <li><a class="dropSub-item" href="./capri">카프리섬</a></li>
+          <li><a class="dropSub-item" href="./cinqueTerre">친퀘테레</a></li>
+          <li><a class="dropSub-item" href="./venice">베네치아</a></li>
         </ul>
       </div>
 
@@ -163,56 +99,65 @@
           <li><a class="dropSub-item" href="#">리뷰</a></li>
         </ul>
       </div>
+      <div class="line"></div>
+      <div class="naviSubItems hidden" id="ticket">
+        <ul class="dropSub loginDropSub">
+          <li><a class="dropSub-item ticketting">예매하기</a></li>
+          <li><a class="dropSub-item logout">로그아웃</a></li>
+        </ul>
+      </div>
+      
 
     </div>
   </div>
 </div>
 <div class="navMQmaster hidden">
   <div class="navMQmain ">
-    <img class="navMQLogo" src="/static/image/LOGO2.png" alt="로꼬로꼬">
+    <i class="bi bi-arrow-right navMQBack"></i>
+    <img class="navMQLogo" id="profileImage" src="/static/image/LOGO2.png" alt="로꼬로꼬">
     <div class="navMQItems">
 
       <div class="navMQItem">
         <a class="navMQtag" href="#">소개</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">이탈리아에 대하여</a></div>
-          <div><a class="MQSub-item" href="#">대표 음식</a></div>
+          <div><a class="MQSub-item" href="./country">이탈리아에 대하여</a></div>
+          <div><a class="MQSub-item" href="./food">대표 음식</a></div>
+          <div><a class="MQSub-item" href="./review">리뷰</a></div>
         </div>
       </div>
       
       <div class="navMQItem">
         <a class="navMQtag" href="#">성당</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">피렌체 대성당</a></div>
-          <div><a class="MQSub-item" href="#">밀라노 대성당</a></div>
-          <div><a class="MQSub-item" href="#">성베드로 성당</a></div>
+          <div><a class="MQSub-item" href="./florence">피렌체 대성당</a></div>
+          <div><a class="MQSub-item" href="./milan">밀라노 대성당</a></div>
+          <div><a class="MQSub-item" href="./saint">성베드로 성당</a></div>
         </div>
       </div>
 
       <div class="navMQItem">
-        <a class="navMQtag" href="#">유적</a>
+        <a class="navMQtag" href="#">유적지</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">콜로세움</a></div>
-          <div><a class="MQSub-item" href="#">판테온</a></div>
-          <div><a class="MQSub-item" href="#">포로로마노</a></div>
+          <div><a class="MQSub-item" href="./colosseum">콜로세움</a></div>
+          <div><a class="MQSub-item" href="./pantheon">판테온</a></div>
+          <div><a class="MQSub-item" href="./fororomano">포로로마노</a></div>
         </div>
       </div>
 
       <div class="navMQItem">
         <a class="navMQtag" href="#">휴양지</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">카프리섬</a></div>
-          <div><a class="MQSub-item" href="#">친퀘테레</a></div>
-          <div><a class="MQSub-item" href="#">베네치아</a></div>
+          <div><a class="MQSub-item" href="./capri">카프리섬</a></div>
+          <div><a class="MQSub-item" href="./cinqueTerre">친퀘테레</a></div>
+          <div><a class="MQSub-item" href="./venice">베네치아</a></div>
         </div>
       </div>
 
       <div class="navMQItem">
-        <a class="navMQtag" href="#">리뷰</a>
+        <a class="navMQtag" href="#">오늘의 이탈리아</a>
         <div class="navMQSub hidden">
-          <div><a class="MQSub-item" href="#">음식1</a></div>
-          <div><a class="MQSub-item" href="#">음식2</a></div>
-          <div><a class="MQSub-item" href="#">음식3</a></div>
+          <div><a class="MQSub-item" href="#">날씨</a></div>
+          <div><a class="MQSub-item" href="#">환율</a></div>
         </div>
       </div>
     </div>

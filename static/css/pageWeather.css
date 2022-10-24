@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*container*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    
+    height: 200px;
+}
+/*cityselect*/
+#citySelect{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+}
+#contents{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+#btnMaxMin{
+    background-color: #FCEDF1;
+    border-radius: 25px;
+    padding: 5px 7px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#btnMaxMin .btn{
+    background-color: #FCEDF1;
+    border: 1px solid #FCEDF1;
+    border-radius: 25px;
+    padding: 3px 5px;
+}
+#weatherInfo{
+    display: flex;
+    flex-direction: row;
+}
+#weatherInfo #weatherTemp{
+    border: 1px solid pink;
+}
+#weatherInfo #weatherHumidity{
+    border: 1px solid blue;
+}
+#weatherInfo #weatherWind{
+    border: 1px solid black;
+}
