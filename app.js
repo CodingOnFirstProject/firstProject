@@ -24,71 +24,82 @@ app.get("/", function (request, response) {
 });
 
 //성당
-app.get('/florence', function(request, response){
-    response.render('florence'); //피렌치
-})
-
+app.get("/florence", function (request, response) {
+  response.render("florence"); //피렌치
+});
 
 app.get("/review", function (request, response) {
   response.render("review");
 });
 
-app.get('/milan', function(request, response){
-    response.render('milan'); //밀라노
-})
+app.get("/weather", function (request, response) {
+  response.render("weather");
+});
+app.get("/exchangeRate", function (request, response) {
+  response.render("exchangeRate");
+});
 
-app.get('/saint', function(request, response){
-    response.render('saint'); // 성베드로
-})
+app.get("/Popup", function (request, response) {
+  response.render("Popup");
+});
+app.get("/milan", function (request, response) {
+  response.render("milan"); //밀라노
+});
 
+app.get("/saint", function (request, response) {
+  response.render("saint"); // 성베드로
+});
+
+// 유적지
+app.get("/colosseum", function (request, response) {
+  response.render("colosseum"); //콜로세움
+});
+
+app.get("/pantheon", function (request, response) {
+  response.render("pantheon"); // 판테온
+});
+
+app.get("/fororomano", function (request, response) {
+  response.render("fororomano"); // 포로로마노
+});
 
 // 휴양지
-app.get('/colosseum', function(request, response){
-    response.render('colosseum'); //콜로세움
-})
+app.get("/capri", function (request, response) {
+  response.render("capri"); //카프리
+});
+app.get("/cinqueTerre", function (request, response) {
+  response.render("cinqueTerre"); //친퀘테레
+});
 
-app.get('/pantheon', function(request, response){
-    response.render('pantheon'); // 판테온
-})
-
-app.get('/fororomano', function(request, response){
-    response.render('fororomano'); // 포로로마노
-})
-
-
-//유적지
-app.get('/capri', function(request, response){
-    response.render('capri'); //카프리
-})
-app.get('/cinqueTerre', function(request, response){
-    response.render('cinqueTerre'); //친퀘테레
-})
-
-app.get('/venice', function(request, response){
-    response.render('venice'); //베네치아
-})
+app.get("/venice", function (request, response) {
+  response.render("venice"); //베네치아
+});
 
 //===========================================================
-app.get("/Popup",function(request, response){
-    response.render('Popup'); // 환율 팝업창
-})
-app.get("/ticket",function(request, response){
-    response.render('ticket');
-})
-app.get("/login",function(request, response){
-    response.render('login');
-})
+app.get("/Popup", function (request, response) {
+  response.render("Popup"); // 환율 팝업창
+});
+app.get("/ticket", function (request, response) {
+  response.render("ticket");
+});
+app.get("/login", function (request, response) {
+  response.render("login");
+});
 
+app.get("/country", function (request, response) {
+  response.render("country");
+});
 
-app.get('/exchangeRate', function(request, response){
-    response.render('exchangeRate'); //환율 연습
-})
+app.get("/food", function (request, response) {
+  response.render("food");
+});
+app.get("/exchangeRate", function (request, response) {
+  response.render("exchangeRate"); //환율 연습
+});
 
-
-
-app.get('/pageWeather', function(request, response){
-    response.render('pageWeather'); // 날씨 팝업창
-})
+app.get("/pageWeather", function (request, response) {
+  response.render("pageWeather"); // 날씨 팝업창
+});
 
 //로컬 서버 동작
 app.listen(PORT, function () {

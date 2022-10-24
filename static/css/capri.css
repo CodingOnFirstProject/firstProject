@@ -1,203 +1,197 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* contents */
-#contents{
+#contents {
+}
+#bigImg {
+  width: 100%;
+  height: 500px;
+}
+#bigImg img {
+  width: 100%;
+  height: 500px;
+}
+#btn4 {
+  background: #1c6758;
+  width: 100%;
+  height: 70px;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#bigImg{
-    width : 100%;
-    height : 500px;
+#btn4 button {
+  width: 90px;
+  height: 30px;
 }
-#bigImg img{
-    width : 100%;
-    height : 500px;
-}
-#btn4{
-    background : #1C6758;
-    width : 100%;
-    height : 70px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#btn4 button{
-    width : 90px;
-    height : 30px;
-}
-#btn4 span{
-    color: white;
-    font-weight: 700;
-    text-shadow: 1px 1px #1C6758;
+#btn4 span {
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px #1c6758;
 }
 
 /* box */
-#box1{
-    display : flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 50px 0;
+#box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0;
 }
-#box1 img{
-    width: 300px;
-    height : 350px;
+#box1 img {
+  width: 300px;
+  height: 350px;
 }
-#box1 #msg{
-    width: 50%;
-    margin-left: 10px;
+#box1 #msg {
+  width: 50%;
+  margin-left: 10px;
 }
-#box1 h2{
-    margin-left: 20px;
+#box1 h2 {
+  margin-left: 20px;
 }
-#box1 #msg .pFour{
-    display: flex;
-    flex-direction: column;
+#box1 #msg .pFour {
+  display: flex;
+  flex-direction: column;
 }
-#box1 #msg .pFour p{
-    /* border : 1px solid black; */
-    width : 300px;
-    height: 120px;
-    margin: 10px 20px;
+#box1 #msg .pFour p {
+  /* border : 1px solid black; */
+  width: 300px;
+  height: 120px;
+  margin: 10px 20px;
 }
 
-#box1 #msg .pFour .twop{
-    display : flex;
-    flex-direction: row;
+#box1 #msg .pFour .twop {
+  display: flex;
+  flex-direction: row;
 }
-#box1 #msg button{
-    width: 100px;
-    height: 30px;
-    margin-left : 20px;
-    margin-top: 10px;
-    background-color: #f9bc6c;
+#box1 #msg button {
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-color: #f9bc6c;
 }
 
 /* box2 */
-#box2{
-    /* background : #1C6758; */
-    background-color: #1C6758;
-    display :flex;
-    flex-direction: column;
-    padding-bottom: 70px;
-    justify-content: space-between;
-    margin-bottom: 180px;
+#box2 {
+  /* background : #1C6758; */
+  background-color: #1c6758;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  justify-content: space-between;
+  margin-bottom: 180px;
 }
-#box2 #box3Img{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#box2 #box3Img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-#box2  #box3Img img{
-    width : 200px;
-    height : 200px;
-    margin: 0 40px;
-}
-
-#box2 #test{
-    display: flex;
-    flex-direction: row;
-    /* border: 2px solid red; */
-    height: 300px; /*위에 초록색의 높이를 결정하는 height*/
-    margin-bottom: 20px;
+#box2 #box3Img img {
+  width: 200px;
+  height: 200px;
+  margin: 0 40px;
 }
 
-#box2 #test .box2Div3{
-    display: flex;
-    flex-direction: column;
-    /* border : 2px solid white; */
-    width: 60%;
-    margin-left : 30px;
-    padding-top: 80px;
-}
-#box2 #test h2{
-    color : white;
-    width: 30%;
-    height : 150px;
-    padding-right: 10px;
-    padding-top: 50px;
-    margin-left : 150px;
+#box2 #test {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  height: 300px; /*위에 초록색의 높이를 결정하는 height*/
+  margin-bottom: 20px;
 }
 
-#box2 #test .box2Div3 p{
-    /* border: 1px solid black; */
-    color : white;
-
-    margin-bottom : 20px;
+#box2 #test .box2Div3 {
+  display: flex;
+  flex-direction: column;
+  /* border : 2px solid white; */
+  width: 60%;
+  margin-left: 30px;
+  padding-top: 80px;
 }
-#box2 #test .box2Div3 .box2button{
-    display :flex;
-    flex-direction: row;
-}
-#box2 #test .box2Div3 .box2button button{
-    width: 150px;
-    height: 40px;
-    margin-right: 20px;
-    margin-top: 20px;
-    background : #f9bc6c;
-    color: white;
-    font-weight: 700;
-    border: 1px solid black;
-}
-#box2 #test .box2Div3 .box2button .colorbtn{
-    /* background-color: #D6CDA4; */
-    background-color: #f9bc6c;
+#box2 #test h2 {
+  color: white;
+  width: 30%;
+  height: 150px;
+  padding-right: 10px;
+  padding-top: 50px;
+  margin-left: 150px;
 }
 
-#box3{
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#box2 #test .box2Div3 p {
+  /* border: 1px solid black; */
+  color: white;
+
+  margin-bottom: 20px;
 }
-#box3 #writer{
-    border: 2px solid red;
-    width: 70%;
-    text-align: center;
+#box2 #test .box2Div3 .box2button {
+  display: flex;
+  flex-direction: row;
+}
+#box2 #test .box2Div3 .box2button button {
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  background: #f9bc6c;
+  color: white;
+  font-weight: 700;
+  border: 1px solid black;
+}
+#box2 #test .box2Div3 .box2button .colorbtn {
+  /* background-color: #D6CDA4; */
+  background-color: #f9bc6c;
 }
 
-
-#box3 #oneImg{
-    margin: 20px 0;
-    width: 100%;
-    border: 2px solid pink;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#box3 {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#box3 #oneImg{
-    position: relative;
-}
-#box3 #oneImg img{
-    width: 400px;
-    height: 250px;
-}
-#box3 .absoluteText{
-    width: 150px;
-    height: 150px;
-    border: 2px solid red;
-    position: absolute;
-    bottom: 40px;
-    right: 450px;
+#box3 #writer {
+  border: 2px solid red;
+  width: 70%;
+  text-align: center;
 }
 
-
-
-#box1:target h2{
-    font-weight: 700;
+#box3 #oneImg {
+  margin: 20px 0;
+  width: 100%;
+  border: 2px solid pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-#box2:target h2{
-    font-weight: 700;
+#box3 #oneImg {
+  position: relative;
 }
-#box3:target h2{
-    font-weight: 700;
+#box3 #oneImg img {
+  width: 400px;
+  height: 250px;
+}
+#box3 .absoluteText {
+  width: 150px;
+  height: 150px;
+  border: 2px solid red;
+  position: absolute;
+  bottom: 40px;
+  right: 450px;
 }
 
-
+#box1:target h2 {
+  font-weight: 700;
+}
+#box2:target h2 {
+  font-weight: 700;
+}
+#box3:target h2 {
+  font-weight: 700;
+}
