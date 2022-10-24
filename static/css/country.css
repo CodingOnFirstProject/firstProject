@@ -69,6 +69,18 @@
   color: white;
 }
 
+#box2 .msg h2 {
+  color: #fff94c;
+}
+
+#box4 .msg h2 {
+  color: #fff94c;
+}
+
+h2 {
+  font-weight: bold;
+}
+
 /* explain */
 #explain {
   margin-bottom: 30px;

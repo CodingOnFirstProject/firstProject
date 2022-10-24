@@ -6,9 +6,9 @@ form.addEventListener("submit", function (event) {
 
   const list = document.querySelector(".list");
   const reviews = document.querySelector(".reviews");
-  const left = document.querySelector(".left");
-  const right = document.querySelector(".right");
-  const side = document.querySelector(".side");
+  // const left = document.querySelector(".left");
+  // const right = document.querySelector(".right");
+  // const side = document.querySelector(".side");
 
   const date = new Date();
   const year = date.getFullYear();
@@ -29,6 +29,8 @@ form.addEventListener("submit", function (event) {
   divRight.classList.add("right"); // div.right 생성
   const divSide = document.createElement("div");
   divSide.classList.add("side"); // div.side 생성
+  const perbot = document.createElement("div");
+  perbot.classList.add("bot"); // div.bot 생성
 
   const pericon = document.createElement("div");
   pericon.innerHTML = '<i class="bi bi-person-circle"></i>';
@@ -76,9 +78,10 @@ form.addEventListener("submit", function (event) {
 
   const makeBtn = document.createElement("button");
   makeBtn.innerHTML = "삭제";
-  makeBtn.classList.add("deletBtn");
+  makeBtn.classList.add("deleteBtn");
   // 삭제버튼을 누르면 발생하는 이벤트 만들기
   makeBtn.addEventListener("click", (event) => {
+    console.log(makeBtn);
     // 삭제버튼을 클릭하면 이벤트 발생
 
     const btn = event.target; // => 그 이벤트 발생의 'target'을 btn 변수에 선언
@@ -86,7 +89,9 @@ form.addEventListener("submit", function (event) {
 
     const deleteAll = btn.parentNode; // btn의 부모 노드 => commentDiv(버튼 태그를 감싸는 상위태그)
 
-    list.removeChild(deleteAll);
+    console.log(this);
+    console.log(list);
+    this.removeChild(".reviews");
     // commentDiv를 감싸는 상위 태그 => comment,  comment의 자식 노드를 삭제한다 => deleteAll을(commentDiv태그를)
 
     // 결과적으로 삭제버튼을 클릭하면 그 삭제버튼을 포함하는 부모태그 commentDiv 자체가 지워져서
@@ -102,7 +107,8 @@ form.addEventListener("submit", function (event) {
 
   divLeft.append(pericon, pernick);
   divRight.append(pertxt, divSide);
-  divSide.append(perstar, perdate, makeBtn);
+  divSide.append(perstar, perbot);
+  perbot.append(perdate, makeBtn);
 
   //별점 선택 안했으면 메시지 표시
   if (rating.rate == 0) {
