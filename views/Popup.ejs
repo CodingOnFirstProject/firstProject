@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>환율 API</title>
+    <title>환율 API-result</title>
 
     <!-- jquery cdn -->
     <script
@@ -43,21 +43,26 @@
             <input id = "amount" name = "amount" type = "text"> <!--사용자가 입력할 돈의 양-->
         </div>
 
+        
         <div id = "fourthbox">
           <p>송금액: </p>
-          <div id = "rateDiv"> <!-- 환율 정보를 표시할 div 태그-->
-            
+          <div id = "rateDiv"> <!--환율 정보를 표시할 div 태그-->
+            <!-- 환율정보 -->
           </div>
         </div>
 
-        <button class = "swapButton">submit</button>
-
-
+        <div id = "btn">
+           <button class = "swapButton">submit</button>
         </div>
+       
 
-        <button onclick = "javascript:window.close();">닫기</button>
+
+    </div>
+
+    <div id = "closebtn">
+      <button onclick = "javascript:window.close();">닫기</button>
     </div>
     
-    <script src = "Popup.js"></script>
+    <script src = "/static/js/Popup.js"></script>
 </body>
 </html>

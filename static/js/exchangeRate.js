@@ -64,27 +64,6 @@ swapButton.addEventListener("click", showResult);
 
 
 
-function calculate(){
-    const selectCountryValue = selectCountry.value;
-
-    const seeCountryValue = seeCountry.value;
-
-    fetch(`https://v6.exchangerate-api.com/v6/d53ace0f556c6cedfeaf1d7d/latest/${selectCountryValue}`)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-
-        const rate = data.conversion_rates[seeCountryValue];
-        const result = rate * amount.value;
-        console.log(rate);
-        rateDiv.innerHTML = `${amount.value} ${selectCountryValue} = ${seeCountryValue} ${result}`;
-        // console.log('@@@',amount);
-        // changeRate.value = amount.value * rate}.toFixed(2);
-
-        //input 창에 뜨게 하기(conversion_rates * 내가 입력한 돈의 양.value)
-    });
-}
-
 //항상 temp 변수를 만들어서 A 값을 넣어주고
 //A, B 값 바꿔준다. => A와 B 값이 벼한다.
 //그럼 currency가 변했으니 그걸 기준으로 다시 환율을 calculate 한다.

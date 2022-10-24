@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>성베드로</title>
 
-    <link rel = "stylesheet" href = "/static/css/sight2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+   
+    <link rel = "stylesheet" href = "/static/css/florence.css">
 </head>
 <body>
-    <header>
-        header
-    </header>
+    <%- include('navbar.ejs')%>
 
     <div id = "contents">
 
         <div id = "bigImg">
-            <img src = "/static/img/airplain.jpg">
+            <img src = "/static/img/florence1.jpg">
         </div>
 
         <div id = "btn4">
-            <button>설명1</button>
-            <button>설명2</button>
-            <button>설명3</button>
-            <button>설명4</button>
+            <a href = "#box1"><span>설명1</span></a>
+            <a href = "#box2"><span>설명2</span></a>
+            <a href = "#box3"><span>설명3</span></a>
+            <a href = "#explain"><span>설명4</span></a>
+            <a href = "#exhibit"><span>설명5</span></a>
         </div>
 
         <div id = "threeBox">
@@ -108,62 +117,45 @@
 
 
         <div id = "exhibit">
-                <div id = "rectangle">
-                    <h2>durlfmf snffjqhtpdy</h2>
-                    <p class = "smallletter">qjxmsdmf snffjqhtpdy.</p>
+            <div id = "rectangle">
+                <h2>durlfmf snffjqhtpdy</h2>
+                <p class = "smallletter">qjxmsdmf snffjqhtpdy.</p>
 
-                    <p>
-                        durldp eogks tjfauddms skwnddp ektl wjrehfhr gkrpTtmqslek.Wkfqdktj ej TMehfhr gkrpTtmqslek. cka glaemspdy;.
-                    </p>
-                </div>
-
-                <div id = "exhibitImg">
-                    <img src = "/static/image/nature2.jpg" alt = "이미지1" class = "img1">
-                    <img src = "/static/image/nature2.jpg" alt = "이미지1" class = "img2">
-                    <img src = "/static/image/nature2.jpg" alt = "이미지1" class = "img3">
-                </div>
-                <button id = "prev">&lang;</button>
-                <button id = "next">&rang;</button>
+                <p>
+                    durldp eogks tjfauddms skwnddp ektl wjrehfhr gkrpTtmqslek.Wkfqdktj ej TMehfhr gkrpTtmqslek. cka glaemspdy;.
+                </p>
             </div>
+
+            <div id = "absoluteDiv">
+                <div class = "slide_wrapper">
+                    <ul class = "slides">
+                        <li><img src = "/static/image/nature1.jpg" alt = "이미지1"></li>
+                        <li><img src = "/static/image/nature2.jpg" alt = "이미지2"></li>
+                        <li><img src = "/static/image/nature3.jpg" alt = "이미지3"></li>
+                        <li><img src = "/static/image/nature4.jpg" alt = "이미지4"></li>
+                        <li><img src = "/static/image/nature1.jpg" alt = "이미지5"></li>
+                        <li><img src = "/static/image/nature2.jpg" alt = "이미지6"></li>
+                        <li><img src = "/static/image/nature3.jpg" alt = "이미지7"></li>
+                        <li><img src = "/static/image/nature4.jpg" alt = "이미지8"></li>
+                    </ul>
+                </div>
+            </div>
+            
+        <p class = "controls">
+            <span class = "prev">prev</span>
+            <span class = "next">next</span>
+        </p>
 
 
     </div>
 
-    <footer>
-        footer
-    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+                integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="/static/js/nav.js"></script>
+    <script src ="/static/js/footer.js"></script>
 
-    <script>
-
-        var slides = document.querySelectorAll("#exhibitImg > img");
-		var prev = document.getElementById("prev");
-		var next = document.getElementById("next");
-
-        
-        var before = 0;
-        var current = 1;
-        var after = 2;
-
-        var temp = 0;
-
-
-        //showSlides(current); //현재 이미지 표시/
-        prev.onclick = function () {
-            prevSlide('hi')
-        }; //이전 이미지 표시
-        next.onclick = nextSlide(current, before, after); //다음 이미지 표시
-
-       
-        function prevSlide(test){ //이전버튼을 누르면
-            console.log(test);
-            slides[0].setAttribute('src', '/static/image/nature2.jpg');
-            slides[1].setAttribute('src', '/static/image/nature3.jpg');
-            slides[2].setAttribute('src', '/static/image/nature4.jpg');
-        }
-
-        function nextSlide(current){ //다음버튼을 누르면
-
-        }
-    </script>
+    <script src = "/static/js/florence.js"></script>
 </body>
 </html>

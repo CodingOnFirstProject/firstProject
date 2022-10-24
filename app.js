@@ -23,42 +23,54 @@ app.get("/", function (request, response) {
   response.render("main");
 });
 
-app.get("/sights", function (request, response) {
-  response.render("sights");
-});
+//성당
+app.get('/florence', function(request, response){
+    response.render('florence'); //피렌치
+})
 
 
 app.get("/review", function (request, response) {
   response.render("review");
 });
 
-app.get('/sights2', function(request, response){
-    response.render('sights2');
+app.get('/milan', function(request, response){
+    response.render('milan'); //밀라노
 })
 
-app.get('/sights3', function(request, response){
-    response.render('sights3');
+app.get('/saint', function(request, response){
+    response.render('saint'); // 성베드로
 })
 
-app.get('/sights4', function(request, response){
-    response.render('sights4');
+
+// 휴양지
+app.get('/colosseum', function(request, response){
+    response.render('colosseum'); //콜로세움
 })
 
-app.get('/weather', function(request, response){
-    response.render('weather');
-})
-app.get('/exchangeRate', function(request, response){
-    response.render('exchangeRate');
-})
-app.get('/loading', function(request, response){
-    response.render('loading');
-})
-app.get('/prac', function(request, response){
-    response.render('prac');
+app.get('/pantheon', function(request, response){
+    response.render('pantheon'); // 판테온
 })
 
+app.get('/fororomano', function(request, response){
+    response.render('fororomano'); // 포로로마노
+})
+
+
+//유적지
+app.get('/capri', function(request, response){
+    response.render('capri'); //카프리
+})
+app.get('/cinqueTerre', function(request, response){
+    response.render('cinqueTerre'); //친퀘테레
+})
+
+app.get('/venice', function(request, response){
+    response.render('venice'); //베네치아
+})
+
+//===========================================================
 app.get("/Popup",function(request, response){
-    response.render('Popup');
+    response.render('Popup'); // 환율 팝업창
 })
 app.get("/ticket",function(request, response){
     response.render('ticket');
@@ -68,6 +80,15 @@ app.get("/login",function(request, response){
 })
 
 
+app.get('/exchangeRate', function(request, response){
+    response.render('exchangeRate'); //환율 연습
+})
+
+
+
+app.get('/pageWeather', function(request, response){
+    response.render('pageWeather'); // 날씨 팝업창
+})
 
 //로컬 서버 동작
 app.listen(PORT, function () {

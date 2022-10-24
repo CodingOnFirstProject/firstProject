@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weater 팝업창-result</title>
+
+    <link rel = "stylesheet" href = "/static/css/pageWeather.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id = "container">
+
+        <div id = "citySelect"> <!-- 도시 선택 바-->
+            <select id = "city">
+                <option value = "seoul">서울</option>
+                <option value = "busan">부산</option>
+                <option value = "ulsan">울산</option>
+                <option value = "ansan">안산</option>
+                <option value = "gangnam">강남</option>
+            </select>
+
+            <button id = "resultbtn">날씨보기</button>
+        </div>
+
+        <div id = "contents"> <!-- 셀렉트 바 옆에 내용들-->
+
+            <div id = "cityNameDay">
+                <h2 id = "cityName">서울</h2>
+                <p class = "cityDay">날짜</p>
+            </div>
+
+            <div id = "btnMaxMin">
+                <button class = "btn btnMax">최고</button>
+                <button class = "btn now">현재</button>
+                <button class = "btn btnMin">최저</button>
+            </div>
+
+            <div id = "weatherImg">
+                <img src = "" alt = "날씨아이콘">
+            </div>
+
+            <div id = "weatherInfo">
+                <div id = "weatherTemp">
+                    <p class = "tempMaxMinName">현재온도</p>
+                    <span id = "temp"> </span>
+                </div>
+
+                <div id = "weatherHumidity">
+                    <p>습도</p>
+                    <span id = "humidity"> </span>
+                </div>
+
+                <div id = "weatherWind">
+                    <p>바람</p>
+                    <span id = "wind"></span>
+                </div>
+            </div>
+
+        </div> <!--contents 끝-->
+
+    </div>
+
+    <script src = "/static/js/pageWeather.js"></script>
+</body>
+</html>
