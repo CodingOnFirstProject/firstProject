@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     background-color: #EEEEEE;
 }
@@ -19,6 +34,7 @@ body {
 
 .contentBox {
     margin-bottom: 30vh;
+    display: block;
 }
 
 /* 검색상자 */
@@ -57,8 +73,8 @@ body {
     width: 8vh;
     height: 8vh;
     border-radius: 50%;
-    box-shadow: 0px 0px 6px #B91646;
-    background: #B91646;
+    box-shadow: 0px 0px 6px #1C6758 ;
+    background: #1C6758 ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,14 +115,14 @@ body {
     width: 90vw;
     /* height: 40vh; */
     background-color:  #EEEEEE;
-    margin: 20vh auto 45vh auto;
+    margin: 20vh auto 30vh auto;
 
 }
 
 .subTabMenu {
     width: 100%;
     /* height: 50vh; */
-    background-color: #105652;
+    background-color: #FDD5A1;;
     border-radius: 0px 15px 15px 15px;
     padding-bottom: 15vh;
 }
@@ -134,6 +150,7 @@ body {
     border-color: white;
     border-style: solid;
     border-width: 5px;
+    cursor: pointer;
 }
 
 .grimdiv {
@@ -149,10 +166,14 @@ body {
     border-radius: 5px;
     background : rgba(0,0,0,0.6);
     text-align: center;
-    padding-top: 6vw;
+    padding-top: 3vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
     transition : all 0.6s ease-in-out;
     color: #fff;
     z-index: 100000;
+    font-family: 'KOTRAHOPE';
+    font-size: 1.3rem;
 }
 
 
@@ -210,34 +231,84 @@ body {
 
 
 .cliBtn {
-    background-color: #105652;
+    background-color: #FDD5A1;;
     border: none;
     border-radius: 6px 6px 0 0;
-    font-size: 1.3rem;
-    padding: 7px 10px 3px 10px;
+    font-size: 1.8rem;
+    padding: 7px 17px 3px 17px;
     font-weight: bold;
     color: white;
+    font-family: 'BMJUA';
 }
 
 .unCliBtn {
     background-color: #EEEEEE;
+    margin-right: 5px;
+    margin-left: 5px;
     border: none;
-    font-size: 1.2rem;
-    margin: auto;
+    font-size: 1.7rem;
+    /* margin: auto; */
+    font-family: 'BMJUA';
 }
 
+/* 심볼탭 */
+
+.simbolDiv {
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 20vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #EEEEEE;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.simbol {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    background-color: green;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 60p */
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.simbol:nth-child(2n) {
+    margin-top: 30vh;
+}
+
+.simbolIcon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+.simbolIcon:hover {
+    font-size: 70px;
+}
 
 
 /* 페스티벌 탭 */
 
 .fstvBox {
-    background-color: #10565290;
+    background-color: #FDD5A1;;
     height: 85vh;
     width: 90vw;
     margin: auto;
     display: flex;
     justify-content: space-around;
-    padding: 0 15vh 0 15vh;
+    padding: 0 5vw 0 5vw;
     border-radius: 15px;
 }
 
@@ -319,6 +390,7 @@ body {
 }
 
 
+
 .fstvText {
     position: absolute;
     width: 100%;
@@ -326,6 +398,7 @@ body {
     z-index: 1;
     color: white;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 .icons {
@@ -344,6 +417,9 @@ body {
     height: 58vh;
 }
 
+.width {
+    width: 14vw;
+}
 
 .fstvDescInner {
     animation: fstvDescAni 1s;
@@ -354,8 +430,9 @@ body {
     margin-left: 3vw;
     border-radius: 6px;
     text-align: center;
-    padding: 12vh 5vw 10vh 5vw;
-    line-height: 1.7;
+    padding: 13vh 5vw 10vh 5vw;
+    line-height: 1.8;
+    /* font-size: 1.2rem; */
     overflow: hidden;
 }
 
@@ -364,7 +441,6 @@ body {
     position: absolute;
     margin-top: 2vh;
     left: 6vw;
-
     font-size: 40px;
 }
 
@@ -526,6 +602,7 @@ footer {
     .search-btn {
         display: none;
     }
+
 
 
    

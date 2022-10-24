@@ -76,12 +76,6 @@ $('.search-btn').mouseout(function() {
 
 
 
-
-
-
-
-
-
 // 서브 사진테마 효과
 
 $('.spotBtn').click(function(){
@@ -118,7 +112,39 @@ $('.artBtn').click(function(){
 })
 
 
+// 심볼 클릭시
 
+$('.ticketSimbol').click(function(){
+    window.open(
+        "/ticket",
+        "ticket",
+        "width=450px, height=400px, top=50, left=50"
+    );
+})
+
+
+$('.reviewSimbol').click(function(){
+    window.open(
+        "./review"
+    );
+})
+
+
+// $('.moneySimbol').click(function(){
+//     window.open(
+//         "/",
+//         "money",
+//         "width=450px, height=400px, top=50, left=50"
+//     );
+// })
+
+// $('.weatherSimbol').click(function(){
+//     window.open(
+//         "/pageWeather",
+//         "weather",
+//         "width=450px, height=400px, top=50, left=50"
+//     );
+// })
 
 
 
@@ -154,8 +180,7 @@ function fstvEvtFunc() {
     thisFstv.removeClass('opaciZero');
     
     thisFstv.removeClass('hidden');
-    
-    let thisBtn = thisFstv.next('.fstvBtn')
+    let thisBtn = thisFstv.next('.fstvBtn');
     $('.fstvBack-1').addClass('fstvBackHover');
 
     $('.fstvEvt').off('click', fstvEvtFunc);
@@ -166,7 +191,7 @@ function fstvEvtFunc() {
         $('.fstvDiv').addClass('fstvCli')
         $('.fstvBtn').removeClass('hidden');
         thisBtn.addClass('fstvBtnClr')
-
+        $('.fstvImg').addClass('width')
         thisBtn.next('.fstvDesc').removeClass('hidden');
         $('.fstvDiv').addClass('hidden');
         $('.fstvDiv').removeClass('fstvAni');
@@ -213,7 +238,7 @@ $('.fstvBack-2').click(function () {
     $('.fstvDiv').removeClass('hidden');
     $('.fstvDiv').removeClass('opaciZero');
     $('.fstvDiv').addClass('fstvAni');
-
+    $('.fstvImg').removeClass('width')
 
     // $(this).prev('.fstvDiv').addClass('fstvCli');
 
