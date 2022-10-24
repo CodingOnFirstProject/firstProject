@@ -1,32 +1,66 @@
-// 로그인창 기능
 
-$('.nickForm').submit(function(e){
+
+$('.loginBtn').click(function (e) {
     e.preventDefault();
-    let nickVal = $('.nickInput').val();
-
-    $('.nickInput').val('');
-
-    $('.nickDiv').addClass('hidden')
-
-    $('.welcDiv').removeClass('hidden')
-    console.log(nickVal.length);
-    
-    if (nickVal.length >= 3){
-        $('.welcDiv').html(`환영합니다 <br> ${nickVal}님`)
-    } else {
-        $('.welcDiv').text(`환영합니다 ${nickVal}님`)
-
-    } 
+    window.name = "mainForm";
+    window.open("/login",
+        "login",
+        "width=440px, height=540px, top=50, left=50, status=no, location=no, toolbar=no")
 })
+
+
+// 로그아웃 기능
+
+$('.logout').click(function () {
+    $('.welcDiv').html('')
+    $('.loginBtn').removeClass('hidden')
+    $('#ticket').addClass('hidden')
+    $('#profileImage').attr("src","/static/image/LOGO2.png")
+    if(!Kakao.isInitialized()){
+        Kakao.init('cd08c92ff47abb48747e75288b10a427'); //발급받은 키 중 javascript키를 사용해준다.
+    }
+     // sdk초기화여부판단
+    kakaoLogout();
+})
+
+//카카오로그아웃  
+
+function kakaoLogout() {
+    if (Kakao.Auth.getAccessToken()) {
+        Kakao.API.request({
+            url: '/v1/user/unlink',
+            success: function (response) {
+                console.log(response)
+            },
+            fail: function (error) {
+                console.log(error)
+            },
+        })
+        Kakao.Auth.setAccessToken(undefined)
+    }
+}
+
+
+
+// 예매하기 기능
+
+$('.ticketting').click(function () {
+    window.open(
+        "/ticket",
+        "ticket",
+        "width=450px, height=400px, top=50, left=50"
+    );
+})
+
 
 // 네비게이션 마우스 호버시 나타나는 효과
 
-$('.naviBoss').mouseover(function(){
+$('.naviBoss').mouseover(function () {
     $('.naviHid').removeClass('hidden')
 })
 
-$('.naviBoss').mouseout(function(){  
-   
+$('.naviBoss').mouseout(function () {
+
     $('.naviHid').addClass('hidden')
 
 })
@@ -34,20 +68,23 @@ $('.naviBoss').mouseout(function(){
 // 네비바 좁은화면 버튼 클릭시
 $('.navMQBtn').click(function () {
 
-        
-        $('.navMQmaster').toggleClass('hidden')
+    $('.navMQmaster').toggleClass('hidden');
 
-
-    
 })
 
-$('.navMQtag').click(function() {
+$('.navMQtag').click(function () {
     $('.navMQSub').removeClass('hidden')
     $('.navMQSub').addClass('hidden')
     $(this).next('.navMQSub').removeClass('hidden')
-})  
+})
 
-$('.navMQLogo').click(function() {
+$('.navMQLogo').click(function () {
     $('.navMQSub').removeClass('hidden')
     $('.navMQSub').addClass('hidden')
-})  
+})
+
+$('.navMQBack').click(function () {
+    $('.navMQSub').removeClass('hidden')
+    $('.navMQSub').addClass('hidden')
+    $('.navMQmaster').toggleClass('hidden')
+})
