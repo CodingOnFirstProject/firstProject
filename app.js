@@ -69,13 +69,13 @@ app.get("/Popup",function(request, response){
 })
 
 app.get('/exchangeRate', function(request, response){
-    response.render('exchangeRate');
+    response.render('exchangeRate'); //환율 연습
 })
 
 
 
 app.get('/pageWeather', function(request, response){
-    response.render('pageWeather');
+    response.render('pageWeather'); // 날씨 팝업창
 })
 
 //로컬 서버 동작
