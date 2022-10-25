@@ -34,3 +34,4 @@ prevBtn.addEventListener('click', function(){
         moveSlide(slideCount - 3); // slideCount-3이 마지막 
     }
 });
+
