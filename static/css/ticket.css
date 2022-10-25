@@ -14,10 +14,10 @@ select {
 }
 
 body {
-    background-image: url(/static/image/airplain.jpg);
+    background-image: url(/static/image/ticketBackImg.png);
     background-size: cover;
-    background-size: 500px 450px;
-    width: 100%;
+    background-size: 450px 450px;
+    /* width: 100%; */
     background-repeat: no-repeat;
 
 }
@@ -31,7 +31,7 @@ body {
 
 .travelAll {
     width: 340px;
-    height: 350px;
+    height: 370px;
     background-color: rgb(255, 255, 255, 0.8);
     margin: 30px auto 0 auto; 
     border-radius: 10px;

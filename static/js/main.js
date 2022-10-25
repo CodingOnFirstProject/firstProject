@@ -5,49 +5,53 @@ $('#search-form').submit(function(e){
     let searBar = $('.searchInput').val();
 
     if (searBar == '이탈리아'){
-        window.open('/sights2');
+        window.open('/country');
         $('.searchInput').val('');
     } else if (searBar == '대표 음식'){
-        window.open('./sights');
+        window.open('./food');
         $('.searchInput').val('');
     } else if (searBar == '피렌체 대성당'){
-        window.open('./sights');
+        window.open('./florence');
         $('.searchInput').val('');
     } else if (searBar == '밀라노 대성당'){
-        window.open('./sights');
+        window.open('./milan');
         $('.searchInput').val('');
     } else if (searBar == '성베드로 성당'){
-        window.open('./sights');
+        window.open('./saint');
         $('.searchInput').val('');
     } else if (searBar == '콜로세움'){
-        window.open('./sights');
+        window.open('./colosseum');
         $('.searchInput').val('');
     } else if (searBar == '판테온'){
-        window.open('./sights');
+        window.open('./pantheon');
         $('.searchInput').val('');
     } else if (searBar == '포로로마노'){
-        window.open('./sights');
+        window.open('./fororomano');
         $('.searchInput').val('');
     } else if (searBar == '카프리섬'){
-        window.open('./sights');
+        window.open('./capri');
         $('.searchInput').val('');
     } else if (searBar == '친퀘테레'){
-        window.open('./sights');
+        window.open('./cinqueTrerre');
         $('.searchInput').val('');
     } else if (searBar == '베네치아'){
-        window.open('./sights');
+        window.open('./venice');
         $('.searchInput').val('');
     } else if (searBar == '날씨'){
-        window.open('./sights');
+        window.open('./pageWeather');
         $('.searchInput').val('');
     } else if (searBar == '환율'){
-        window.open('./sights');
+        window.open('./money');
         $('.searchInput').val('');
     } else if (searBar == '리뷰'){
-        window.open('./sights');
+        window.open('./review');
         $('.searchInput').val('');
-    } else {
-        alert('올바른 키워드를 입력해라')
+    } else if (searBar == ''){
+        alert('검색어를 입력해주세요.')
+    }
+    
+    else {
+        alert('올바른 키워드를 입력해주세요.')
     }  
 })
 
@@ -114,6 +118,7 @@ $('.artBtn').click(function(){
 
 // 심볼 클릭시
 
+
 $('.ticketSimbol').click(function(){
     window.open(
         "/ticket",
@@ -129,14 +134,18 @@ $('.reviewSimbol').click(function(){
     );
 })
 
+$('.logoSimbol').click(function(){
+    $('html').scrollTop(0);
+}
+)
 
-// $('.moneySimbol').click(function(){
-//     window.open(
-//         "/",
-//         "money",
-//         "width=450px, height=400px, top=50, left=50"
-//     );
-// })
+$('.moneySimbol').click(function(){
+    window.open(
+        "./Popup",
+        "money",
+        "width=450px, height=400px, top=50, left=50"
+    );
+})
 
 // $('.weatherSimbol').click(function(){
 //     window.open(
