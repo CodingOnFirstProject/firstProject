@@ -117,7 +117,7 @@
 
                 <!-- 등록버튼 -->
                 <div class="bu">
-                  <button type="submit" class="btn btn-primary">등록</button>
+                  <button type="submit" class="enter">등록</button>
                 </div>
               </div>
             </div>
@@ -250,6 +250,7 @@
         </div>
       </div>
       <hr />
+      <hr />
       <!-- 리뷰 출력되는 부분 -->
       <div class="list">
         <!-- <div class="reviews">
@@ -266,7 +267,13 @@
                 <button class="deleteBtn"></div>
             </div>
           </div>
-        </div> -->
+        </div> 
+      <div class="reviews">
+      <span>${userid}</span>
+      <span>${coment}</span>
+      <span>${star}</span>
+      <button onclick="deleteBtn();">삭제</button>
+    </div>-->
       </div>
     </form>
     <%- include('footer.ejs')%>
