@@ -1,4 +1,13 @@
 $( function() {
+ 
+
+    let strWidth = 450 + (window.outerWidth - window.innerWidth);
+    let strHeight = 450 + (window.outerHeight - window.innerHeight);
+
+
+    window.resizeTo( strWidth, strHeight );
+
+
     const now = new Date();
     $( "#startDate" ).datepicker({
         "dateFormat" : 'yy-mm-dd',
@@ -25,6 +34,8 @@ $( function() {
     $( "#endDate" ).val(getAddDate(7));
 
 });
+
+
 $('.ticketBtn').click(function(e){
     e.preventDefault();
     let destiSelec = $('.desti option:selected').val();

@@ -1,3 +1,10 @@
+$(function () {
+  let strWidth = 440 + (window.outerWidth - window.innerWidth);
+  let strHeight = 540 + (window.outerHeight - window.innerHeight);
+
+  console.log(strWidth)
+  window.resizeTo( strWidth, strHeight );
+})
 
 //카카오로그인
 function kakaoLogin() {
