@@ -12,6 +12,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
 
@@ -35,27 +48,35 @@ body {
 
 .contentBox {
     margin-bottom: 30vh;
-    display: block;
+
 }
 
 /* 검색상자 */
 
 .serBox {
-    width: 60%;
+    width: 100%;
     margin-top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     margin-bottom: 30vh;
+    
 
 }
 
+#search-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
 
 
 #search-form input {
     text-align: center;
     background: transparent;
     color: black;
-    width: 53vw;
+    width: 65vw;
     height: 8vh;
     /* padding: 10px; */
     border-radius: 20px;
@@ -67,8 +88,12 @@ body {
 }
 
 .search-btn {
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
     color: white;
     float: right;
+    margin-left: 3vw;
     /* width: 40px; */
     /* height: 40px; */
     width: 8vh;
@@ -98,9 +123,19 @@ body {
     border-radius: 20px 20px 0 0;
 }
 
+.searchKeyBox {
+    width: 65vw;
+}
+
+
 .keywordBox {
-    position: absolute;
-    width: 53vw;
+    position: absolute; 
+    /* transform: translateY(8vh);
+    transform: translateX(8vh); */
+    /* top: 8vh; */
+    /* left: 0; */
+    /* transform: translateX(-3.5vw); */
+    width: 65vw;    
     background: white;
     padding: 20px;
     box-shadow: 0px 5px 4px #0002;
@@ -122,10 +157,10 @@ body {
 /* 탭메뉴 및 버튼*/
 
 .tabMenu {
-    width: 100%;
+    width: 90vw;
     /* height: 40vh; */
     background-color:  #EEEEEE;
-    margin: 20vh auto 30vh auto;
+    margin: 20vh auto 20vh auto;
 
 }
 
@@ -161,15 +196,16 @@ body {
     border-color: white;
     border-style: solid;
     border-width: 5px;
-    cursor: pointer;
+   
 }
 
 .grimdiv {
     position: relative;
+    cursor: pointer;
 }
 
 .tabGrimDesc {
-    top: 28vh;
+    top: 32vh;
     position: absolute;
     opacity: 0;
     width: 21vw;
@@ -177,21 +213,29 @@ body {
     border-radius: 5px;
     background : rgba(0,0,0,0.6);
     text-align: center;
-    padding-top: 3vw;
-    padding-right: 1vw;
-    padding-left: 1vw;
+    padding: 20vh 1vw 10vh 1vw;
+    /* padding-right: 1vw;
+    padding-left: 1vw; */
     transition : all 0.6s ease-in-out;
     color: #fff;
     z-index: 100000;
     font-family: 'KOTRAHOPE';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    overflow: scroll;
+
 }
+
+.tabGrimDesc::-webkit-scrollbar{
+    display: none; 
+}
+
+
 
 
 .grimdiv:hover .tabGrimDesc {
     opacity: 1;
     animation: grimDesc 2s 1;
-    transform: translateY(-16vh);
+    transform: translateY(-20vh);
 }
 
 @keyframes grimDesc {
@@ -204,14 +248,14 @@ body {
     50% {
       
         opacity: 0;
-        transform: translateY(-8vh);
+        transform: translateY(-10vh);
 
     }
 
 
     100% {
         opacity: 1;
-        transform: translateY(-16vh);
+        transform: translateY(-20vh);
     }
 
 }
@@ -265,7 +309,7 @@ body {
 /* 심볼탭 */
 
 .simbolDiv {
-    width: 100%;
+    /* width: 100%; */
     height: 40vh;
     margin-bottom: 20vh;
     padding-left: 10vw;
@@ -279,11 +323,11 @@ body {
 }
 
 .simbol {
-    width: 20vh;
-    height: 20vh;
+    width: 13vw;
+    height: 13vw;
     border-radius: 50%;
-    background-color: green;
-    margin-bottom: 15vh;
+    background-color: #1C6758;
+    margin-bottom: 23vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,17 +340,37 @@ body {
 
 
 .simbol:nth-child(2n) {
-    margin-top: 30vh;
-}
-
-.simbolIcon {
-    font-size: 60px;
-    margin-bottom: 10px;
+    margin-top: 55vh;
 }
 
 
-.simbolIcon:hover {
-    font-size: 70px;
+
+
+
+.simbol:hover {
+    animation-name: simbolAni;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes simbolAni {
+    0%, 100% {
+
+    }
+
+    20% {
+        transform: translate(-10px, 10px);
+    }
+    40% {
+        transform: translate(10px, 0px);
+    }
+    60% {
+        transform: translate(-10px, -10px);
+    }
+    80% {
+        transform: translate(0px, 10px);
+    }
 }
 
 
@@ -315,7 +379,7 @@ body {
 .fstvBox {
     background-color: #FDD5A1;;
     height: 85vh;
-    width: 90vw;
+    /* width: 90vw; */
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -331,6 +395,7 @@ body {
     background-color: beige;
     margin-top: 19vh;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .fstvAni:hover {
@@ -355,6 +420,7 @@ body {
     height: 2vw;
     background-color: #63000040;
     z-index: 2;
+    cursor: pointer;
 }
 
 .fstvBtnClr {
@@ -402,6 +468,7 @@ body {
 
 
 
+
 .fstvText {
     position: absolute;
     width: 100%;
@@ -409,11 +476,12 @@ body {
     z-index: 1;
     color: white;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;    
+    font-family: 'Cafe24Ssurround';
 }
 
 .icons {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .transIcon {
@@ -441,18 +509,21 @@ body {
     margin-left: 3vw;
     border-radius: 6px;
     text-align: center;
-    padding: 13vh 5vw 10vh 5vw;
+    padding: 7vh 5vw 10vh 5vw;
     line-height: 1.8;
     /* font-size: 1.2rem; */
     overflow: hidden;
+
 }
+
 
 
 .fstvBack {
     position: absolute;
-    margin-top: 2vh;
-    left: 6vw;
-    font-size: 40px;
+    margin-top: 0.3vh;
+    left: 1vw;
+    font-size: 50px;
+     /* cursor: pointer; */
 }
 
 .fstvBackHover {
@@ -467,6 +538,7 @@ body {
 
 .fstvBack-2 {
     animation: fstvBackAni 2s 1;
+    cursor: pointer;
 }
 
 @keyframes fstvBackAni {
@@ -478,6 +550,7 @@ body {
         transform: translateY(0);
     }
 }
+
 
 
 
@@ -555,29 +628,59 @@ footer {
 
 
 @media (max-width: 1200px) {
+    .simbolDiv {
+        /* width: 100%; */
+        height: 20vw;
+        margin-bottom: 25vw;
+        margin-top: 30vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        background-color: #EEEEEE;
+    
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
 
+    .simbol {
+        width: 18vw;
+        height: 18vw;
+        margin-top: 5vw;
+    }
+    
+    .simbol:nth-child(2n) {
+        margin-top: 15vw;
+        margin-bottom: 0;
+    }
+    
 
-    .serBox {
+    /* .serBox {
         width: 80%;
     }
 
     
     #search-form input {
         width: 70vw;
-    }
+    } */
 
     /* .search-btn {
         display: none;
     } */
 
 
-    .keywordBox {
+    /* .keywordBox {
         width: 70vw;
-    }
+    } */
+
+    
+
+
 }
     @media (max-width: 1030px) {
     .subTabMenu {
-        padding-bottom: 10vh;
+        padding-bottom: 5vh;
+        align-items: center;
     }
 
 
@@ -593,7 +696,18 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .serBox {
+
+    .tabMenu {
+        margin-bottom: 5vh;
+    }
+    .sinbolDiv {
+        height: 20vh;
+        margin-bottom: 0;
+    }
+    /* .grimdiv {
+        padding-bottom: 5vh;
+    } */
+    /* .serBox {
         width: 80%;
     }
 
@@ -612,19 +726,22 @@ footer {
 
     .search-btn {
         display: none;
-    }
+    } */
 
 
 
    
     .themaGrim { 
-        width: 55vw;
+        width: 65vw;
         height: 50vw;
+        margin-top: 8vh;
     }
 
     .tabGrimDesc {
-        width: 55vw;
+        width: 65vw;
         height: 50vw;
+        top: 28vh;
+        /* margin-bottom: 5vh; */
     }
     .fstvBox {
         height: 98vh;
@@ -634,10 +751,16 @@ footer {
         align-items: center;
         /* width: 30vw; */
     }
+
+    .width {
+        width: 100%
+    }
+    
     .fstvDiv {
         width: 60vw;
         height: 13vh;
         margin: 2vh;
+        
     }
 
     .fstvAni {
@@ -664,11 +787,18 @@ footer {
 
     .fstvDescInner {
         margin-top: 3vh;
-        margin-left: 0vw
+        margin-left: 0vw;
+        overflow: scroll;
     }
-
+    
+    .fstvDescInner::-webkit-scrollbar{
+        display: none; 
+    }
     .fstvBtn {
-        margin-bottom: 85vh;
+        margin-bottom: 88vh;
+        margin-left: 5vw;
+        width: 4vw;
+        height: 4vw;
     }
     
 /* 
@@ -678,3 +808,4 @@ footer {
     }
      */
 }
+

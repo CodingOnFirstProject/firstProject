@@ -23,6 +23,9 @@ app.get("/", function (request, response) {
   response.render("main");
 });
 
+app.get("/sights", function(request, response){
+  response.render('sights');
+})
 //성당
 app.get("/florence", function (request, response) {
   response.render("florence"); //피렌치

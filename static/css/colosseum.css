@@ -57,8 +57,9 @@ header{
     height : 300px;
 }
 .box .msg{
+    margin: auto 0;
     margin-left : 7%;
-    margin-top : 60px;
+    /* margin-top : 20px; */
     width : 40%;
 }
 #box2 .msg{

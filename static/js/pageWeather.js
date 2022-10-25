@@ -7,6 +7,7 @@ const city = document.querySelector("#city"); //select 태그
 let temp = document.querySelector("#temp");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
+let cloud = document.querySelector('#cloud');
 
 const cityName = document.querySelector("#cityName"); // 도시 이름을 저장한 변수
 
@@ -19,6 +20,9 @@ const tempMaxMinName = document.querySelector(".tempMaxMinName");
 
 let cityDay = document.querySelector(".cityDay");
 
+let weatherImg = document.querySelector("#weatherImg > img");
+//==========================================================
+
 let clock = new Date();
 clock.setHours(clock.getHours() - 7);
 
@@ -29,6 +33,11 @@ var month = time.getMonth() + 1;
 var date = time.getDate();
 
 cityDay.innerText = `${year}년 ${month}월 ${date}일`;
+
+
+//============================================================
+
+
 
 
 resultbtn.addEventListener("click", apply);
@@ -63,6 +72,8 @@ console.log("URL:::::::" + url);
     async: 'false',
     success: function (response) {
       console.log(response);
+      console.log("뭔데:" + response.weather[0]['main']);
+      
       console.log('원래 현재온도 : ' + (response.main.temp - 273.15));
       console.log('최고온도 : ' + (response.main.temp_max - 273.15));
       console.log('최저 온도: ' + (response.main.temp_min - 273.15));
@@ -78,7 +89,42 @@ console.log("URL:::::::" + url);
   
       temp.innerHTML = `${Math.floor(response.main.temp - 273.15)}°C`;
       humidity.innerHTML = response.main.humidity;
-      wind.innerHTML = response.wind.speed;     
+      wind.innerHTML = response.wind.speed;  
+      cloud.innerHTML = response.clouds.all + '%';
+      
+
+      let weatherInfo = response.weather[0]['main'];
+      console.log("weatherInfo: " + weatherInfo);
+
+
+      // function changeIcon(weatherInfo){
+        
+
+        if(weatherInfo === 'Clouds'){
+          weatherImg.setAttribute('src', '/static/img/clouds.png');
+        }
+        else if(weatherInfo === 'Clear'){
+          weatherImg.setAttribute('src', '/static/img/clear.png');
+        }
+        else if(weatherInfo === 'Thunderstrom'){
+          weatherImg.setAttribute('src', '/static/img/Thunderstrom.png');
+        }
+        else if(weatherInfo === 'Drizzle'){
+          weatherImg.setAttribute('src', '/static/img/Drizzle.png');
+        }
+        else if(weatherInfo === 'Rain'){
+          weatherImg.setAttribute('src', '/static/img/rain.png');
+        }
+        else if(weatherInfo === 'Snow'){
+          weatherImg.setAttribute('src', '/static/img/snow.png');
+        }
+        else if(weatherInfo === 'Atmosphere'){
+          weatherImg.setAttribute('src', '/static/img/atmoshere.png');
+        }
+        else{
+          weatherImg.setAttribute('src', '/static/img/clear.png');
+        }
+      // }
 
 
       btnMax.addEventListener("click", function(){
@@ -106,6 +152,8 @@ console.log("URL:::::::" + url);
         btnMax.style.backgroundColor = "#FCEDF1";
         btnMin.style.backgroundColor = "#FCEDF1";
         now.style.backgroundColor = "white";
+        tempMaxMinName.innerHTML = "현재온도";
+        temp.innerHTML = `${Math.floor(response.main.temp - 273.15)}°C`;
       })
 
 

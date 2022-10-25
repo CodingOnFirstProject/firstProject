@@ -2,12 +2,18 @@
 
 $('.loginBtn').click(function (e) {
     e.preventDefault();
-    window.name = "mainForm";
-    window.open("/login",
-        "login",
-        "width=440px, height=540px, top=50, left=50, status=no, location=no, toolbar=no")
-})
+ 
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
 
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    window.name = "mainForm";
+    openCenter("/login","login", 450, 540);
+})
+    
 
 // 로그아웃 기능
 
@@ -45,11 +51,14 @@ function kakaoLogout() {
 // 예매하기 기능
 
 $('.ticketting').click(function () {
-    window.open(
-        "/ticket",
-        "ticket",
-        "width=450px, height=400px, top=50, left=50"
-    );
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
+
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    openCenter("/ticket","ticket", 450, 450);
 })
 
 
@@ -85,9 +94,9 @@ $('.navMQLogo').click(function () {
 })  
 
 //환율창에 대한 js
-const money = document.querySelector(".money");
+// let money = document.querySelector(".money");
 
-money.addEventListener('click', function(){
+$('.money').click(function(){
     function openCenter(doc, win, w, h){
         var left = (screen.availWidth - w) / 2;
         var top = (screen.availHeight - h) / 2;
@@ -98,6 +107,7 @@ money.addEventListener('click', function(){
     openCenter("/Popup", "pop", 450, 350);
 
 })
+
 
 $('.navMQBack').click(function () {
     $('.navMQSub').removeClass('hidden')
