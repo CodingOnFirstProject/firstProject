@@ -39,34 +39,43 @@
 #box1 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 50px 0;
+
+  border: 4px solid red;
+}
+#box1 #box1Img{
+  width: 30%;
 }
 #box1 img {
-  width: 300px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
 }
 #box1 #msg {
   width: 50%;
   margin-left: 10px;
+
+  border: 4px solid red;
 }
 #box1 h2 {
   margin-left: 20px;
 }
 #box1 #msg .pFour {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 #box1 #msg .pFour p {
   /* border : 1px solid black; */
   width: 300px;
   height: 120px;
   margin: 10px 20px;
+  
+  border: 4px solid blue;
 }
 
 #box1 #msg .pFour .twop {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 #box1 #msg button {
   width: 100px;
@@ -101,8 +110,7 @@
   display: flex;
   flex-direction: row;
   /* border: 2px solid red; */
-  height: 300px; /*위에 초록색의 높이를 결정하는 height*/
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #box2 #test .box2Div3 {
@@ -112,6 +120,8 @@
   width: 60%;
   margin-left: 30px;
   padding-top: 80px;
+
+  border: 4px solid blue;
 }
 #box2 #test h2 {
   color: white;
@@ -157,9 +167,12 @@
   align-items: center;
 }
 #box3 #writer {
-  border: 2px solid red;
   width: 70%;
   text-align: center;
+}
+#box3 #writer p{
+  color: #f9bc6c;
+  font-weight: 200;
 }
 
 #box3 #oneImg {
@@ -171,19 +184,18 @@
   justify-content: space-around;
 }
 #box3 #oneImg {
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
 }
-#box3 #oneImg img {
-  width: 400px;
-  height: 250px;
+#box3 #oneImg #imgWidth{
+  width: 35%;
 }
-#box3 .absoluteText {
-  width: 150px;
-  height: 150px;
-  border: 2px solid red;
-  position: absolute;
-  bottom: 40px;
-  right: 450px;
+#box3 #oneImg #imgWidth img {
+  width: 100%;
+  height: 100%;
 }
 
 #box1:target h2 {
@@ -194,4 +206,42 @@
 }
 #box3:target h2 {
   font-weight: 700;
+}
+
+#box3 #variableText{
+  width: 60%;
+  height: 100%;
+}
+
+#box3 #variableText #parentsP{
+  width: 90%;
+}
+
+
+
+
+@media (max-width: 666px){
+  #box2{
+    
+  }
+  #box2 #test {
+    flex-direction: column;
+  }
+
+  #box2 #test h2 {
+    color: white;
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  #box2 #test .box2Div3 {
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+  
+    border: 4px solid blue;
+  }
 }
