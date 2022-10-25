@@ -1,4 +1,18 @@
 const form = document.querySelector(".wrap");
+
+function deleteBtn(obj) {
+  console.log("click delete btn!");
+  console.log(obj);
+  console.log(obj.parentElement.parentElement.parentElement.parentElement);
+  const removeReviews =
+    obj.parentElement.parentElement.parentElement.parentElement;
+  // console.log(list);
+  // console.log(reviews);
+  // list.removeChild(reviews);
+  console.log(removeReviews);
+  removeReviews.remove();
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const nickname = document.getElementById("nickname").value;
@@ -15,117 +29,104 @@ form.addEventListener("submit", function (event) {
   const month = date.getMonth();
   const day = date.getDate();
 
-  const rating1 = document.getElementById("rating1");
-  const rating2 = document.getElementById("rating2");
-  const rating3 = document.getElementById("rating3");
-  const rating4 = document.getElementById("rating4");
-  const rating5 = document.getElementById("rating5");
+  // const rating1 = document.getElementById("rating1");
+  // const rating2 = document.getElementById("rating2");
+  // const rating3 = document.getElementById("rating3");
+  // const rating4 = document.getElementById("rating4");
+  // const rating5 = document.getElementById("rating5");
 
-  const divReviews = document.createElement("div");
-  divReviews.classList.add("reviews"); // div.reviews 생성
-  const divLeft = document.createElement("div");
-  divLeft.classList.add("left"); // div.left 생성
-  const divRight = document.createElement("div");
-  divRight.classList.add("right"); // div.right 생성
-  const divSide = document.createElement("div");
-  divSide.classList.add("side"); // div.side 생성
-  const perbot = document.createElement("div");
-  perbot.classList.add("bot"); // div.bot 생성
+  // const divReviews = document.createElement("div");
+  // divReviews.classList.add("reviews"); // div.reviews 생성
+  // const divLeft = document.createElement("div");
+  // divLeft.classList.add("left"); // div.left 생성
+  // const divRight = document.createElement("div");
+  // divRight.classList.add("right"); // div.right 생성
+  // const divSide = document.createElement("div");
+  // divSide.classList.add("side"); // div.side 생성
+  // const perbot = document.createElement("div");
+  // perbot.classList.add("bot"); // div.bot 생성
 
-  const pericon = document.createElement("div");
-  pericon.innerHTML = '<i class="bi bi-person-circle"></i>';
-  pericon.classList.add("icon2");
-  const pernick = document.createElement("div");
-  pernick.textContent = nickname;
-  pernick.classList.add("nickname"); // div.nickname 생성 후 nickname value값 삽입
+  // const pericon = document.createElement("div");
+  // pericon.innerHTML = '<i class="bi bi-person-circle"></i>';
+  // pericon.classList.add("icon2");
+  // const pernick = document.createElement("div");
+  // pernick.textContent = nickname;
+  // pernick.classList.add("nickname"); // div.nickname 생성 후 nickname value값 삽입
 
-  const pertxt = document.createElement("div");
-  pertxt.textContent = review;
-  pertxt.classList.add("textreview"); // div.txtreview 생성 후 txtreview value값 삽입
+  // const pertxt = document.createElement("div");
+  // pertxt.textContent = review;
+  // pertxt.classList.add("textreview"); // div.txtreview 생성 후 txtreview value값 삽입
 
-  const perstar = document.createElement("div");
+  // const perstar = document.querySelector(".stars");
 
-  const star1 = rating1.checked;
-  const star2 = rating2.checked;
-  const star3 = rating3.checked;
-  const star4 = rating4.checked;
-  const star5 = rating5.checked;
+  // const star1 = rating1.checked;
+  // const star2 = rating2.checked;
+  // const star3 = rating3.checked;
+  // const star4 = rating4.checked;
+  // const star5 = rating5.checked;
 
-  if (star5 == true) {
-    perstar.innerHTML = '<img src="/static/img/5점.png" alt ="별점이미지">';
-    console.log("5");
-  } else if (star4 == true && star5 != true) {
-    perstar.innerHTML = '<img src="/static/img/4점.png" alt ="별점이미지">';
-    console.log("4");
-  } else if (star3 == true && star4 != true) {
-    perstar.innerHTML = '<img src="/static/img/3점.png" alt ="별점이미지">';
-    console.log("3");
-  } else if (star2 == true && star3 != true) {
-    perstar.innerHTML = '<img src="/static/img/2점.png" alt ="별점이미지">';
-    console.log("2");
-  } else if (star1 == true && star2 != true) {
-    perstar.innerHTML = '<img src="/static/img/1점.png" alt ="별점이미지">';
-    console.log("1");
-  } else {
-    perstar.textContent = "";
-    console.log("0");
-  }
-  perstar.classList.add("stars"); // div.stars 생성 후 stars value값 삽입
+  // if (star5 == true) {
+  //   perstar.innerHTML = '<img src="/static/img/5점.png" alt ="별점이미지">';
+  //   console.log("5");
+  // } else if (star4 == true && star5 != true) {
+  //   perstar.innerHTML = '<img src="/static/img/4점.png" alt ="별점이미지">';
+  //   console.log("4");
+  // } else if (star3 == true && star4 != true) {
+  //   perstar.innerHTML = '<img src="/static/img/3점.png" alt ="별점이미지">';
+  //   console.log("3");
+  // } else if (star2 == true && star3 != true) {
+  //   perstar.innerHTML = '<img src="/static/img/2점.png" alt ="별점이미지">';
+  //   console.log("2");
+  // } else if (star1 == true && star2 != true) {
+  //   perstar.innerHTML = '<img src="/static/img/1점.png" alt ="별점이미지">';
+  //   console.log("1");
+  // } else {
+  //   perstar.textContent = "";
+  //   console.log("0");
+  // }
+  // perstar.classList.add("stars"); // div.stars 생성 후 stars value값 삽입
 
-  const perdate = document.createElement("div");
-  perdate.textContent = `${year}.${month + 1}.${day}`;
-  perdate.classList.add("dates"); // div.dates 생성 후 dates value값 삽입
+  const perdate = document.querySelector(".dates");
+  // perdate.textContent = `${year}.${month + 1}.${day}`;
+  // perdate.classList.add("dates"); // div.dates 생성 후 dates value값 삽입
 
-  const makeBtn = document.createElement("button");
-  makeBtn.innerHTML = "삭제";
-  makeBtn.classList.add("deleteBtn");
-  // 삭제버튼을 누르면 발생하는 이벤트 만들기
-  makeBtn.addEventListener("click", (event) => {
-    console.log(makeBtn);
-    // 삭제버튼을 클릭하면 이벤트 발생
-
-    const btn = event.target; // => 그 이벤트 발생의 'target'을 btn 변수에 선언
-    console.log(btn); // 콘솔창을 띄우면 버튼 태그가 출력됨
-
-    const deleteAll = btn.parentNode; // btn의 부모 노드 => commentDiv(버튼 태그를 감싸는 상위태그)
-
-    console.log(this);
-    console.log(list);
-    this.removeChild(".reviews");
-    // commentDiv를 감싸는 상위 태그 => comment,  comment의 자식 노드를 삭제한다 => deleteAll을(commentDiv태그를)
-
-    // 결과적으로 삭제버튼을 클릭하면 그 삭제버튼을 포함하는 부모태그 commentDiv 자체가 지워져서
-    // 원하는 댓글을 삭제할 수 있다.
-  });
-
-  list.append(divReviews);
+  // list.append(divReviews);
   if (nickname === "" || review === "") {
     perdate.textContent = "";
     pericon.innerHTML = "";
   } // nickname value와 review value가 없을때 date출력되지 않게끔
-  divReviews.append(divLeft, divRight);
+  // divReviews.append(divLeft, divRight);
 
-  divLeft.append(pericon, pernick);
-  divRight.append(pertxt, divSide);
-  divSide.append(perstar, perbot);
-  perbot.append(perdate, makeBtn);
+  // divLeft.append(pericon, pernick);
+  // divRight.append(pertxt, divSide);
+  // divSide.append(perstar, perbot);
+  // perbot.append(perdate, makeBtn);
 
-  //별점 선택 안했으면 메시지 표시
-  if (rating.rate == 0) {
-    alert("별점을 선택해주세요!");
-    return false;
-  }
-  //리뷰 5자 미만이면 메시지 표시
-  if (document.getElementById("review").value.length < 5) {
-    alert("리뷰를 5자 이상 써주세요!");
-    return false;
-  }
-  if (rating.rate != 0 && document.getElementById("review").value.length < 5) {
-    alert("리뷰등록이 완료되었습니다!");
-  }
+  let html = `
+    <div class="reviews">
+      <div class="left">
+        <div class="icon2"><i class="bi bi-person-circle"></i></div>
+        <div class="nickname">${nickname}</div>
+      </div>
+      <div class="right">
+        <div class="textreview">${review}</div>
+        <div class="side">
+          <div class="stars">${stars()}</div>
+          <div class="bot">
+            <div class="dates">${year}.${month + 1}.${day}</div>
+            <button class="deleteBtn" onclick="deleteBtn(this);">삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
 
-  // document.getElementById("nickname").value = "";
-  // document.getElementById("review").value = "";
+  // $(".deleteBtn").click(function () {
+  //   $(this).parents().remove();
+  // });
+
+  $(list).append(html);
+
   $("form[name='review']").each(function () {
     this.reset();
   }); // 등록 눌렀을때 폼 초기화
@@ -186,18 +187,54 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  $(".nickForm").submit(function (e) {
-    e.preventDefault();
-    let nickVal = $(".nickInput").val();
-
-    $(".nickInput").val("");
-
-    $(".nickDiv").addClass("hidden");
-
-    $(".welcDiv").removeClass("hidden");
-
-    $(".welcDiv").text(`환영합니다 ${nickVal}님`);
-    console.log(nickVal);
-  });
 });
+
+// deleteBtn.addEventListener("onclick", () => {
+// deleteBtn.innerHTML = "삭제";
+// deleteBtn.classList.add("deleteBtn");
+// 삭제버튼을 누르면 발생하는 이벤트 만들기
+// console.log("1", deleteBtn);
+// console.log("2", deleteBtn);
+// 삭제버튼을 클릭하면 이벤트 발생
+
+// const btn = event.target; // => 그 이벤트 발생의 'target'을 btn 변수에 선언
+// console.log(btn); // 콘솔창을 띄우면 버튼 태그가 출력됨
+
+// const deleteAll = btn.parentNode; // btn의 부모 노드 => commentDiv(버튼 태그를 감싸는 상위태그)
+
+// console.log(this);
+// console.
+
+// commentDiv를 감싸는 상위 태그 => comment,  comment의 자식 노드를 삭제한다 => deleteAll을(commentDiv태그를)
+
+// 결과적으로 삭제버튼을 클릭하면 그 삭제버튼을 포함하는 부모태그 commentDiv 자체가 지워져서
+// 원하는 댓글을 삭제할 수 있다.
+//
+
+function stars() {
+  const rating1 = document.getElementById("rating1");
+  const rating2 = document.getElementById("rating2");
+  const rating3 = document.getElementById("rating3");
+  const rating4 = document.getElementById("rating4");
+  const rating5 = document.getElementById("rating5");
+
+  const star1 = rating1.checked;
+  const star2 = rating2.checked;
+  const star3 = rating3.checked;
+  const star4 = rating4.checked;
+  const star5 = rating5.checked;
+
+  if (star5 == true) {
+    return '<img src="/static/img/5점.png" alt ="별점이미지">';
+  } else if (star4 == true && star5 != true) {
+    return '<img src="/static/img/4점.png" alt ="별점이미지">';
+  } else if (star3 == true && star4 != true) {
+    return '<img src="/static/img/3점.png" alt ="별점이미지">';
+  } else if (star2 == true && star3 != true) {
+    return '<img src="/static/img/2점.png" alt ="별점이미지">';
+  } else if (star1 == true && star2 != true) {
+    return '<img src="/static/img/1점.png" alt ="별점이미지">';
+  } else {
+    return;
+  }
+}

@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .top {
@@ -56,9 +56,18 @@ body {
 .comment {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 0 16px 0;
+  justify-content: space-around;
+  padding: 13px 0 0 0;
   width: 100%;
+  background-color: #3d8361;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
 }
 
 .input {
@@ -99,7 +108,7 @@ body {
 
 .rerabu {
   border-style: dashed;
-  border-color: rgb(83, 134, 165);
+  border-color: #3d8361;
   position: relative;
   width: 80%;
   flex-direction: column;
@@ -122,6 +131,13 @@ body {
   padding: 12px 16px;
 }
 
+.enter {
+  background: #3d8361;
+  width: 100px;
+  border: 2px solid #c64251;
+  font-weight: bold;
+}
+
 /* 별점 관련 */
 /* .rating {
     text-align: center;
@@ -141,7 +157,7 @@ body {
   background-color: #f0f0f0;
 }
 .rating .rate_radio:checked + label {
-  background-color: rgb(235, 235, 20);
+  background-color: #f9bc6c;
 }
 
 /* 체크박스 안보이게 */
@@ -153,7 +169,7 @@ body {
 .list {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+
   width: 70%;
   /* height: 1000px; */
   margin-left: 10px;
@@ -167,7 +183,7 @@ body {
   /* height: 10%; */
   border-style: dashed;
   border-width: thin;
-  border-color: rgb(83, 134, 165);
+  border-color: #3d8361;
 }
 
 /* 닉네임칸 */
@@ -177,8 +193,9 @@ body {
   flex: 0 0 auto;
   /* height: 10%; */
   width: 30%;
+  /* background-color: #f9bc6c; */
   align-items: center;
-  border-right: thin dotted rgb(83, 134, 165);
+  border-right: thin dotted #3d8361;
   border-bottom: 0;
   border-top: 0;
   border-left: 0;
@@ -236,7 +253,11 @@ img {
 }
 
 .deleteBtn {
-  margin-left: 20px;
+  margin-left: 25px;
+  background: #c64251;
+  width: 100px;
+  border: 2px solid #3d8361;
+  font-weight: bold;
 }
 
 @media (max-width: 990px) {
@@ -283,6 +304,7 @@ img {
     flex-direction: row;
     /* height: 6vw; */
     border-right: 0;
+    margin-left: 20px;
   }
 
   .nickname {
@@ -293,7 +315,7 @@ img {
     width: 100%;
     border-right: 0;
     border-bottom: 0;
-    border-top: medium solid rgb(0, 0, 0);
+    border-top: thin dotted #3d8361;
     border-left: 0;
   }
 

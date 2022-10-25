@@ -29,8 +29,8 @@
 }
 #box1 #msg .pFour p {
   /* border : 1px solid black; */
-  width: 300px;
-  height: 120px;
+  width: 50%;
+  /* height: 120px; */
   margin: 10px 20px;
 }
 
@@ -45,31 +45,37 @@
   margin-top: 10px;
 }
 
+#threeBox .box {
+  margin: 0px 20px 20px 20px;
+  height: 300px;
+}
 /* box2 */
 #box2 {
   background: #3d8361;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-#threeBox .box {
-  margin: 0 20px 0 0;
 }
 
 #threeBox .box img {
   width: 47%; /*부모요소의 45%*/
-  height: 300px;
+  height: 100%;
 }
 .box .msg {
   margin-left: 7%;
-  margin-top: 40px;
+  margin-top: 25px;
   width: 40%;
 }
 #box2 .msg {
   margin-right: 6%;
   color: white;
+}
+
+#box2 .msg h2 {
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
+  margin-bottom: 1rem;
 }
 
 .box .msg .smallw {
@@ -83,12 +89,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 #box3 .msg {
   margin-right: 6%;
   /* color: white; */
+}
+
+#box3 .msg h2 {
+  margin-bottom: 1rem;
 }
 
 /* box4 */
@@ -97,12 +106,18 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 #box4 .msg {
   margin-right: 6%;
   color: white;
+}
+
+#box4 .msg h2 {
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
+  margin-bottom: 1rem;
 }
 
 /* box5 */
@@ -111,12 +126,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 #box5 .msg {
   margin-right: 6%;
   /* color: white; */
+}
+
+#box5 .msg h2 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: bold;
 }
 /* box끝 */
 
@@ -126,11 +148,14 @@
   padding: 30px;
   padding-bottom: 50px;
   margin-bottom: 80px;
+  margin-top: 10px;
 }
 #infoThree h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: white;
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
 }
 #infoThree #infoImg {
   display: flex;
@@ -147,33 +172,34 @@
 }
 
 #contents button {
+  font-weight: bold;
   margin-left: 47%;
-  background: #d6cda4;
+  background: #c64251;
   width: 100px;
-  border: 2px solid #1c6758;
+  border: 2px solid #3d8361;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1188px) {
   #box1 {
     flex-direction: column;
     align-items: center;
   }
 
-  #box1 #msg {
-    height: 30vw;
+  #box1 h2 {
+    margin-top: 20px;
   }
 
-  #infoThree #infoImg {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 1188px) {
   #box2 {
     flex-direction: column;
     align-items: center;
-    /* width: 500px; */
+    background-color: #eeeeee;
+  }
+
+  #box2 .msg {
+    background-color: #3d8361;
+    margin: 0;
+    width: 47%;
+    padding: 20px 15px 0 15px;
   }
 
   #box3 {
@@ -184,9 +210,28 @@
   #box4 {
     flex-direction: column;
     align-items: center;
+    background-color: #eeeeee;
+  }
+
+  #box4 .msg {
+    background-color: #3d8361;
+    margin: 0;
+    width: 47%;
+    padding: 20px 15px 0 15px;
   }
 
   #box5 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #threeBox .box {
+    height: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  #infoThree #infoImg {
     flex-direction: column;
     align-items: center;
   }

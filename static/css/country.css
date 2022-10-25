@@ -7,30 +7,21 @@
 /* contents */
 
 #video {
-  width: 100%;
-  height: 700px;
+  width: 100vw;
+  /* height: 87vh; */
 }
 #video video {
   width: 100%;
-  height: 700px;
-}
-#btn4 {
-  background: #1c6758;
-  width: 100%;
-  height: 70px;
-}
-#btn4 button {
-  width: 90px;
-  height: 30px;
+  height: 87vh;
 }
 
 /* box */
 .box {
-  margin: 0 20px 0 0;
+  margin: 0px 20px 20px 20px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
 }
+
 #box2 {
   background: #3d8361;
   display: flex;
@@ -49,6 +40,11 @@
   width: 47%; /*부모요소의 45%*/
   height: 300px;
 }
+
+#threeBox .box h2 {
+  margin-bottom: 1rem;
+}
+
 .box .msg {
   margin-left: 7%;
   margin-top: 30px;
@@ -70,11 +66,15 @@
 }
 
 #box2 .msg h2 {
-  color: #fff94c;
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
 }
 
 #box4 .msg h2 {
-  color: #fff94c;
+  font-weight: 700;
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
 }
 
 h2 {
@@ -91,7 +91,7 @@ h2 {
 }
 
 .smallw {
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -110,10 +110,11 @@ h2 {
   margin-left: 100px;
 }
 #contents button {
+  font-weight: bold;
   margin-left: 47%;
-  background: #d6cda4;
+  background: #c64251;
   width: 100px;
-  border: 2px solid #1c6758;
+  border: 2px solid #3d8361;
 }
 
 #explain img {
@@ -133,22 +134,34 @@ h2 {
   #box2 {
     flex-direction: column;
     align-items: center;
-    /* background-color: white; */
+    background-color: #eeeeee;
   }
 
-  /* #box2 .msg {
+  #box2 .msg {
     background-color: #3d8361;
-  } */
+    margin: 0;
+    width: 47%;
+    padding: 20px 15px 0 15px;
+  }
+
+  #box3 .msg {
+    margin: 0;
+    width: 47%;
+    padding: 20px 15px 0 15px;
+  }
 
   #box4 {
     flex-direction: column;
     align-items: center;
-    /* background-color: white; */
+    background-color: #eeeeee;
   }
 
-  /* #box4 .msg {
+  #box4 .msg {
     background-color: #3d8361;
-  } */
+    margin: 0;
+    width: 47%;
+    padding: 20px 15px 0 15px;
+  }
 
   #explain #posit {
     flex-direction: column;
