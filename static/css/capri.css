@@ -39,7 +39,6 @@
 #box1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   margin: 50px 0;
 
   border: 4px solid red;
@@ -52,23 +51,31 @@
   height: 100%;
 }
 #box1 #msg {
-  width: 50%;
-  margin-left: 10px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;;
 
-  border: 4px solid red;
+  border: 4px solid green;
 }
 #box1 h2 {
   margin-left: 20px;
 }
 #box1 #msg .pFour {
+  width: 100%;
+  height: 90%;
+  border: 4px solid purple;
+
+  
   display: flex;
   flex-direction: row;
+  align-items: space-between;
 }
+
 #box1 #msg .pFour p {
   /* border : 1px solid black; */
-  width: 300px;
-  height: 120px;
-  margin: 10px 20px;
+  width: 90%;
+  height: 50%;
+  margin: 10px auto;
   
   border: 4px solid blue;
 }
@@ -77,17 +84,11 @@
   display: flex;
   flex-direction: column;
 }
-#box1 #msg button {
-  width: 100px;
-  height: 30px;
-  margin-left: 20px;
-  margin-top: 10px;
-  background-color: #f9bc6c;
-}
 
 /* box2 */
 #box2 {
-  /* background : #1C6758; */
+  width: 100%;
+
   background-color: #1c6758;
   display: flex;
   flex-direction: column;
@@ -107,30 +108,43 @@
 }
 
 #box2 #test {
+  width: 100%;
+
   display: flex;
   flex-direction: row;
-  /* border: 2px solid red; */
   margin-bottom: 50px;
+  border: 4px solid pink;
+}
+
+
+#box2 #test #write{
+  width: 500%;
+  height: 100%;
+  margin: auto 0;
+
+  border: 4px solid red;
+}
+
+#box2 #test h2 {
+  border: 4px solid white;
+  color: #f9bc6c;;
+  width: 60%;
+  height: 100%;
+
 }
 
 #box2 #test .box2Div3 {
+  width: 60%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   /* border : 2px solid white; */
-  width: 60%;
-  margin-left: 30px;
   padding-top: 80px;
 
   border: 4px solid blue;
 }
-#box2 #test h2 {
-  color: white;
-  width: 30%;
-  height: 150px;
-  padding-right: 10px;
-  padding-top: 50px;
-  margin-left: 150px;
-}
+
 
 #box2 #test .box2Div3 p {
   /* border: 1px solid black; */
@@ -220,7 +234,26 @@
 
 
 
-@media (max-width: 666px){
+@media (max-width: 768px){
+  #box1 #msg .pFour {
+    flex-direction: column;
+  }
+  #box1 #box1Img{
+    width: 0%;
+  }
+  #box1 img {
+    display: none;
+   }
+
+  #box1 #msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;;
+  
+    border: 4px solid green;
+  }
+
+
   #box2{
     
   }
@@ -229,19 +262,14 @@
   }
 
   #box2 #test h2 {
-    color: white;
     width: 80%;
-    height: 150px;
     margin: 0 auto;
     text-align: center;
   }
 
 
   #box2 #test .box2Div3 {
-    /* justify-content: center; */
-    align-items: center;
-    justify-content: center;
-  
     border: 4px solid blue;
+    margin: 0 auto;
   }
 }
