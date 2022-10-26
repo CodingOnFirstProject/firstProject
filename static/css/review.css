@@ -242,8 +242,8 @@ h2 {
   font-size: 0.8rem;
 }
 
-img {
-  max-width: 100%;
+.stars img {
+  width: auto;
   height: auto;
 }
 
@@ -335,5 +335,6 @@ img {
   .side {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
