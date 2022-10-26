@@ -104,14 +104,18 @@ $('.money').click(function(){
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
-    openCenter("/Popup", "pop", 450, 550);
+    openCenter("/Popup", "pop", 450, 560);
 
 })
 
-//날씨창에 대한 js
-const weatherbtn = document.querySelector('.weatherbtn');
 
-weatherbtn.addEventListener('click', function(){
+$('.navMQBack').click(function () {
+    $('.navMQSub').removeClass('hidden')
+    $('.navMQSub').addClass('hidden')
+    $('.navMQmaster').toggleClass('hidden')
+})
+
+$('.weatherbtn').click(function(){
     function openCenter(doc, win, w, h){
         var left = (screen.availWidth - w) / 2;
         var top = (screen.availHeight - h) / 2;
@@ -119,13 +123,5 @@ weatherbtn.addEventListener('click', function(){
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
-    openCenter("/pageWeather", "pop", 300, 500);
-})
-
-
-
-$('.navMQBack').click(function () {
-    $('.navMQSub').removeClass('hidden')
-    $('.navMQSub').addClass('hidden')
-    $('.navMQmaster').toggleClass('hidden')
+    openCenter("/pageWeather", "weather", 350, 600);
 })
