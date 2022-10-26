@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'MICEGothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  font-family: 'MICEGothic Bold';
 }
 
 /* contents */
@@ -170,11 +180,15 @@
   margin-top: 20px;
   background: #f9bc6c;
   color: white;
+  border-width: 0;
+  border-radius: 7px;
   font-weight: 700;
 }
 #box2 #test .box2Div3 .box2button .colorbtn {
   /* background-color: #D6CDA4; */
   background-color: #f9bc6c;
+  border-width: 0;
+  border-radius: 7px;
   
 }
 
