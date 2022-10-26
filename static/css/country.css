@@ -38,7 +38,7 @@
 
 #threeBox .box img {
   width: 47%; /*부모요소의 45%*/
-  height: 303px;
+  height: 400px;
 }
 
 #threeBox .box h2 {
@@ -49,6 +49,8 @@
   margin-left: 7%;
   margin-top: 40px;
   width: 40%;
+  padding-top: 50px;
+  /* height: 400px; */
 }
 
 .italyintro {
@@ -133,6 +135,10 @@ h2 {
     align-items: center;
   }
 
+  .box .msg {
+    height: 350px;
+  }
+
   #box2 {
     flex-direction: column;
     align-items: center;
@@ -143,13 +149,13 @@ h2 {
     background-color: #3d8361;
     margin: 0;
     width: 47%;
-    padding: 20px 15px 0 15px;
+    padding: 35px 25px 0 25px;
   }
 
   #box3 .msg {
     margin: 0;
     width: 47%;
-    padding: 20px 15px 0 15px;
+    padding: 35px 25px 0 25px;
   }
 
   #box4 {
@@ -162,7 +168,7 @@ h2 {
     background-color: #3d8361;
     margin: 0;
     width: 47%;
-    padding: 20px 15px 0 15px;
+    padding: 35px 25px 0 25px;
   }
 
   #explain {

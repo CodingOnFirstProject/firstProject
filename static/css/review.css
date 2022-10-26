@@ -4,22 +4,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #eeeeee;
-  opacity: 0.9;
-}
 /* 폼 전체 */
 .wrap {
   width: 90vw;
-  margin-top: 16px;
-  background-color: #fff;
-  height: 100%;
-  padding: 20px 30px 50px;
+  margin-top: 8vh;
+  background-color: #ffffff;
+  opacity: 0.8;
+  /* height: 100%; */
+  margin-bottom: 5vh;
+  padding: 5vh 5vw 1vh 5vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .top {
@@ -28,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  opacity: 1;
 }
 
 .outer {
@@ -37,12 +36,13 @@ body {
 }
 
 .card {
-  margin-left: 10px;
-  margin-top: 30px;
+  margin-left: 50px;
+  margin-top: 40px;
 }
 
 .reviewPic {
   height: 30vh;
+  width: 100%;
 }
 
 /* .top {
@@ -60,6 +60,7 @@ body {
   padding: 13px 0 0 0;
   width: 100%;
   background-color: #3d8361;
+  border-radius: 20px;
 }
 
 h2 {
@@ -107,21 +108,27 @@ h2 {
 }
 
 .rerabu {
-  border-style: dashed;
-  border-color: #3d8361;
+  /* border-style: dashed;
+  border-color: #3d8361; */
   position: relative;
   width: 80%;
   flex-direction: column;
+  margin-left: 10px;
 }
 
 .re {
   flex: 1 1 auto;
   padding: 16px 16px 0 16px;
-  min-width: 0;
-  min-height: 66px;
+  /* min-width: 0; */
+  height: 115px;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+}
+
+#review {
+  padding-left: 10px;
+  height: 15vh;
 }
 
 .rabu {
@@ -154,7 +161,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: 30px 30px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #eeeeee;
 }
 .rating .rate_radio:checked + label {
   background-color: #f9bc6c;
@@ -172,7 +179,7 @@ h2 {
 
   width: 70%;
   /* height: 1000px; */
-  margin-left: 10px;
+  margin-left: -300px;
 }
 
 /* 개인 리뷰칸 */
@@ -181,7 +188,7 @@ h2 {
   flex-direction: row;
   width: 100%;
   /* height: 10%; */
-  border-style: dashed;
+  border-style: solid;
   border-width: thin;
   border-color: #3d8361;
 }
@@ -337,4 +344,23 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+} */
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
 }
