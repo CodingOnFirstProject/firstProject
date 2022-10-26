@@ -11,6 +11,9 @@
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+
 </head>
 <body>
     <div id = "container">
@@ -35,10 +38,10 @@
             <div id = "contents"> <!-- 셀렉트 바 옆에 내용들-->
     
                 <div id = "cityNameDay">
-                    <h2 id = "cityName">Rome</h2>
+                    <!-- <h2 id = "cityName">Rome</h2> -->
 
                     <div id = "citySelect">
-                        <select id = "city">
+                        <select id = "city" class="form-select">
                             <option value = "Rome">로마</option>
                             <option value = "Milan">밀라노</option>
                             <option value = "Napoli">나폴리</option>
@@ -65,7 +68,7 @@
                     <img src = "/static/img/snow.png" alt = "날씨아이콘">
                 </div>
 
-                <button id = "resultbtn">날씨보기</button>
+                <button id = "resultbtn" type="button" class="btn btn-info">날씨보기</button>
 
             </div> <!--contents 끝-->
         </div>

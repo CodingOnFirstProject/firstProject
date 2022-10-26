@@ -140,20 +140,27 @@ $('.logoSimbol').click(function(){
 )
 
 $('.moneySimbol').click(function(){
-    window.open(
-        "./Popup",
-        "money",
-        "width=450px, height=400px, top=50, left=50"
-    );
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
+
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    openCenter("/Popup", "pop", 450, 560);
+})
+$('.weatherSimbol').click(function(){
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
+
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    openCenter("/pageWeather",
+    "weather", 350, 600);
 })
 
-// $('.weatherSimbol').click(function(){
-//     window.open(
-//         "/pageWeather",
-//         "weather",
-//         "width=450px, height=400px, top=50, left=50"
-//     );
-// })
 
 
 

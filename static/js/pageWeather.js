@@ -38,6 +38,14 @@ cityDay.innerText = `${year}년 ${month}월 ${date}일`;
 //============================================================
 
 
+
+$( function() {
+  let strWidth = 350 + (window.outerWidth - window.innerWidth);
+  let strHeight = 600 + (window.outerHeight - window.innerHeight);
+  window.resizeTo( strWidth, strHeight );
+})
+
+
 uraxInfo('rome'); //urax의 정보를 가져온다. => 기본값으로 로마
 
 resultbtn.addEventListener("click", apply);
