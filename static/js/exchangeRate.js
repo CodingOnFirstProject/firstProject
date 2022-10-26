@@ -26,7 +26,6 @@ swapButton.addEventListener("click", showResult);
         type: "GET", // GET 방식으로 요청한다.
         url: RATE_API_URL,
         success: function (response) {
-          const str = 'tttttt';
 
           // 서버에서 준 결과를 response라는 변수에 담음
           // console.log(response); // 서버에서 준 결과를 이용해서 나머지 코드를 작성

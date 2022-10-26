@@ -66,7 +66,7 @@
     padding: 1vh;
     width: 100%;
 
-    background-color: #FFD372;
+    background-color: #FFC696;
     /* background-color: #FDD5A1;; */
 
  
@@ -205,7 +205,7 @@ a:hover,a:active { text-decoration: none; }
     width: 45vw;
     height: 100vh;
     /* background-color: #FFD372; */
-    background-color: #7EA583 ;
+    background-color: #FF8886;
     top: 0;
     right: 0;
     z-index: 10000000;
@@ -265,7 +265,6 @@ a:hover,a:active { text-decoration: none; }
     /* background-color: white; */
     /* width: 20vw; */
     margin-top: 2vh;
-    text-align: center;
    
     background-color: #EAF6F6;
     border-radius: 8px;
