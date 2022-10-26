@@ -115,10 +115,13 @@ h2 {
 #contents button {
   font-weight: bold;
   margin-left: 47%;
-  background: #c64251;
+  background: #3d8361;
   width: 100px;
   border: 2px solid #3d8361;
   margin-bottom: 30px;
+  border-radius: 5px;
+  border-width: 0;
+  color: white;
 }
 
 #explain img {

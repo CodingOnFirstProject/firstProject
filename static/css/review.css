@@ -9,7 +9,6 @@
   width: 90vw;
   margin-top: 8vh;
   background-color: #ffffff;
-  opacity: 0.8;
   /* height: 100%; */
   margin-bottom: 5vh;
   padding: 5vh 5vw 1vh 5vw;
@@ -38,6 +37,8 @@
 .card {
   margin-left: 50px;
   margin-top: 40px;
+  width: 20rem;
+  height: 20rem;
 }
 
 .reviewPic {
@@ -60,14 +61,14 @@
   padding: 13px 0 0 0;
   width: 100%;
   background-color: #3d8361;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
-  color: #f9bc6c;
+  color: #fff;
   text-shadow: 1px 1px #c64251;
 }
 
@@ -128,7 +129,7 @@ h2 {
 
 #review {
   padding-left: 10px;
-  height: 15vh;
+  height: 14vh;
 }
 
 .rabu {
@@ -143,6 +144,8 @@ h2 {
   width: 100px;
   border: 2px solid #c64251;
   font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
 }
 
 /* 별점 관련 */
@@ -180,6 +183,7 @@ h2 {
   width: 70%;
   /* height: 1000px; */
   margin-left: -300px;
+  margin-bottom: 50px;
 }
 
 /* 개인 리뷰칸 */
@@ -191,12 +195,14 @@ h2 {
   border-style: solid;
   border-width: thin;
   border-color: #3d8361;
+  margin-top: 2vh;
 }
 
 /* 닉네임칸 */
 .left {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   flex: 0 0 auto;
   /* height: 10%; */
   width: 30%;
@@ -265,6 +271,8 @@ h2 {
   width: 100px;
   border: 2px solid #3d8361;
   font-weight: bold;
+  color: white;
+  border-radius: 5px;
 }
 
 @media (max-width: 990px) {
@@ -290,6 +298,7 @@ h2 {
   }
   .reviews {
     flex-direction: column;
+    width: 134%;
   }
   .nn {
     justify-content: center;
@@ -305,6 +314,10 @@ h2 {
 
   .rating {
     text-align: center;
+  }
+
+  .list {
+    margin-left: -167px;
   }
 
   .left {
@@ -344,23 +357,8 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
   }
-}
 
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
+  .card {
+    display: none;
   }
-  to {
-    opacity: 0.1;
-  }
-} */
-
-.bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  animation: fadeIn 0.5s linear;
 }
