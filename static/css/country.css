@@ -7,7 +7,7 @@
 /* contents */
 
 #video {
-  width: 100vw;
+  width: 98vw;
   /* height: 87vh; */
 }
 #video video {
@@ -17,7 +17,7 @@
 
 /* box */
 .box {
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 200px 20px;
   display: flex;
   flex-direction: row;
 }
@@ -38,7 +38,7 @@
 
 #threeBox .box img {
   width: 47%; /*부모요소의 45%*/
-  height: 300px;
+  height: 303px;
 }
 
 #threeBox .box h2 {
@@ -47,7 +47,7 @@
 
 .box .msg {
   margin-left: 7%;
-  margin-top: 30px;
+  margin-top: 40px;
   width: 40%;
 }
 
@@ -83,16 +83,17 @@ h2 {
 
 /* explain */
 #explain {
-  margin-bottom: 30px;
+  margin: 95px 50px 95px 50px;
+  height: 50%;
 }
 #explain h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .smallw {
   font-size: 20px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 #explain #posit {
@@ -115,6 +116,7 @@ h2 {
   background: #c64251;
   width: 100px;
   border: 2px solid #3d8361;
+  margin-bottom: 30px;
 }
 
 #explain img {
@@ -125,7 +127,7 @@ h2 {
   margin-left: 70px;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1110px) {
   .box {
     flex-direction: column;
     align-items: center;
@@ -161,6 +163,12 @@ h2 {
     margin: 0;
     width: 47%;
     padding: 20px 15px 0 15px;
+  }
+
+  #explain {
+    width: auto;
+    height: auto;
+    margin: 20px 100px;
   }
 
   #explain #posit {
