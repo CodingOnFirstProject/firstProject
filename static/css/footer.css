@@ -22,21 +22,27 @@
 }
 
 footer {
-  position: relative;
-  width: 100%;
-  height: 13vh;
-  background-color: aqua;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Cafe24Ssurround";
-  /* padding-bottom: 2vh; */
+
+    /* position : relative;
+    transform : translateY(-100%); */
+    width: 100%;
+    height: 13vh;
+    background-color: #FFD372;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Cafe24Ssurround';
+    /* padding-bottom: 2vh; */
 }
 
 .footerName {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.link-icon {
+    margin-left: 1vw;
 }

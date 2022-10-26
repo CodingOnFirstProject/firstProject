@@ -65,7 +65,10 @@
     align-items: center;
     padding: 1vh;
     width: 100%;
-    background-color: #FDD5A1;;
+
+    background-color: #FFD372;
+    /* background-color: #FDD5A1;; */
+
  
 }
 
@@ -201,6 +204,7 @@ a:hover,a:active { text-decoration: none; }
     flex-direction: column;
     width: 45vw;
     height: 100vh;
+    /* background-color: #FFD372; */
     background-color: #7EA583 ;
     top: 0;
     right: 0;

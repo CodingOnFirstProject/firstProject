@@ -13,7 +13,7 @@ slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px
 
 
 function moveSlide(num){
-    slides.style.left = -num * 380 + 'px';
+    slides.style.left = -num * 385 + 'px';
     currentIdx = num;
 }
 

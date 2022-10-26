@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>환율 API-result</title>
 
-    <!-- jquery cdn -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>환율 API-result</title>
 
-    <link rel = "stylesheet" href = "/static/css/Popup.css">
-    
-  </head>
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/Popup.css">
+
+</head>
+
 <body>
-    <div id = "container">
-        <h1>환율 계산</h1>
+  <div id="container">
+    <h1>환율 계산</h1>
 
-        <div id = "firstbox" class = "box">
-            <p>송금국가: </p>
-            <select id = "selectCountry">
-                <option value = "KRW">한국(KOR)</option>
-                <option value = "USD">미국(USD)</option>
-                <option value = "JPY">일본(JAN)</option>
-            </select>
-        </div>
+    <div id="firstbox" class="box">
+      <p>기준 통화 </p>
+      <select id="selectCountry" class="form-select">
+        <option value="KRW">한국(KOR)</option>
+        <option value="USD">미국(USA)</option>
+        <option value="JPY">일본(JAP)</option>
+      </select>
+    </div>
 
-        <div id = "secondbox" class = "box">
-            <p>수취국가: </p>
-            <select id = "seeCountry">
-                <option value = "KRW">한국(KOR)</option>
-                <option value = "USD">미국(USD)</option>
-                <option value = "JPY">일본(JAN)</option>
-            </select>
-        </div>
+    <div id="secondbox" class="box">
+      <p>변환 통화 </p>
+      <select id="seeCountry" class="form-select">
+        <option value="KRW">한국(KOR)</option>
+        <option value="USD">미국(USD)</option>
+        <option value="JPY">일본(JAN)</option>
+      </select>
+    </div>
 
-        <div id = "thirdbox" class = "box">
-            <label for = "amount">송금액: </label>
-            <input id = "amount" name = "amount" type = "text"> <!--사용자가 입력할 돈의 양-->
-        </div>
-
-        
-        <div id = "fourthbox">
-          <p>송금액: </p>
-          <div id = "rateDiv"> <!--환율 정보를 표시할 div 태그-->
-            <!-- 환율정보 -->
-          </div>
-        </div>
-
-        <div id = "btn">
-           <button class = "swapButton">submit</button>
-        </div>
-       
+    <div id="thirdbox" class="box">
+      <label for="amount">기준 금액 </label>
+      <input id="amount" name="amount" type="text" placeholder="금액을 입력해주세요.">
+      <!--사용자가 입력할 돈의 양-->
 
 
     </div>
-
-    <div id = "closebtn">
-      <button onclick = "javascript:window.close();">닫기</button>
+    <div id="fourthbox"class="box hidden">
+      <label for="rate">환전 금액 </label>
+      <input id="rateDiv" name="rate" type="text">
     </div>
-    
-    <script src = "/static/js/Popup.js"></script>
+    <button type="button" id="swapBtn" class="swapButton btn">환전</button>
+
+
+    <div id="fourthbox">
+
+      <div id="rateDiv">
+        <!--환율 정보를 표시할 div 태그-->
+        <!-- 환율정보 -->
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <script src="/static/js/Popup.js"></script>
+
+
 </body>
+
 </html>
