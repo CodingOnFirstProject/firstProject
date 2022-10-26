@@ -3,15 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+/* html{
     font-size: 62.5%;
-}
+} */
 /* header */
 
 /* contents */
-#contents{
 
-}
 #bigImg{
     width : 100%;
     height : 500px;
