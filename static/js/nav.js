@@ -104,7 +104,7 @@ $('.money').click(function(){
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
-    openCenter("/Popup", "pop", 450, 350);
+    openCenter("/Popup", "pop", 450, 550);
 
 })
 
