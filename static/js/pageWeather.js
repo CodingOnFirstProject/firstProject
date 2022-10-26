@@ -38,11 +38,12 @@ cityDay.innerText = `${year}년 ${month}월 ${date}일`;
 //============================================================
 
 
-
+uraxInfo('rome'); //urax의 정보를 가져온다. => 기본값으로 로마
 
 resultbtn.addEventListener("click", apply);
 
-function apply(){
+function apply(){ // 날씨 보기 버튼을 눌르면 실행.
+
   const cityValue = city.value; // city 변수의 value값을 cityValue에 대입.
   const name = `${cityValue}`;
 

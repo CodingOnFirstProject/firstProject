@@ -5,20 +5,20 @@
 }
 
 /* contents */
-#contents {
-}
+
 #bigImg {
   width: 100%;
-  height: 500px;
+  height: 78vh;
 }
 #bigImg img {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 #btn4 {
   background: #1c6758;
   width: 100%;
-  height: 70px;
+  /* height: 70px; */
+  height: 8.5vh;
 
   display: flex;
   flex-direction: row;
@@ -39,10 +39,7 @@
 #box1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   margin: 50px 0;
-
-  border: 4px solid red;
 }
 #box1 #box1Img{
   width: 30%;
@@ -52,42 +49,39 @@
   height: 100%;
 }
 #box1 #msg {
-  width: 50%;
-  margin-left: 10px;
-
-  border: 4px solid red;
+  width: 70%;
+  display: flex;
+  flex-direction: column;;
 }
 #box1 h2 {
   margin-left: 20px;
 }
 #box1 #msg .pFour {
+  width: 100%;
+  height: 90%;
+  
   display: flex;
   flex-direction: row;
+  align-items: space-between;
 }
+
 #box1 #msg .pFour p {
-  /* border : 1px solid black; */
-  width: 300px;
-  height: 120px;
-  margin: 10px 20px;
-  
-  border: 4px solid blue;
+  width: 90%;
+  height: 50%;
+  margin: 10px auto;
+  /*border : 2px solid black;*/
+  background-color: rgb(248, 248, 248);
 }
 
 #box1 #msg .pFour .twop {
   display: flex;
   flex-direction: column;
 }
-#box1 #msg button {
-  width: 100px;
-  height: 30px;
-  margin-left: 20px;
-  margin-top: 10px;
-  background-color: #f9bc6c;
-}
 
 /* box2 */
 #box2 {
-  /* background : #1C6758; */
+  width: 100%;
+
   background-color: #1c6758;
   display: flex;
   flex-direction: column;
@@ -96,49 +90,76 @@
   margin-bottom: 180px;
 }
 #box2 #box3Img {
+  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-#box2 #box3Img img {
-  width: 200px;
-  height: 200px;
-  margin: 0 40px;
-}
+#box2 .twoImg{
+  width: 50%;
 
-#box2 #test {
   display: flex;
   flex-direction: row;
-  /* border: 2px solid red; */
+  justify-content: space-around;
+}
+
+#box2 .twoImg img{
+  width: 45%;
+}
+
+/* #box2 #box3Img img {
+  width: 35%;
+  height: 100%;
+} */
+
+#box2 #test {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
   margin-bottom: 50px;
 }
 
+
+#box2 #test #write{
+  width: 40%;
+  height: 100%;
+  margin: auto 0;
+
+  /* border: 4px solid white; */
+}
+
+#box2 #test h2 {
+  color: #f9bc6c;
+  text-shadow: 1px 1px #c64251;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  padding-bottom :5px;
+}
+#box2 #test .red{
+  color: #f9bc6c;
+  border-bottom : 4px solid red;
+}
+
 #box2 #test .box2Div3 {
+  width: 60%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
-  /* border : 2px solid white; */
-  width: 60%;
-  margin-left: 30px;
   padding-top: 80px;
+}
 
-  border: 4px solid blue;
-}
-#box2 #test h2 {
-  color: white;
-  width: 30%;
-  height: 150px;
-  padding-right: 10px;
-  padding-top: 50px;
-  margin-left: 150px;
-}
 
 #box2 #test .box2Div3 p {
-  /* border: 1px solid black; */
   color: white;
-
   margin-bottom: 20px;
 }
 #box2 #test .box2Div3 .box2button {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -150,17 +171,16 @@
   background: #f9bc6c;
   color: white;
   font-weight: 700;
-  border: 1px solid black;
 }
 #box2 #test .box2Div3 .box2button .colorbtn {
   /* background-color: #D6CDA4; */
   background-color: #f9bc6c;
+  
 }
 
 #box3 {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,29 +193,23 @@
 #box3 #writer p{
   color: #f9bc6c;
   font-weight: 200;
+  
 }
 
 #box3 #oneImg {
-  margin: 20px 0;
   width: 100%;
-  border: 2px solid pink;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#box3 #oneImg {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  
-}
+
 #box3 #oneImg #imgWidth{
   width: 35%;
 }
 #box3 #oneImg #imgWidth img {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  margin-top: 5%;
 }
 
 #box1:target h2 {
@@ -211,6 +225,7 @@
 #box3 #variableText{
   width: 60%;
   height: 100%;
+  margin-top: 10px;
 }
 
 #box3 #variableText #parentsP{
@@ -220,28 +235,101 @@
 
 
 
-@media (max-width: 666px){
-  #box2{
-    
+@media (max-width: 768px){
+  #box1 h2 {
+    text-align: center;
   }
+  #box1 #msg .pFour {
+    flex-direction: column;
+  }
+  #box1 #box1Img{
+    width: 0%;
+  }
+  #box1 img {
+    display: none;
+   }
+
+  #box1 #msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;;
+  }
+
+  #box2 {
+    margin-bottom: 80px;
+  }
+
+  #box2 #box3Img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  #box2 .twoImg{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+  }
+
+  #box2 #test #write{
+    width: 100%;
+    height: 100%;
+  
+  }
+
   #box2 #test {
     flex-direction: column;
+    justify-content: space-between;
   }
 
   #box2 #test h2 {
-    color: white;
     width: 80%;
-    height: 150px;
     margin: 0 auto;
     text-align: center;
   }
 
-
-  #box2 #test .box2Div3 {
-    /* justify-content: center; */
-    align-items: center;
-    justify-content: center;
+  #box2 #test h2 {
+    color: #f9bc6c;
+    text-shadow: 1px 1px #c64251;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
   
-    border: 4px solid blue;
+    margin-top: 40px;
+    padding-bottom :5px;
+  }
+  #box2 #test .box2Div3 {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }  
+  #box2 #test .box2Div3 p {
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #box2 #test .box2Div3 .box2button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 690px){
+  #box3 #oneImg #imgWidth{
+    width: 0;
+    display: none;
+  }
+  #box3 #variableText{
+    width: 100%;
+    margin-top: 20px;
+  }
+  #box3 #variableText #parentsP{
+    width: 100%;
   }
 }
