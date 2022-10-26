@@ -239,32 +239,32 @@ function stars() {
   }
 }
 
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-const IMG_NUMBER = 11;
+// const IMG_NUMBER = 11;
 
-/* 이미지를 가져오는 함수 */
-function paintImage(imgNumber) {
-  /* 1. new 를 사용하여 object 만들기 */
-  const image = new Image();
-  /* 2. object에 이미지 주소(레퍼런스) 연결하기 */
-  image.src = `/static/image/image/${imgNumber + 1}.jpg`;
-  // + 1를 하는 이유는 Math.random() 함수가 0을 줄 수 있기 때문이다.
-  // image에 class 지정하기 (css에서 작업하기 위한 용도)
-  image.classList.add("bgImage");
-  /* body 안에 image 넣기 */
-  body.prepend(image);
-}
+// /* 이미지를 가져오는 함수 */
+// function paintImage(imgNumber) {
+//   /* 1. new 를 사용하여 object 만들기 */
+//   const image = new Image();
+//   /* 2. object에 이미지 주소(레퍼런스) 연결하기 */
+//   image.src = `/static/image/image/${imgNumber + 1}.jpg`;
+//   // + 1를 하는 이유는 Math.random() 함수가 0을 줄 수 있기 때문이다.
+//   // image에 class 지정하기 (css에서 작업하기 위한 용도)
+//   image.classList.add("bgImage");
+//   /* body 안에 image 넣기 */
+//   body.prepend(image);
+// }
 
-function genRandom() {
-  const number = Math.floor(Math.random() * IMG_NUMBER);
-  return number;
-}
+// function genRandom() {
+//   const number = Math.floor(Math.random() * IMG_NUMBER);
+//   return number;
+// }
 
-function init() {
-  const randomNumber = genRandom();
+// function init() {
+//   const randomNumber = genRandom();
 
-  /* 이미지(갯수) 함수와 randeomNumber변수(랜덤숫자생성함수)를 인자로 설정 */
-  paintImage(randomNumber);
-}
-init();
+//   /* 이미지(갯수) 함수와 randeomNumber변수(랜덤숫자생성함수)를 인자로 설정 */
+//   paintImage(randomNumber);
+// }
+// init();
