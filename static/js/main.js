@@ -120,11 +120,16 @@ $('.artBtn').click(function(){
 
 
 $('.ticketSimbol').click(function(){
-    window.open(
-        "/ticket",
-        "ticket",
-        "width=450px, height=400px, top=50, left=50"
-    );
+
+// })
+function openCenter(doc, win, w, h){
+    var left = (screen.availWidth - w) / 2;
+    var top = (screen.availHeight - h) / 2;
+
+    var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+    window.open(doc, win, opt); 
+}
+openCenter("/ticket", "ticket", 450, 400);
 })
 
 
