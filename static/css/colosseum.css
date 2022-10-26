@@ -15,16 +15,17 @@ header{
 
 #bigImg{
     width : 100%;
-    height : 500px;
+    /* height : 500px; */
+    height: 78vh;
 }
 #bigImg img{
     width : 100%;
-    height : 500px;
+    height: 100%;
 }
 #btn4{
     background : #1C6758;
     width : 100%;
-    height : 70px;
+    height : 8.5vh;
 
     display: flex;
     flex-direction: row;
@@ -78,6 +79,7 @@ header{
 #explain h2{
     text-align : center;
     margin-bottom: 40px;
+    font-weight: 700;
 }
 #explain #posit{
     display : flex;
@@ -91,10 +93,11 @@ header{
     margin-top : 30px; /*글씨위치*/
 }
 #explain #posit #text button{
-    margin-left : 90px;
+    margin-left : 140px;
     background: #f9bc6c;
     width : 100px;
-    border: 2px solid #1C6758;
+    border: 2px solid #C64251
+    /* text-shadow: 1px 1px #C64251; */
 }
 
 #explain img{
@@ -114,8 +117,11 @@ header{
 }
 #infoThree h2{
     text-align : center;
-    margin-bottom : 20px;
-    color: white;
+    margin-bottom : 50px;
+    color: #f9bc6c;
+    text-shadow: 1px 1px #c64251;
+    font-weight: 700;
+
 }
 #infoThree #infoImg{
     display: flex;

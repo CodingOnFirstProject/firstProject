@@ -108,6 +108,21 @@ $('.money').click(function(){
 
 })
 
+//날씨창에 대한 js
+const weatherbtn = document.querySelector('.weatherbtn');
+
+weatherbtn.addEventListener('click', function(){
+    function openCenter(doc, win, w, h){
+        var left = (screen.availWidth - w) / 2;
+        var top = (screen.availHeight - h) / 2;
+
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
+        window.open(doc, win, opt); 
+    }
+    openCenter("/pageWeather", "pop", 300, 500);
+})
+
+
 
 $('.navMQBack').click(function () {
     $('.navMQSub').removeClass('hidden')
