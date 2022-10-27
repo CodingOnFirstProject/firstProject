@@ -23,10 +23,10 @@ form.addEventListener("submit", function (event) {
   const month = date.getMonth();
   const day = date.getDate();
 
-  const perdate = document.querySelector(".dates"); // 작성일 출력을 위한 변수 지정
-  const pericon = document.querySelector(".icon2");
-  const perstars = document.querySelector("stars");
-  const starcheck = document.querySelector(".rate_radio");
+  // const perdate = document.querySelector(".dates"); // 작성일 출력을 위한 변수 지정
+  // const pericon = document.querySelector(".icon2");
+  // const perstars = document.querySelector("stars");
+  const starcheck = document.querySelector(".rate_radio").checked;
 
   let html = `
     <div class="reviews">
@@ -47,13 +47,9 @@ form.addEventListener("submit", function (event) {
     </div>
   `; // .list 자식태그로 들어갈 개인 리뷰창 구조 및 컨텐츠 생성
 
-  $(list).append(html);
-
   if (nickname === "" || review === "" || starcheck == false) {
     alert("닉네임과 리뷰, 별점을 입력해주세요");
-    perdate.textContent = "";
-    pericon.innerHTML = "";
-    perstars.textContent = "";
+    $(list).append(html);
   } // nickname value와 review value가 없을때 date출력되지 않게끔
 
   $("form[name='review']").each(function () {
