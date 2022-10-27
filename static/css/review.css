@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'MICEGothic Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11,15 +12,16 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'MICEGothic Bold';
+body {
+  font-family: "MICEGothic Bold";
 }
+
 /* 폼 전체 */
+
 .wrap {
   width: 90vw;
   margin-top: 8vh;
   background-color: #ffffff;
-  /* height: 100%; */
   margin-bottom: 5vh;
   padding: 5vh 5vw 1vh 5vw;
   box-sizing: border-box;
@@ -55,14 +57,6 @@ body{
   height: 30vh;
   width: 100%;
 }
-
-/* .top {
-  flex-direction: row;
-}
-
-.container {
-  background-color: white;
-} */
 
 .comment {
   display: flex;
@@ -119,8 +113,6 @@ h2 {
 }
 
 .rerabu {
-  /* border-style: dashed;
-  border-color: #3d8361; */
   position: relative;
   width: 80%;
   flex-direction: column;
@@ -130,7 +122,6 @@ h2 {
 .re {
   flex: 1 1 auto;
   padding: 16px 16px 0 16px;
-  /* min-width: 0; */
   height: 115px;
   display: flex;
   flex: 1 1 auto;
@@ -159,9 +150,6 @@ h2 {
 }
 
 /* 별점 관련 */
-/* .rating {
-    text-align: center;
-  } */
 
 .rating .rate_radio + label {
   position: relative;
@@ -181,27 +169,27 @@ h2 {
 }
 
 /* 체크박스 안보이게 */
+
 [type="checkbox"] {
   display: none;
 }
 
 /* 리뷰전체 칸 */
+
 .list {
   display: flex;
   flex-direction: column;
-
   width: 70%;
-  /* height: 1000px; */
   margin-left: -300px;
   margin-bottom: 50px;
 }
 
 /* 개인 리뷰칸 */
+
 .reviews {
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* height: 10%; */
   border-style: solid;
   border-width: thin;
   border-color: #3d8361;
@@ -209,53 +197,47 @@ h2 {
 }
 
 /* 닉네임칸 */
+
 .left {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex: 0 0 auto;
-  /* height: 10%; */
   width: 30%;
-  /* background-color: #f9bc6c; */
   align-items: center;
   border-right: thin dotted #3d8361;
   border-bottom: 0;
   border-top: 0;
   border-left: 0;
-  /* justify-content: center; */
 }
-/* div 위치 확인용 완성후 nickname부터 icon2까지 배경색지우기 */
+
+/* div 위치 확인용 */
 .nickname {
-  /* background-color: bisque; */
   font-weight: bold;
 }
+
 .textreview {
-  /* background-color: brown; */
   font-size: 1.5rem;
   padding-left: 10px;
 }
 
 .stars {
-  /* background-color: darkgrey; */
   width: 100%;
   padding-left: 10px;
 }
+
 .dates {
-  /* background-color: darkseagreen; */
   padding-left: 10px;
 }
 
 .icon2 {
   font-size: 30px;
-  /* padding-top: 15px; */
-
-  /* background-color: cornflowerblue; */
 }
 
 /* 리뷰,별점,작성일 칸 */
+
 .right {
   width: 70%;
-  /* height: 10vw; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -285,39 +267,50 @@ h2 {
   border-radius: 5px;
 }
 
+/* 미디어쿼리 */
+
 @media (max-width: 990px) {
   .wrap {
     flex-direction: column;
   }
+
   .comment {
     flex-direction: column;
   }
+
   .input {
     flex-direction: column;
   }
+
   .icon {
     flex-direction: column;
   }
+
   .ni {
     flex-direction: column;
     padding-bottom: 30px;
     align-items: center;
   }
+
   .rabu {
     flex-direction: column;
   }
+
   .reviews {
     flex-direction: column;
     width: 134%;
   }
+
   .nn {
     justify-content: center;
     align-items: center;
     width: 100%;
   }
+
   .icon1 {
     padding-bottom: 0px;
   }
+
   .rerabu {
     width: 100%;
   }
@@ -332,7 +325,6 @@ h2 {
 
   .left {
     flex-direction: row;
-    /* height: 6vw; */
     border-right: 0;
     margin-left: 20px;
   }

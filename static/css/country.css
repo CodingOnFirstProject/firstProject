@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'MICEGothic Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11,21 +12,21 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'MICEGothic Bold';
+body {
+  font-family: "MICEGothic Bold";
 }
-/* contents */
 
 #video {
   width: 98vw;
-  /* height: 87vh; */
 }
+
 #video video {
   width: 100%;
   height: 87vh;
 }
 
 /* box */
+
 .box {
   margin: 0px 20px 200px 20px;
   display: flex;
@@ -47,7 +48,7 @@ body{
 }
 
 #threeBox .box img {
-  width: 47%; /*부모요소의 45%*/
+  width: 47%; /*부모요소의 47%*/
   height: 400px;
 }
 
@@ -60,7 +61,6 @@ body{
   margin-top: 40px;
   width: 40%;
   padding-top: 50px;
-  /* height: 400px; */
 }
 
 .italyintro {
@@ -94,10 +94,12 @@ h2 {
 }
 
 /* explain */
+
 #explain {
   margin: 95px 50px 95px 50px;
   height: 50%;
 }
+
 #explain h2 {
   text-align: center;
   margin-bottom: 60px;
@@ -114,14 +116,17 @@ h2 {
   flex-direction: row;
   justify-content: center;
 }
+
 #explain #posit #text p {
   text-align: left;
 }
+
 #explain #posit #text {
   margin-top: 30px; /*글씨위치*/
   margin-right: 100px;
   margin-left: 100px;
 }
+
 #contents button {
   font-weight: bold;
   margin-left: 47%;
@@ -137,10 +142,11 @@ h2 {
 #explain img {
   width: 400px;
   height: 400px;
-
   margin-bottom: 80px;
   margin-left: 70px;
 }
+
+/* 미디어쿼리 */
 
 @media (max-width: 1110px) {
   .box {
