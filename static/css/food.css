@@ -78,6 +78,7 @@ body {
 
 #box1 #msg .pFour .twop {
   display: flex;
+  
   flex-direction: row;
 }
 
