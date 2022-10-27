@@ -1,21 +1,47 @@
 @font-face {
-  font-family: 'MICEGothic Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'MICEGothic Bold';
+
+body {
+  font-family: "MICEGothic Bold";
 }
+
 /* box */
+
+#threeBox .box {
+  margin: 0px 20px 200px 20px;
+  height: 400px;
+}
+
+#threeBox .box img {
+  width: 47%; /*부모요소의 45%*/
+  height: 100%;
+}
+
+.box .msg {
+  margin-left: 7%;
+  margin-top: 90px;
+  width: 40%;
+  height: 100%;
+}
+
+.box .msg .smallw {
+  font-size: 10px;
+  margin: 10px 0;
+}
+
 /* box1 */
+
 #box1 {
   display: flex;
   flex-direction: row;
@@ -24,25 +50,28 @@ body{
   width: 90vw;
   height: 60vh;
 }
+
 #box1 img {
   width: 550px;
   height: 400px;
 }
+
 #box1 #msg {
   width: 50%;
   margin-left: 30px;
 }
+
 #box1 h2 {
   margin-left: 20px;
 }
+
 #box1 #msg .pFour {
   display: flex;
   flex-direction: column;
 }
+
 #box1 #msg .pFour p {
-  /* border : 1px solid black; */
   width: 50%;
-  /* height: 120px; */
   margin: 10px 20px;
   font-size: 17px;
 }
@@ -52,6 +81,7 @@ body{
   
   flex-direction: row;
 }
+
 #box1 #msg button {
   width: 100px;
   height: 30px;
@@ -59,32 +89,13 @@ body{
   margin-top: 10px;
 }
 
-#threeBox .box {
-  margin: 0px 20px 200px 20px;
-  height: 400px;
-}
 /* box2 */
+
 #box2 {
   background: #3d8361;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-}
-
-#threeBox .box img {
-  width: 47%; /*부모요소의 45%*/
-  height: 100%;
-}
-
-/* #threeBox .box .msg {
-  padding-top: 50px;
-} */
-
-.box .msg {
-  margin-left: 7%;
-  margin-top: 90px;
-  width: 40%;
-  height: 100%;
 }
 
 #box2 .msg {
@@ -99,14 +110,9 @@ body{
   margin-bottom: 1rem;
 }
 
-.box .msg .smallw {
-  font-size: 10px;
-  margin: 10px 0;
-}
-
 /* box3 */
+
 #box3 {
-  /* background: #3d8361; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,6 +128,7 @@ body{
 }
 
 /* box4 */
+
 #box4 {
   background: #3d8361;
   display: flex;
@@ -142,8 +149,8 @@ body{
 }
 
 /* box5 */
+
 #box5 {
-  /* background: #3d8361; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -151,7 +158,6 @@ body{
 
 #box5 .msg {
   margin-right: 6%;
-  /* color: white; */
 }
 
 #box5 .msg h2 {
@@ -161,9 +167,9 @@ body{
 h2 {
   font-weight: bold;
 }
-/* box끝 */
 
 /* 디저트 */
+
 #infoThree {
   background: #3d8361;
   padding: 30px;
@@ -171,6 +177,7 @@ h2 {
   margin-bottom: 80px;
   margin-top: 30px;
 }
+
 #infoThree h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -178,15 +185,18 @@ h2 {
   color: #f9bc6c;
   text-shadow: 1px 1px #c64251;
 }
+
 #infoThree #infoImg {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 #infoThree #infoImg .card {
   margin: 10px 40px;
   border: 1px solid black;
 }
+
 #infoThree #infoImg img {
   /* width: 17.9rem; */
   height: 180px;
@@ -203,6 +213,8 @@ h2 {
   border-width: 0;
   color: white;
 }
+
+/* 미디어쿼리 */
 
 @media (max-width: 1060px) {
   #box1 {
@@ -269,6 +281,8 @@ h2 {
     height: auto;
   }
 }
+
+/* 미디어쿼리2 */
 
 @media (max-width: 1008px) {
   #infoThree #infoImg {
