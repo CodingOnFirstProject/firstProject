@@ -515,7 +515,9 @@ body {
 
 }
 
-
+.fstvDescInner > div {
+    padding: 5vh 2vw;
+}
 
 .fstvBack {
     position: absolute;

@@ -275,6 +275,7 @@ a:hover,a:active { text-decoration: none; }
     font-size: 0.8rem;
     margin-bottom: 1.5vh;
     margin-top: 0.9vh;
+    text-align: center;
     /* font-family: 'Cute Font', cursive; */
     /* margin-left: 2vh; */
 }
