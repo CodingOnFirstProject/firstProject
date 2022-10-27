@@ -1,12 +1,8 @@
-
-
 $('.loginBtn').click(function (e) {
     e.preventDefault();
- 
     function openCenter(doc, win, w, h){
         var left = (screen.availWidth - w) / 2;
         var top = (screen.availHeight - h) / 2;
-
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
@@ -14,7 +10,6 @@ $('.loginBtn').click(function (e) {
     openCenter("/login","login", 450, 540);
 })
     
-
 // 로그아웃 기능
 
 $('.logout').click(function () {
@@ -46,21 +41,17 @@ function kakaoLogout() {
     }
 }
 
-
-
 // 예매하기 기능
 
 $('.ticketting').click(function () {
     function openCenter(doc, win, w, h){
         var left = (screen.availWidth - w) / 2;
         var top = (screen.availHeight - h) / 2;
-
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
     openCenter("/ticket","ticket", 450, 450);
 })
-
 
 // 네비게이션 마우스 호버시 나타나는 효과
 
@@ -69,16 +60,12 @@ $('.naviBoss').mouseover(function () {
 })
 
 $('.naviBoss').mouseout(function () {
-
     $('.naviHid').addClass('hidden')
-
 })
 
 // 네비바 좁은화면 버튼 클릭시
 $('.navMQBtn').click(function () {
-
     $('.navMQmaster').toggleClass('hidden');
-
 })
 
 $('.navMQtag').click(function () {
@@ -90,7 +77,6 @@ $('.navMQtag').click(function () {
 $('.navMQLogo').click(function () {
     $('.navMQSub').removeClass('hidden')
     $('.navMQSub').addClass('hidden')
-
 })  
 
 //환율창에 대한 js
@@ -100,36 +86,17 @@ $('.money').click(function(){
     function openCenter(doc, win, w, h){
         var left = (screen.availWidth - w) / 2;
         var top = (screen.availHeight - h) / 2;
-
         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
         window.open(doc, win, opt); 
     }
     openCenter("/Popup", "pop", 450, 550);
-
 })
-
-//날씨창에 대한 js
-// const weatherbtn = document.querySelector('.weatherbtn');
-
-// weatherbtn.addEventListener('click', function(){
-//     function openCenter(doc, win, w, h){
-//         var left = (screen.availWidth - w) / 2;
-//         var top = (screen.availHeight - h) / 2;
-
-//         var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;
-//         window.open(doc, win, opt); 
-//     }
-//     openCenter("/pageWeather", "pop", 300, 500);
-// })
-
-
 
 $('.navMQBack').click(function () {
     $('.navMQSub').removeClass('hidden')
     $('.navMQSub').addClass('hidden')
     $('.navMQmaster').toggleClass('hidden')
 })
-
 
 $('.weatherbtn').click(function(){
     function openCenter(doc, win, w, h){

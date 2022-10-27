@@ -27,17 +27,10 @@
 }
 
 body {
-
     background-color: #EEEEEE;
 }
 
-
-
-
-
 /* 메인 화면 사진 */
-
-
 
 .mainPic {
     width: 100%;
@@ -56,11 +49,7 @@ body {
 .serBox {
     width: 100%;
     margin-top: 5vh;
-    /* margin-left: auto;
-    margin-right: auto; */
     margin-bottom: 30vh;
-    
-
 }
 
 #search-form {
@@ -71,14 +60,12 @@ body {
     position: relative;
 }
 
-
 #search-form input {
     text-align: center;
     background: transparent;
     color: black;
     width: 65vw;
     height: 8vh;
-    /* padding: 10px; */
     border-radius: 20px;
     box-shadow: 0px -5px 4px #0002;
     border-width: 0;
@@ -88,19 +75,14 @@ body {
 }
 
 .search-btn {
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
     color: white;
     float: right;
     margin-left: 3vw;
-    /* width: 40px; */
-    /* height: 40px; */
     width: 8vh;
     height: 8vh;
     border-radius: 50%;
-    box-shadow: 0px 0px 6px #1C6758 ;
-    background: #1C6758 ;
+    box-shadow: 0px 0px 6px #1C6758;
+    background: #1C6758;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,10 +92,6 @@ body {
 .search-icon {
     font-size: 20px;
 }
-
-/* .fa-search {
-        font-size: 30px;
-  } */
 
 #search-form input:hover {
     border-width: 0;
@@ -125,25 +103,19 @@ body {
     width: 65vw;
 }
 
-
 .keywordBox {
-    position: absolute; 
-    /* transform: translateY(8vh);
-    transform: translateX(8vh); */
-    /* top: 8vh; */
-    /* left: 0; */
-    /* transform: translateX(-3.5vw); */
-    width: 65vw;    
+    position: absolute;
+    width: 65vw;
     background: white;
     padding: 20px;
     box-shadow: 0px 5px 4px #0002;
     border-radius: 0 0 20px 20px;
     color: #0006;
-
 }
 
 /* 이미지3개 */
-#Imgthree{
+
+#Imgthree {
     width: 80%;
     margin: 0 auto;
     border: 1px solid red;
@@ -151,34 +123,26 @@ body {
     flex-direction: column;
 }
 
-
 /* 탭메뉴 및 버튼*/
 
 .tabMenu {
     width: 90vw;
-    /* height: 40vh; */
-    background-color:  #EEEEEE;
+    background-color: #EEEEEE;
     margin: 20vh auto 20vh auto;
-
 }
 
 .subTabMenu {
     width: 100%;
-    /* height: 50vh; */
-
     background-color: #FFC696;
     border-radius: 0px 15px 15px 15px;
     padding-bottom: 15vh;
 }
 
-
 /* 관광지.음식 순위 */
-
 
 .hidden {
     display: none;
 }
-
 
 .tabGrims {
     width: 100%;
@@ -194,7 +158,6 @@ body {
     border-color: white;
     border-style: solid;
     border-width: 5px;
-   
 }
 
 .grimdiv {
@@ -209,28 +172,19 @@ body {
     width: 21vw;
     height: 28vh;
     border-radius: 5px;
-    background : rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     text-align: center;
     padding: 2vh 1vw 2vh 1vw;
-    /* padding-right: 1vw;
-    padding-left: 1vw; */
-    transition : all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
     color: #fff;
     z-index: 100000;
     font-family: 'KOTRAHOPE';
     font-size: 1.2rem;
-    /* overflow: scroll; */
-
 }
 
-
-
-.tabGrimDesc::-webkit-scrollbar{
-    display: none; 
+.tabGrimDesc::-webkit-scrollbar {
+    display: none;
 }
-
-
-
 
 .grimdiv:hover .tabGrimDesc {
     opacity: 1;
@@ -240,26 +194,19 @@ body {
 
 @keyframes grimDesc {
     0% {
-      
         opacity: 0;
-
     }
 
     50% {
-      
         opacity: 0;
         transform: translateY(-10vh);
-
     }
-
 
     100% {
         opacity: 1;
         transform: translateY(-20vh);
     }
-
 }
-
 
 .grimdiv:hover .themaGrim {
     animation: grimHover 2s 1;
@@ -269,21 +216,13 @@ body {
 
 @keyframes grimHover {
     0% {
-      
-       transform: rotateY(0deg);
-
+        transform: rotateY(0deg);
     }
-    
-
 
     100% {
         transform: rotateY(180deg);
     }
-
 }
-
-
-
 
 .cliBtn {
     background-color: #FFC696;
@@ -302,14 +241,12 @@ body {
     margin-left: 5px;
     border: none;
     font-size: 1.7rem;
-    /* margin: auto; */
     font-family: 'BMJUA';
 }
 
 /* 심볼탭 */
 
 .simbolDiv {
-    /* width: 100%; */
     height: 40vh;
     margin-bottom: 20vh;
     padding-left: 10vw;
@@ -332,20 +269,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* font-size: 60p */
     color: white;
     cursor: pointer;
 }
 
-
-
 .simbol:nth-child(2n) {
     margin-top: 55vh;
 }
-
-
-
-
 
 .simbol:hover {
     animation-name: simbolAni;
@@ -355,38 +285,38 @@ body {
 }
 
 @keyframes simbolAni {
-    0%, 100% {
 
+    0%, 100% {
     }
 
     20% {
         transform: translate(-10px, 10px);
     }
+
     40% {
         transform: translate(10px, 0px);
     }
+
     60% {
         transform: translate(-10px, -10px);
     }
+
     80% {
         transform: translate(0px, 10px);
     }
 }
-
 
 /* 페스티벌 탭 */
 
 .fstvBox {
     background-color: #FFC696;
     height: 85vh;
-    /* width: 90vw; */
     margin: auto;
-    display: flex;  
+    display: flex;
     justify-content: space-around;
     padding: 0 5vw 0 5vw;
     border-radius: 15px;
 }
-
 
 .fstvDiv {
     position: relative;
@@ -402,19 +332,15 @@ body {
     transform: translateY(-50px);
     transition-duration: 2s;
     width: 14vw;
-    /* box-shadow: 0 4px 4px 5px #EEEBDD; */
 }
 
 .opaciZero {
     animation: opaciZeroAni 2s 1;
 }
 
-
 .fstvBtn {
     position: absolute;
-    /* top: 5px; */
     margin-top: 5vh;
-
     border-radius: 50%;
     width: 2vw;
     height: 2vw;
@@ -447,13 +373,9 @@ body {
     transform: translateX(250%);
 }
 
-
-
 .fstvCli {
     margin-top: 15vh;
 }
-
-
 
 .fstvAni:nth-child(6n+1) {
     margin-top: 10vh;
@@ -466,9 +388,6 @@ body {
     border-radius: 6px;
 }
 
-
-
-
 .fstvText {
     position: absolute;
     width: 100%;
@@ -476,7 +395,7 @@ body {
     z-index: 1;
     color: white;
     text-align: center;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
     font-family: 'Cafe24Ssurround';
 }
 
@@ -512,30 +431,25 @@ body {
     padding: 0 5vw;
     line-height: 1.8;
     font-size: 1.2rem;
-  
     font-family: 'KOTRAHOPE';
-
 }
 
-.fstvDescInner > div {
+.fstvDescInner>div {
     width: 100%;
     height: 70%;
-    margin-top: 5vh 2vw 0 2vw; 
+    margin-top: 5vh 2vw 0 2vw;
     overflow: scroll;
 }
 
-.fstvDescInner > div::-webkit-scrollbar{
-    display: none; 
+.fstvDescInner>div::-webkit-scrollbar {
+    display: none;
 }
-
-
 
 .fstvBack {
     position: absolute;
     margin-top: 0.3vh;
     left: 1vw;
     font-size: 50px;
-     /* cursor: pointer; */
 }
 
 .fstvBackHover {
@@ -563,15 +477,7 @@ body {
     }
 }
 
-
-
-
-
-
-
-
 /* keyframes */
-
 /* icon 애니메이션 효과 */
 
 @keyframes icon {
@@ -589,12 +495,9 @@ body {
 }
 
 @keyframes fstvDescAni {
-
     0% {
         width: 0;
     }
-
-    30% {}
 
     100% {
         width: 100%
@@ -608,7 +511,6 @@ body {
 
     25% {
         opacity: 0.7;
-
     }
 
     50% {
@@ -617,7 +519,6 @@ body {
 
     75% {
         opacity: 0;
-
     }
 
     100% {
@@ -625,25 +526,16 @@ body {
     }
 }
 
-
-
-
-
-
-
 /* 미디어쿼리 */
-
 
 @media (max-width: 1200px) {
     .simbolDiv {
-        /* width: 100%; */
         height: 20vw;
         margin-bottom: 25vw;
         margin-top: 30vw;
         padding-left: 5vw;
         padding-right: 5vw;
         background-color: #EEEEEE;
-    
         display: flex;
         justify-content: space-around;
         flex-direction: row;
@@ -655,36 +547,14 @@ body {
         height: 18vw;
         margin-top: 5vw;
     }
-    
+
     .simbol:nth-child(2n) {
         margin-top: 15vw;
         margin-bottom: 0;
     }
-    
-
-    /* .serBox {
-        width: 80%;
-    }
-
-    
-    #search-form input {
-        width: 70vw;
-    } */
-
-    /* .search-btn {
-        display: none;
-    } */
-
-
-    /* .keywordBox {
-        width: 70vw;
-    } */
-
-    
-
-
 }
-    @media (max-width: 1030px) {
+
+@media (max-width: 1030px) {
     .subTabMenu {
         padding-bottom: 5vh;
         align-items: center;
@@ -707,38 +577,13 @@ body {
     .tabMenu {
         margin-bottom: 5vh;
     }
+
     .sinbolDiv {
         height: 20vh;
         margin-bottom: 0;
     }
-    /* .grimdiv {
-        padding-bottom: 5vh;
-    } */
-    /* .serBox {
-        width: 80%;
-    }
 
-    
-    #search-form {
-        width: 100%;
-    }
-
-    #search-form input{
-        width: 100%;
-    }
-
-    .keywordBox {
-        width: 80%;
-    }
-
-    .search-btn {
-        display: none;
-    } */
-
-
-
-   
-    .themaGrim { 
+    .themaGrim {
         width: 65vw;
         height: 50vw;
         margin-top: 8vh;
@@ -748,26 +593,24 @@ body {
         width: 65vw;
         height: 50vw;
         top: 28vh;
-        /* margin-bottom: 5vh; */
     }
+
     .fstvBox {
         height: 98vh;
         padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* width: 30vw; */
     }
 
     .width {
         width: 100%
     }
-    
+
     .fstvDiv {
         width: 60vw;
         height: 13vh;
         margin: 2vh;
-        
     }
 
     .fstvAni {
@@ -783,34 +626,25 @@ body {
         transform: translateY(-1vw);
         transition-duration: 2s;
         width: 25vw;
-        /* box-shadow: 0 5px 5px 5px rgba(92, 137, 222, 0.4); */
     }
+
     .fstvText {
         top: 2vh
     }
+
     .fstvBack {
-       margin-bottom: 93vh;
+        margin-bottom: 93vh;
     }
 
     .fstvDescInner {
         margin-top: 3vh;
         margin-left: 0vw;
-      
     }
-    
- 
+
     .fstvBtn {
         margin-bottom: 88vh;
         margin-left: 5vw;
         width: 4vw;
         height: 4vw;
     }
-    
-/* 
-    .fstvBox {
-        flex-direction: column;
-        align-items: center;
-    }
-     */
 }
-
