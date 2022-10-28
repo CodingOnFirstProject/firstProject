@@ -1,32 +1,28 @@
 const form = document.querySelector(".wrap");
 
 function deleteBtn(obj) {
-  console.log("click delete btn!");
-  console.log(obj);
-  console.log(obj.parentElement.parentElement.parentElement.parentElement);
+  // console.log("click delete btn!");
+  // console.log(obj);
+  // console.log(obj.parentElement.parentElement.parentElement.parentElement);
   const removeReviews =
     obj.parentElement.parentElement.parentElement.parentElement;
   // console.log(list);
   // console.log(reviews);
-  console.log(removeReviews);
+  // console.log(removeReviews);
   removeReviews.remove();
 }
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+
   const nickname = document.getElementById("nickname").value;
   const review = document.getElementById("review").value;
-
   const list = document.querySelector(".list");
   const date = new Date();
   const year = date.getFullYear();
   const month = date.getMonth();
   const day = date.getDate();
-
-  const perdate = document.querySelector(".dates"); // 작성일 출력을 위한 변수 지정
-  const pericon = document.querySelector(".icon2");
-  const perstars = document.querySelector("stars");
-  const starcheck = document.querySelector(".rate_radio");
+  const starcheck = document.querySelector(".rate_radio").checked;
 
   let html = `
     <div class="reviews">
@@ -47,14 +43,11 @@ form.addEventListener("submit", function (event) {
     </div>
   `; // .list 자식태그로 들어갈 개인 리뷰창 구조 및 컨텐츠 생성
 
-  $(list).append(html);
-
   if (nickname === "" || review === "" || starcheck == false) {
-    alert("닉네임과 리뷰, 별점을 입력해주세요");
-    perdate.textContent = "";
-    pericon.innerHTML = "";
-    perstars.textContent = "";
-  } // nickname value와 review value가 없을때 date출력되지 않게끔
+    alert("닉네임과 리뷰 및 별점을 전부 입력해주세요");
+  } else {
+    $(list).append(html);
+  } // nickname, review, 별점 중에 하나라도 입력값 없으면 알림 발생
 
   $("form[name='review']").each(function () {
     this.reset();
@@ -71,7 +64,6 @@ document.getElementById("review").addEventListener("keydown", function () {
     reviewLength.value = reviewLength.value.substr(0, 20);
   }
 });
-
 function Rating() {}
 Rating.prototype.rate = 0;
 Rating.prototype.setRate = function (rateobj, newrate) {

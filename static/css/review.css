@@ -20,15 +20,13 @@ body {
 
 .wrap {
   width: 90vw;
-  margin-top: 8vh;
   background-color: #ffffff;
-  margin-bottom: 5vh;
   padding: 5vh 5vw 1vh 5vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 50px;
+  margin: 30px auto 10px auto;
 }
 
 .top {
@@ -37,12 +35,10 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  opacity: 1;
 }
 
 .outer {
   width: 100%;
-  min-width: 500px;
   margin-right: 10px;
 }
 
@@ -114,9 +110,8 @@ h2 {
 
 .rerabu {
   position: relative;
-  width: 80%;
+  width: 100%;
   flex-direction: column;
-  margin-left: 10px;
 }
 
 .re {
@@ -131,6 +126,7 @@ h2 {
 #review {
   padding-left: 10px;
   height: 14vh;
+  width: 100%;
 }
 
 .rabu {
@@ -179,8 +175,8 @@ h2 {
 .list {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-left: -300px;
+  width: 60%;
+  margin-left: -30%;
   margin-bottom: 50px;
 }
 
@@ -193,7 +189,7 @@ h2 {
   border-style: solid;
   border-width: thin;
   border-color: #3d8361;
-  margin-top: 2vh;
+  margin-top: 10px;
 }
 
 /* 닉네임칸 */
@@ -214,10 +210,11 @@ h2 {
 /* div 위치 확인용 */
 .nickname {
   font-weight: bold;
+  font-size: 2.5vw;
 }
 
 .textreview {
-  font-size: 1.5rem;
+  font-size: 2vw;
   padding-left: 10px;
 }
 
@@ -231,7 +228,7 @@ h2 {
 }
 
 .icon2 {
-  font-size: 30px;
+  font-size: 3.5vw;
 }
 
 /* 리뷰,별점,작성일 칸 */
@@ -244,17 +241,17 @@ h2 {
 }
 
 .side {
-  font-size: 0.8rem;
+  font-size: 1.5vw;
 }
 
 .stars img {
-  width: auto;
-  height: auto;
+  width: 15vw;
 }
 
 .bot {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .deleteBtn {
@@ -280,6 +277,7 @@ h2 {
 
   .input {
     flex-direction: column;
+    justify-content: center;
   }
 
   .icon {
@@ -298,7 +296,7 @@ h2 {
 
   .reviews {
     flex-direction: column;
-    width: 134%;
+    width: 100%;
   }
 
   .nn {
@@ -317,16 +315,20 @@ h2 {
 
   .rating {
     text-align: center;
+    width: auto;
   }
 
   .list {
-    margin-left: -167px;
+    margin-left: 0;
+    width: 90%;
   }
 
   .left {
     flex-direction: row;
     border-right: 0;
     margin-left: 20px;
+    width: 50%;
+    align-items: center;
   }
 
   .nickname {
@@ -342,7 +344,7 @@ h2 {
   }
 
   .stars {
-    width: 30%;
+    width: 50%;
     padding-left: 50px;
   }
 
@@ -362,5 +364,20 @@ h2 {
 
   .card {
     display: none;
+  }
+
+  .deleteBtn {
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .bot {
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .enter {
+    width: 13vw;
   }
 }

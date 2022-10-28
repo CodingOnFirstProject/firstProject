@@ -16,7 +16,6 @@ body {
   font-family: "MICEGothic Bold";
 }
 
-
 #video {
   width: 98vw;
 }
@@ -24,6 +23,59 @@ body {
 #video video {
   width: 100%;
   height: 87vh;
+}
+
+/* explain */
+
+#explain {
+  margin: 95px 50px 95px 50px;
+  height: 50%;
+}
+
+#explain h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.smallw {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+#explain #posit {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#explain #posit #text p {
+  text-align: left;
+}
+
+#explain #posit #text {
+  margin-top: 30px; /*글씨위치*/
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+#explain img {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 80px;
+  margin-left: 70px;
+}
+
+#contents button {
+  font-weight: bold;
+  margin-left: 47%;
+  background: #3d8361;
+  width: 100px;
+  border: 2px solid #3d8361;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border-width: 0;
+  color: white;
 }
 
 /* box */
@@ -61,7 +113,7 @@ body {
   margin-left: 7%;
   margin-top: 40px;
   width: 40%;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .italyintro {
@@ -69,12 +121,10 @@ body {
 }
 
 #box2 .msg {
-  margin-right: 6%;
   color: white;
 }
 
 #box4 .msg {
-  margin-right: 6%;
   color: white;
 }
 
@@ -94,110 +144,50 @@ h2 {
   font-weight: bold;
 }
 
-/* explain */
-
-#explain {
-  margin: 95px 50px 95px 50px;
-  height: 50%;
-}
-
-#explain h2 {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.smallw {
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-#explain #posit {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#explain #posit #text p {
-  text-align: left;
-}
-
-#explain #posit #text {
-  margin-top: 30px; /*글씨위치*/
-  margin-right: 100px;
-  margin-left: 100px;
-}
-
-#contents button {
-  font-weight: bold;
-  margin-left: 47%;
-  background: #3d8361;
-  width: 100px;
-  border: 2px solid #3d8361;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  border-width: 0;
-  color: white;
-}
-
-#explain img {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 80px;
-  margin-left: 70px;
-}
-
 /* 미디어쿼리 */
 
 @media (max-width: 1110px) {
-  .box {
+  #explain {
+    width: 100%;
+    margin: 0;
+  }
+
+  #explain #posit {
     flex-direction: column;
     align-items: center;
   }
 
+  #explain img {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  #explain #posit #text {
+    margin: 0 15px 10px 15px;
+  }
+
+  #threeBox .box img {
+    width: 100%;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
   .box .msg {
-    height: 350px;
+    width: 80%;
+    margin: 35px 10px;
   }
 
   #box2 {
     flex-direction: column;
     align-items: center;
-    background-color: #eeeeee;
-  }
-
-  #box2 .msg {
-    background-color: #3d8361;
-    margin: 0;
-    width: 47%;
-    padding: 35px 25px 0 25px;
-  }
-
-  #box3 .msg {
-    margin: 0;
-    width: 47%;
-    padding: 35px 25px 0 25px;
   }
 
   #box4 {
-    flex-direction: column;
-    align-items: center;
-    background-color: #eeeeee;
-  }
-
-  #box4 .msg {
-    background-color: #3d8361;
-    margin: 0;
-    width: 47%;
-    padding: 35px 25px 0 25px;
-  }
-
-  #explain {
-    width: auto;
-    height: auto;
-    margin: 20px 100px;
-  }
-
-  #explain #posit {
     flex-direction: column;
     align-items: center;
   }
